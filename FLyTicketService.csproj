@@ -16,8 +16,6 @@
 
   <ItemGroup>
     <Folder Include="Shared\" />
-    <Folder Include="Service\" />
-    <Folder Include="Model\" />
     <Folder Include="Infrastructure\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
