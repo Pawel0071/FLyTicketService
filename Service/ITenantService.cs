@@ -4,17 +4,17 @@ namespace FLyTicketService.Service
 {
     public interface ITenantService
     {
-        public Task<OperationResult> AddTenantAsync(TenantDTO tenant);
+        public Task<OperationResult> AddTenantAsync(Tenant tenant);
 
-        public Task<OperationResult> UpdateTenantAsync(TenantDTO tenant);
+        public Task<OperationResult> UpdateTenantAsync(Tenant tenant);
 
         public Task<OperationResult> DeleteTenantAsync(Guid tenantId);
 
-        public Task<TenantDTO> GetTenantAsync(Guid tenantId);
+        public Task<Tenant> GetTenantAsync(Guid tenantId);
 
-        public Task<IEnumerable<TenantDTO>> GetTenantsAsync();
+        public Task<IEnumerable<Tenant>> GetTenantsAsync();
 
-        public Task<bool> ValidateTenantAsync(TenantDTO? tenant);
+        public Task<bool> ValidateTenantAsync(Tenant? tenant);
 
 
     }

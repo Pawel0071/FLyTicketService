@@ -9,7 +9,7 @@ namespace FLyTicketService.Controllers
     public class TenantController(ITenantService _tenantService): ControllerBase
     {
         [HttpGet("{tenantId}")]
-        public async Task<ActionResult<TenantDTO>> GetTenant(Guid tenantId)
+        public async Task<ActionResult<Tenant>> GetTenant(Guid tenantId)
         {
             if (tenantId == Guid.Empty)
             {
@@ -26,14 +26,14 @@ namespace FLyTicketService.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TenantDTO>>> GetTenants()
+        public async Task<ActionResult<IEnumerable<Tenant>>> GetTenants()
         {
-            IEnumerable<TenantDTO> tenants = await _tenantService.GetTenantsAsync();
+            IEnumerable<Tenant> tenants = await _tenantService.GetTenantsAsync();
             return Ok(tenants);
         }
 
         [HttpPost]
-        public async Task<ActionResult> AddTenant(TenantDTO tenant)
+        public async Task<ActionResult> AddTenant(Tenant tenant)
         {
             if (tenant == null)
             {
@@ -52,7 +52,7 @@ namespace FLyTicketService.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> UpdateTenant(TenantDTO tenant)
+        public async Task<ActionResult> UpdateTenant(Tenant tenant)
         {
             if (tenant == null)
             {

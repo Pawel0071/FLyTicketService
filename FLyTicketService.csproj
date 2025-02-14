@@ -20,4 +20,8 @@
     <Folder Include="Repositories\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Model\Flight.cs" />
+  </ItemGroup>
+
 </Project>

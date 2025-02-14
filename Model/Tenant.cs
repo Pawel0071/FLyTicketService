@@ -1,6 +1,6 @@
 ﻿namespace FLyTicketService.Model
 {
-    public class TenantDTO
+    public class Tenant
     {
         public Guid TenantId { get; set; }
 
