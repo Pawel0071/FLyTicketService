@@ -6,20 +6,21 @@ namespace FLyTicketService.Model
     public class Aircraft
     {
         [Key]
-        public Guid AircraftId { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid AircraftId { get; set; } = Guid.NewGuid();
 
         [Required]
         [MaxLength(100)]
-        public string Model { get; set; }
+        public required string Model { get; set; }
 
         [Required]
         [MaxLength(10)]
-        public string RegistrationNumber { get; set; }
+        public required string RegistrationNumber { get; set; }
 
-        public int Capacity => this.SeatPlan.AvailableSeats;
+        public ICollection<AircraftSeat> Seats { get; set; } = new List<AircraftSeat>();
 
-        [ForeignKey("AircraftSeatPlanId")]
-        public AircraftSeatPlan SeatPlan { get; set; }
+        [NotMapped]
+        public int TotalSeats => this.Seats.Count( x => !x.OutOfService);
     }
 
 }

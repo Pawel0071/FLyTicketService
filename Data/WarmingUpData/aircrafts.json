@@ -1,0 +1,139 @@
+[
+  {
+    "Model": "Boeing 737-MAX",
+    "RegistrationNumber": "SP-LAA",
+    "Seats": [
+      {
+        "SeatNumber": "1A",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "1B",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "1C",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "1D",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "1E",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "2A",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "2B",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "2C",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "2D",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "2E",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "3A",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "3B",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {       
+        "SeatNumber": "3C",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "3D",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "3E",
+        "Class": 1,
+        "OutOfService": false
+      }
+    ]
+  },
+  {
+    "Model": "Airbus A320Neo",
+    "RegistrationNumber": "SP-LBG",
+    "Seats": [
+      {
+        "SeatNumber": "1A",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "1B",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "1C",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "1D",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "1E",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "2A",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "2B",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "2C",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "2D",
+        "Class": 1,
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "2E",
+        "Class": 1,
+        "OutOfService": false
+      }
+    ]
+  }
+]

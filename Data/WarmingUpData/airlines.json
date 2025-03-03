@@ -1,0 +1,32 @@
+[
+  {
+    "AirlineName": "Air India",
+    "Country": "India",
+    "IATA": "AI"
+  },
+  {
+    "AirlineName": "Delta Airlines",
+    "Country": "USA",
+    "IATA": "DL"
+  },
+  {
+    "AirlineName": "American Airlines",
+    "Country": "USA",
+    "IATA": "AA"
+  },
+  {
+    "AirlineName": "Emirates",
+    "Country": "UAE",
+    "IATA": "EK"
+  },
+  {
+    "AirlineName": "Qatar Airways",
+    "Country": "Qatar",
+    "IATA": "QR"
+  },
+  {
+    "AirlineName": "LOT",
+    "Country": "Poland",
+    "IATA": "LO"
+  }
+  ]

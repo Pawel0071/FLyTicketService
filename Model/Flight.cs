@@ -7,13 +7,25 @@ namespace FLyTicketService.Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid FlyId { get; set; }
+        public Guid FlightId { get; set; } = Guid.NewGuid();
 
         [Required]
-        public required Operator Operator { get; set; }
+        public required Airline Airline { get; set; }
 
         [Required]
         public required Aircraft Aircraft { get; set; }
+
+
+        public required ICollection<FlightSeat> Seats { get; set; }
+
+        [NotMapped]
+        public int TotalSeats => this.Seats.Count;
+
+        [NotMapped]
+        public int AvailableSeats => this.Seats.Count(s => s.IsAvailable);
+
+        [NotMapped]
+        public int OccupiedSeats => this.Seats.Count(s => !s.IsAvailable);
 
         [Required]
         [StringLength(10, ErrorMessage = "Fly number cannot be longer than 10 characters.")]
@@ -26,10 +38,10 @@ namespace FLyTicketService.Model
         public DateTime Arrival { get; set; }
 
         [Required]
-        public required AirPort Origin { get; set; }
+        public required Airport Origin { get; set; }
 
         [Required]
-        public required AirPort Destination { get; set; }
+        public required Airport Destination { get; set; }
 
         [Required]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a positive value.")]

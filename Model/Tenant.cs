@@ -1,17 +1,25 @@
-﻿namespace FLyTicketService.Model
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace FLyTicketService.Model
 {
     public class Tenant
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid TenantId { get; set; }
 
-        public string Name { get; set; }
+        [Required]
+        [MaxLength(100)]
+        public required string Name { get; set; }
 
-        public string Address { get; set; }
+        [MaxLength(200)]
+        public required string Address { get; set; }
 
-        public string Phone { get; set; }
+        [Phone]
+        public string? Phone { get; set; }
 
-        public string Email { get; set; }
-
-
+        [EmailAddress]
+        public string? Email { get; set; }
     }
 }

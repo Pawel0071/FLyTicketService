@@ -1,4 +1,5 @@
-﻿using FLyTicketService.Model;
+﻿using FLyTicketService.Infrastructure;
+using FLyTicketService.Model;
 
 namespace FLyTicketService.Service
 {
@@ -13,9 +14,5 @@ namespace FLyTicketService.Service
         public Task<Tenant> GetTenantAsync(Guid tenantId);
 
         public Task<IEnumerable<Tenant>> GetTenantsAsync();
-
-        public Task<bool> ValidateTenantAsync(Tenant? tenant);
-
-
     }
 }

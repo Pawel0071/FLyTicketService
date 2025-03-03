@@ -1,20 +1,31 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FLyTicketService.Model
 {
     public class FlightSeat
     {
-        [Key] 
-        public Guid FlightSeatId { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid FlightSeatId { get; set; } 
 
-        [Required] 
-        [MaxLength(10)] 
+        [Required]
+        [MaxLength(10)]
         public required string SeatNumber { get; set; }
 
-        [Required] 
+        [ForeignKey("Flight")]
+        public Flight Flight { get; set; }
+
+        [Required]
         public SeatClass Class { get; set; }
 
-        [Required] 
+        [Required]
         public bool IsAvailable { get; set; }
+
+        [ForeignKey("TicketId")]
+        public Ticket? Ticket { get; set; }
+
+        [ForeignKey("ReservationId")]
+        public Reservation? Reservation { get; set; }
     }
 }

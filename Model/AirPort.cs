@@ -1,15 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FLyTicketService.Model
 {
-    public class AirPort
+    public class Airport
     {
         [Key]
-        public Guid AirPortId { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid AirportId { get; set; } = Guid.NewGuid();
 
         [Required]
         [MaxLength(100)]
-        public string AirPortName { get; set; }
+        public string AirportName { get; set; }
 
         [Required]
         [MaxLength(100)]
@@ -37,22 +39,10 @@ namespace FLyTicketService.Model
         public double Altitude { get; set; }
 
         [Required]
-        public double Timezone { get; set; }
+        public string Timezone { get; set; }
 
         [Required]
         [MaxLength(1)]
         public string DST { get; set; }
-
-        [Required]
-        [MaxLength(100)]
-        public string TzDatabaseTimeZone { get; set; }
-
-        [Required]
-        [MaxLength(50)]
-        public string Type { get; set; }
-
-        [Required]
-        [MaxLength(100)]
-        public string Source { get; set; }
     }
 }
