@@ -1,31 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using FLyTicketService.Model.Enums;
 
 namespace FLyTicketService.Model
 {
     public class FlightSeat
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid FlightSeatId { get; set; } 
+        #region Properties
 
-        [Required]
-        [MaxLength(10)]
+        public Guid FlightSeatId { get; set; }
         public required string SeatNumber { get; set; }
-
-        [ForeignKey("Flight")]
-        public Flight Flight { get; set; }
-
-        [Required]
+        public Guid FlightsPlanId { get; set; }
+        public required FlightsPlan FlightsPlan { get; set; }
         public SeatClass Class { get; set; }
-
-        [Required]
         public bool IsAvailable { get; set; }
-
-        [ForeignKey("TicketId")]
         public Ticket? Ticket { get; set; }
-
-        [ForeignKey("ReservationId")]
         public Reservation? Reservation { get; set; }
+
+        #endregion
     }
 }

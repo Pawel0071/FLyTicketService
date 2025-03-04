@@ -27,11 +27,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="DTO\" />
     <Folder Include="Shared\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Model\Flight.cs" />
+    <None Include="Model\FlightsPlan.cs" />
   </ItemGroup>
 
 </Project>

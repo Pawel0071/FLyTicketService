@@ -1,6 +1,6 @@
 ﻿using FLyTicketService.Infrastructure;
 using FLyTicketService.Model;
-using FLyTicketService.Service;
+using FLyTicketService.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using NSwag.Annotations;
 
@@ -8,8 +8,10 @@ namespace FLyTicketService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TenantController(ITenantService _tenantService) : ControllerBase
+    public class TenantController(ITenantService _tenantService): ControllerBase
     {
+        #region Methods
+
         /// <summary>
         /// Get a tenant by ID.
         /// </summary>
@@ -19,20 +21,13 @@ namespace FLyTicketService.Controllers
         [OpenApiOperation("GetTenantById", "Get a tenant by ID.")]
         public async Task<ActionResult<Tenant>> GetTenant(Guid tenantId)
         {
-            try
+            Tenant? tenant = await _tenantService.GetTenantAsync(tenantId);
+            if (tenant is null)
             {
-                Tenant? tenant = await _tenantService.GetTenantAsync(tenantId);
-                if (tenant == null)
-                {
-                    return NotFound();
-                }
+                return NotFound();
+            }
 
-                return Ok(tenant);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Error retrieving tenant: {ex.Message}");
-            }
+            return Ok(tenant);
         }
 
         /// <summary>
@@ -43,15 +38,8 @@ namespace FLyTicketService.Controllers
         [OpenApiOperation("GetTenants", "Get all tenants.")]
         public async Task<ActionResult<IEnumerable<Tenant>>> GetTenants()
         {
-            try
-            {
-                IEnumerable<Tenant> tenants = await _tenantService.GetTenantsAsync();
-                return Ok(tenants);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Error retrieving tenants: {ex.Message}");
-            }
+            IEnumerable<Tenant> tenants = await _tenantService.GetTenantsAsync();
+            return Ok(tenants);
         }
 
         /// <summary>
@@ -63,15 +51,8 @@ namespace FLyTicketService.Controllers
         [OpenApiOperation("AddTenant", "Add a new tenant.")]
         public async Task<ActionResult> AddTenant([FromBody] Tenant tenant)
         {
-            try
-            {
-                OperationResult result = await _tenantService.AddTenantAsync(tenant);
-                return StatusCode(result.Status.ToInt(), result.Message);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Error adding tenant: {ex.Message}");
-            }
+            OperationResult result = await _tenantService.AddTenantAsync(tenant);
+            return StatusCode(result.Status.ToInt(), result.Message);
         }
 
         /// <summary>
@@ -83,15 +64,8 @@ namespace FLyTicketService.Controllers
         [OpenApiOperation("UpdateTenant", "Update an existing tenant.")]
         public async Task<ActionResult> UpdateTenant([FromBody] Tenant tenant)
         {
-            try
-            {
-                OperationResult result = await _tenantService.UpdateTenantAsync(tenant);
-                return StatusCode(result.Status.ToInt(), result.Message);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Error updating tenant: {ex.Message}");
-            }
+            OperationResult result = await _tenantService.UpdateTenantAsync(tenant);
+            return StatusCode(result.Status.ToInt(), result.Message);
         }
 
         /// <summary>
@@ -103,15 +77,10 @@ namespace FLyTicketService.Controllers
         [OpenApiOperation("DeleteTenant", "Delete a tenant by ID.")]
         public async Task<ActionResult> DeleteTenant(Guid tenantId)
         {
-            try
-            {
-                OperationResult result = await _tenantService.DeleteTenantAsync(tenantId);
-                return StatusCode(result.Status.ToInt(), result.Message);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Error deleting tenant: {ex.Message}");
-            }
+            OperationResult result = await _tenantService.DeleteTenantAsync(tenantId);
+            return StatusCode(result.Status.ToInt(), result.Message);
         }
+
+        #endregion
     }
 }

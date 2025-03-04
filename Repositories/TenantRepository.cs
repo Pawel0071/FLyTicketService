@@ -1,11 +1,12 @@
 ﻿using FLyTicketService.Data;
 using FLyTicketService.Model;
+using FLyTicketService.Repositories.Interfaces;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 namespace FLyTicketService.Repositories
 {
-    public class TenantRepository : ITenantRepository
+    public class TenantRepository: ITenantRepository
     {
         #region Fields
 
@@ -22,6 +23,10 @@ namespace FLyTicketService.Repositories
             this._logger = logger;
         }
 
+        #endregion
+
+        #region Methods
+
         public async Task<bool> AddAsync(Tenant tenant)
         {
             if (tenant == null)
@@ -29,18 +34,18 @@ namespace FLyTicketService.Repositories
                 throw new ArgumentNullException(nameof(tenant), "Tenant cannot be null.");
             }
 
-            await this._context.Set<Tenant>().AddAsync(tenant);
+            await this._context.Tenants.AddAsync(tenant);
             return await this.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<Tenant>> GetAllAsync()
         {
-            return await this._context.Set<Tenant>().ToListAsync();
+            return await this._context.Tenants.ToListAsync();
         }
 
         public async Task<Tenant?> GetByIdAsync(Guid tenantId)
         {
-            var tenant = await this._context.Set<Tenant>().FindAsync(tenantId);
+            Tenant? tenant = await this._context.Tenants.FindAsync(tenantId);
             return tenant;
         }
 
@@ -53,19 +58,14 @@ namespace FLyTicketService.Repositories
 
             try
             {
-                this._context.Set<Tenant>().Remove(tenant);
+                this._context.Tenants.Remove(tenant);
                 return await this.SaveChangesAsync();
             }
             catch (DbUpdateException ex) when (ex.InnerException is SqlException sqlEx && sqlEx.Number == 547)
             {
-                _logger.LogError(ex, "Cannot remove tenant due to key violation.");
+                this._logger.LogError(ex, "Cannot remove tenant due to key violation.");
                 throw new InvalidOperationException("Cannot remove tenant due to key violation.", ex);
             }
-        }
-
-        public async Task<bool> SaveChangesAsync()
-        {
-            return await this._context.SaveChangesAsync() > 0;
         }
 
         public async Task<bool> Update(Tenant tenant)
@@ -75,10 +75,10 @@ namespace FLyTicketService.Repositories
                 throw new ArgumentNullException(nameof(tenant), "Tenant cannot be null.");
             }
 
-            var existingTenant = await this._context.Set<Tenant>().FindAsync(tenant.TenantId);
+            Tenant? existingTenant = await this._context.Tenants.FindAsync(tenant.TenantId);
             if (existingTenant == null)
             {
-                _logger.LogError($"Tenant with ID {tenant.TenantId} was not found.");
+                this._logger.LogError($"Tenant with ID {tenant.TenantId} was not found.");
                 throw new KeyNotFoundException($"Tenant with ID {tenant.TenantId} was not found.");
             }
 
@@ -87,8 +87,13 @@ namespace FLyTicketService.Repositories
             existingTenant.Phone = tenant.Phone;
             existingTenant.Email = tenant.Email;
 
-            this._context.Set<Tenant>().Update(existingTenant);
+            this._context.Tenants.Update(existingTenant);
             return await this.SaveChangesAsync();
+        }
+
+        private async Task<bool> SaveChangesAsync()
+        {
+            return await this._context.SaveChangesAsync() > 0;
         }
 
         #endregion

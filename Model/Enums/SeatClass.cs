@@ -1,4 +1,4 @@
-namespace FLyTicketService.Model
+namespace FLyTicketService.Model.Enums
 {
     public enum SeatClass
     {

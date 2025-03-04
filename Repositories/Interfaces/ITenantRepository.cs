@@ -1,6 +1,6 @@
 ﻿using FLyTicketService.Model;
 
-namespace FLyTicketService.Repositories
+namespace FLyTicketService.Repositories.Interfaces
 {
     public interface ITenantRepository 
     {

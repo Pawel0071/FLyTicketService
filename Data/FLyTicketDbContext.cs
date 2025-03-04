@@ -1,25 +1,43 @@
-﻿using FLyTicketService.Model;
+﻿using FLyTicketService.Data.Configuration;
+using FLyTicketService.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using System.Reflection;
 using System.Text.Json;
 
 namespace FLyTicketService.Data
 {
     public sealed class FLyTicketDbContext: DbContext
     {
-        private readonly IConfiguration configuration;
+        #region Fields
 
-        public FLyTicketDbContext(DbContextOptions<FLyTicketDbContext> options, IConfiguration configuration): base(options)
-        {
-            this.configuration = configuration;
-            Database.EnsureCreated();
-        }
+        private readonly IConfiguration _configuration;
+
+        #endregion
+
+        #region Properties
 
         public DbSet<Airline> Operators { get; set; }
         public DbSet<Airport> Airports { get; set; }
         public DbSet<Aircraft> Aircrafts { get; set; }
         public DbSet<AircraftSeat> AircraftSeats { get; set; }
+        public DbSet<FlightSeat> FlightSeats { get; set; }
+        public DbSet<FlightsPlan> FlightsPlans { get; set; }
+        public DbSet<Airline> Airlines { get; set; }
+        public DbSet<Tenant> Tenants { get; set; }
+
+        #endregion
+
+        #region Constructors
+
+        public FLyTicketDbContext(DbContextOptions<FLyTicketDbContext> options, IConfiguration configuration): base(options)
+        {
+            this._configuration = configuration;
+            Database.EnsureCreated();
+        }
+
+        #endregion
+
+        #region Methods
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,7 +48,7 @@ namespace FLyTicketService.Data
                 return;
             }
 
-            string connectionString = configuration.GetConnectionString("DefaultConnection")!;
+            string connectionString = _configuration.GetConnectionString("DefaultConnection")!;
             if (string.IsNullOrEmpty(connectionString))
             {
                 throw new InvalidOperationException("The ConnectionString property has not been initialized.");
@@ -43,20 +61,22 @@ namespace FLyTicketService.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new FlightSeatConfiguration());
+            modelBuilder.ApplyConfiguration(new FlightsPlanConfiguration());
+            modelBuilder.ApplyConfiguration(new AircraftSeatConfiguration());
+            modelBuilder.ApplyConfiguration(new AircraftConfiguration());
+            modelBuilder.ApplyConfiguration(new AirportConfiguration());
+            modelBuilder.ApplyConfiguration(new AirlineConfiguration());
+            modelBuilder.ApplyConfiguration(new TenantConfiguration());
 
-            modelBuilder.ApplyConfigurationsFromAssembly(
-                Assembly.GetExecutingAssembly(),
-                t => t.Namespace == "FLyTicketService.Model");
-
-            // Initial data seeding
-            string airportsJson = File.ReadAllText("Data/airports.json");
+            string airportsJson = File.ReadAllText("Data/WarmingUpData/airports.json");
             List<Airport>? airports = JsonSerializer.Deserialize<List<Airport>>(airportsJson);
             if (airports != null)
             {
                 modelBuilder.Entity<Airport>().HasData(data: airports);
             }
 
-            string aircraftsJson = File.ReadAllText("Data/aircrafts.json");
+            string aircraftsJson = File.ReadAllText("Data/WarmingUpData/aircrafts.json");
             List<Aircraft>? aircrafts = JsonSerializer.Deserialize<List<Aircraft>>(aircraftsJson);
             List<AircraftSeat> aircraftSeats = new List<AircraftSeat>();
 
@@ -80,12 +100,14 @@ namespace FLyTicketService.Data
                 modelBuilder.Entity<Aircraft>().HasData(data: aircrafts);
             }
 
-            string airlinesJson = File.ReadAllText("Data/airlines.json");
+            string airlinesJson = File.ReadAllText("Data/WarmingUpData/airlines.json");
             List<Airline>? airlines = JsonSerializer.Deserialize<List<Airline>>(airlinesJson);
             if (airlines != null)
             {
                 modelBuilder.Entity<Airline>().HasData(data: airlines);
             }
         }
+
+        #endregion
     }
 }
