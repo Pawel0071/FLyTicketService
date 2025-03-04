@@ -1,87 +1,54 @@
 ﻿using FLyTicketService.DTO;
 using FLyTicketService.Infrastructure;
-using FLyTicketService.Model;
 using FLyTicketService.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using NSwag.Annotations;
 
 namespace FLyTicketService.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
-    public class TenantController(ITenantService _tenantService): ControllerBase
+    [Route("api/[controller]")]
+    public class TenantController : ControllerBase
     {
-        #region Methods
+        private readonly ITenantService _tenantService;
 
-        /// <summary>
-        /// Get a tenant by ID.
-        /// </summary>
-        /// <param name="tenantId">The ID of the tenant.</param>
-        /// <returns>The tenant with the specified ID.</returns>
-        [HttpGet("{tenantId}")]
-        [OpenApiOperation("GetTenantById", "Get a tenant by ID.")]
-        public async Task<ActionResult<Tenant>> GetTenant(Guid tenantId)
+        public TenantController(ITenantService tenantService)
         {
-            TenantDTO? tenant = await _tenantService.GetTenantAsync(tenantId);
-            if (tenant is null)
-            {
-                return NotFound();
-            }
-
-            return Ok(tenant);
+            _tenantService = tenantService;
         }
 
-        /// <summary>
-        /// Get all tenants.
-        /// </summary>
-        /// <returns>A list of all tenants.</returns>
-        [HttpGet]
-        [OpenApiOperation("GetTenants", "Get all tenants.")]
-        public async Task<ActionResult<IEnumerable<Tenant>>> GetTenants()
-        {
-            IEnumerable<Tenant> tenants = await _tenantService.GetTenantsAsync();
-            return Ok(tenants);
-        }
-
-        /// <summary>
-        /// Add a new tenant.
-        /// </summary>
-        /// <param name="tenant">The tenant to add.</param>
-        /// <returns>Result of the add operation.</returns>
         [HttpPost]
-        [OpenApiOperation("AddTenant", "Add a new tenant.")]
-        public async Task<ActionResult> AddTenant([FromBody] Tenant tenant)
+        public async Task<IActionResult> AddTenant([FromBody] TenantDTO tenant)
         {
-            OperationResult result = await _tenantService.AddTenantAsync(tenant);
-            return StatusCode(result.Status.ToInt(), result.Message);
+            OperationResult<bool> result = await _tenantService.AddTenantAsync(tenant);
+            return result.GetResult();
         }
 
-        /// <summary>
-        /// Update an existing tenant.
-        /// </summary>
-        /// <param name="tenant">The tenant to update.</param>
-        /// <returns>Result of the update operation.</returns>
-        [HttpPut]
-        [OpenApiOperation("UpdateTenant", "Update an existing tenant.")]
-        public async Task<ActionResult> UpdateTenant([FromBody] Tenant tenant)
+        [HttpPut("{tenantId}")]
+        public async Task<IActionResult> UpdateTenant(Guid tenantId, [FromBody] TenantDTO tenant)
         {
-            OperationResult result = await _tenantService.UpdateTenantAsync(tenant);
-            return StatusCode(result.Status.ToInt(), result.Message);
+            OperationResult<bool> result = await _tenantService.UpdateTenantAsync(tenantId, tenant);
+            return result.GetResult();
         }
 
-        /// <summary>
-        /// Delete a tenant by ID.
-        /// </summary>
-        /// <param name="tenantId">The ID of the tenant to delete.</param>
-        /// <returns>Result of the delete operation.</returns>
         [HttpDelete("{tenantId}")]
-        [OpenApiOperation("DeleteTenant", "Delete a tenant by ID.")]
-        public async Task<ActionResult> DeleteTenant(Guid tenantId)
+        public async Task<IActionResult> DeleteTenant(Guid tenantId)
         {
-            OperationResult result = await _tenantService.DeleteTenantAsync(tenantId);
-            return StatusCode(result.Status.ToInt(), result.Message);
+            OperationResult<bool> result = await _tenantService.DeleteTenantAsync(tenantId);
+            return result.GetResult();
         }
 
-        #endregion
+        [HttpGet("{tenantId}")]
+        public async Task<IActionResult> GetTenant(Guid tenantId)
+        {
+            OperationResult<TenantDTO?> result = await _tenantService.GetTenantAsync(tenantId);
+            return result.GetResult();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetTenants()
+        {
+            OperationResult<IEnumerable<TenantDTO>> result = await _tenantService.GetTenantsAsync();
+            return result.GetResult();
+        }
     }
 }

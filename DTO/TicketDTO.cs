@@ -4,6 +4,8 @@ namespace FLyTicketService.DTO
 {
     public class TicketDTO
     {
+        public Guid TicketId { get; set; }
+        public required string TicketNumber { get; set; }
         public required decimal FlightNumber { get; set; }
         public required string SeatNumber { get; set; }
         public Guid TenantId { get; set; }

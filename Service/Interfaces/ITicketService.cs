@@ -5,16 +5,16 @@ namespace FLyTicketService.Service.Interfaces
 {
     public interface ITicketService
     {
-        public Task<OperationResult> ReserveTicketAsync(string flightId, string seatNo, Guid tenantId);
+        public Task<OperationResult<bool>> ReserveTicketAsync(string flightId, string seatNo, Guid tenantId);
 
-        public Task<OperationResult> SoldTicketAsync(string flightId, string seatNo, Guid tenantId, decimal discount);
+        public Task<OperationResult<bool>> SoldTicketAsync(string flightId, string seatNo, Guid tenantId, decimal discount);
 
-        public Task<OperationResult> SoldReservedTicketAsync(string ticketNumber, decimal discount);
+        public Task<OperationResult<bool>> SoldReservedTicketAsync(string ticketNumber, decimal discount);
 
-        public Task<OperationResult> CancelTicketAsync(string ticketNumber);
+        public Task<OperationResult<bool>> CancelTicketAsync(string ticketNumber);
 
-        public Task<TenantDTO?> GetTicketAsync(string ticketNumber);
+        public Task<OperationResult<TicketDTO?>> GetTicketAsync(string ticketNumber);
 
-        public Task<IEnumerable<TenantDTO>> GetTicketsAsync(string? flyNumber, Guid? tenantId);
+        public Task<OperationResult<IEnumerable<TicketDTO>>> GetTicketsAsync(string? flyNumber, Guid? tenantId);
     }
 }

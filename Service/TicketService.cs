@@ -1,4 +1,6 @@
-﻿using FLyTicketService.Model;
+﻿using FLyTicketService.DTO;
+using FLyTicketService.Infrastructure;
+using FLyTicketService.Model;
 using FLyTicketService.Repositories.Interfaces;
 using FLyTicketService.Service.Interfaces;
 
@@ -17,10 +19,34 @@ namespace FLyTicketService.Service
             _logger = logger;
         }
 
-        public async Task<IEnumerable<Ticket>> GetAllTicketsAsync()
+        public Task<OperationResult<bool>> CancelTicketAsync(string ticketNumber)
         {
-            _logger.LogInformation("Getting all tickets");
-            return await _tenantRepository.GetAllAsync();
+            throw new NotImplementedException();
+        }
+
+        public Task<OperationResult<TicketDTO?>> GetTicketAsync(string ticketNumber)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<OperationResult<IEnumerable<TicketDTO>>> GetTicketsAsync(string? flyNumber, Guid? tenantId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<OperationResult<bool>> ReserveTicketAsync(string flightId, string seatNo, Guid tenantId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<OperationResult<bool>> SoldReservedTicketAsync(string ticketNumber, decimal discount)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<OperationResult<bool>> SoldTicketAsync(string flightId, string seatNo, Guid tenantId, decimal discount)
+        {
+            throw new NotImplementedException();
         }
     }
 }

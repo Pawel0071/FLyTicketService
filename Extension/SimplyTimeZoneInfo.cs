@@ -6,9 +6,9 @@ namespace FLyTicketService.Extension
     {
         #region Properties
 
-        private SimplyTimeZone TimeZone { get; }
-        private string DisplayName { get; set; }
-        private TimeSpan Offset { get; set; }
+        public SimplyTimeZone TimeZone { get; }
+        public string DisplayName { get; set; }
+        public TimeSpan Offset { get; set; }
 
         #endregion
 

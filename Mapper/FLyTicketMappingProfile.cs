@@ -4,9 +4,9 @@ using FLyTicketService.Model;
 
 namespace FLyTicketService.Mapper
 {
-    public class MappingProfile : Profile
+    public class FLyTicketMappingProfile : Profile
     {
-        public MappingProfile()
+        public FLyTicketMappingProfile()
         {
             // Mapowanie DTO na model EF
             CreateMap<TicketDTO, Ticket>()

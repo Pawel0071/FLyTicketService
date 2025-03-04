@@ -74,7 +74,18 @@ namespace FLyTicketService.Repositories
                 return false;
             }
         }
+        public async Task<T?> GetByAsync(Func<T, bool> predicate)
+        {
+            _logger.LogInformation($"Getting entity of type {typeof(T).Name} by predicate");
+            return await Task.Run(() => _dbSet.SingleOrDefault(predicate));
+        }
+
+        public async Task<IEnumerable<T>> FilterByAsync(Func<T, bool> predicate)
+        {
+            _logger.LogInformation($"Filtering entities of type {typeof(T).Name} by predicate");
+            return await Task.Run(() => _dbSet.Where(predicate).ToList());
+        }
 
         #endregion
+        }
     }
-}

@@ -1,11 +1,13 @@
 using FLyTicketService.Data;
-using FLyTicketService.Mapper;
 using FLyTicketService.Middleware;
 using FLyTicketService.Model;
 using FLyTicketService.Repositories;
 using FLyTicketService.Repositories.Interfaces;
 using FLyTicketService.Service;
 using FLyTicketService.Service.Interfaces;
+using FLyTicketService.Services;
+using FLyTicketService.Services.Implementations;
+using FLyTicketService.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -22,17 +24,17 @@ builder.Services.AddDbContext<FLyTicketDbContext>(
         options.UseSqlServer(
             builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.")));
 
-// Correct AutoMapper configuration
-builder.Services.AddAutoMapper(cfg => { cfg.AddProfile<MappingProfile>(); }, AppDomain.CurrentDomain.GetAssemblies());
 
 // Register repositories and services
 
 builder.Services.AddScoped<IGenericRepository<Ticket>, GenericRepository<Ticket>>();
 builder.Services.AddScoped<IGenericRepository<Tenant>, GenericRepository<Tenant>>();
 builder.Services.AddScoped<IGenericRepository<FlightSchedule>, GenericRepository<FlightSchedule>>();
+builder.Services.AddScoped<IGenericRepository<DiscountType>, GenericRepository<DiscountType>>();
 builder.Services.AddScoped<ITicketService, TicketService>();
 builder.Services.AddScoped<ITenantService, TenantService>();
 builder.Services.AddScoped<IFlightScheduleService, FlightScheduleService>();
+builder.Services.AddScoped<IDiscountTypeService, DiscountTypeService>();
 
 WebApplication app = builder.Build();
 

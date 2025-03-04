@@ -23,7 +23,43 @@ namespace FLyTicketService.Extension
                 new SimplyTimeZoneInfo (SimplyTimeZone.AEDT, "Australian Eastern Daylight Time", TimeSpan.FromHours(11)),
                 new SimplyTimeZoneInfo (SimplyTimeZone.IST, "India Standard Time", TimeSpan.FromHours(5.5))
             };
-
         }
-    }
+
+        public static DateTime ConvertToTargetTimeZone(this DateTime currentDateTime, SimplyTimeZone sourceTimeZone, SimplyTimeZone targetTimeZone)
+        {
+            SimplyTimeZoneInfo sourceTimeZoneInfo = TimeZones.Find(tz => tz.TimeZone == sourceTimeZone);
+            SimplyTimeZoneInfo targetTimeZoneInfo = TimeZones.Find(tz => tz.TimeZone == targetTimeZone);
+
+            if (sourceTimeZoneInfo == null || targetTimeZoneInfo == null)
+            {
+                throw new ArgumentException("Invalid source or target time zone.");
+            }
+
+            TimeSpan timeDifference = targetTimeZoneInfo.Offset - sourceTimeZoneInfo.Offset;
+            DateTime targetDateTime = currentDateTime + timeDifference;
+
+            return targetDateTime;
+        }
+
+        public static DateTime ConvertToTargetTimeZone(this DateTimeOffset currentDateTime, SimplyTimeZone sourceTimeZone, SimplyTimeZone targetTimeZone)
+        {
+            SimplyTimeZoneInfo sourceTimeZoneInfo = TimeZones.Find(tz => tz.TimeZone == sourceTimeZone);
+            SimplyTimeZoneInfo targetTimeZoneInfo = TimeZones.Find(tz => tz.TimeZone == targetTimeZone);
+
+            if (sourceTimeZoneInfo == null || targetTimeZoneInfo == null)
+            {
+                throw new ArgumentException("Invalid source or target time zone.");
+            }
+
+            TimeSpan timeDifference = targetTimeZoneInfo.Offset - sourceTimeZoneInfo.Offset;
+            DateTime targetDateTime = currentDateTime.UtcDateTime + timeDifference;
+
+            return targetDateTime;
+        }
+
+        public static SimplyTimeZone GetSystemTimeZone()
+        {
+            TimeZoneInfo localZone = TimeZoneInfo.Local;
+            return TimeZones.Find(tz => TimeZoneInfo.Equals(TimeZoneInfo.FindSystemTimeZoneById(tz.TimeZone.ToString()), localZone)).TimeZone;
+        }
 }
