@@ -2,11 +2,10 @@ using FLyTicketService.Data;
 using FLyTicketService.Model;
 using FLyTicketService.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 
 namespace FLyTicketService.Repositories.Implementations
 {
-    public class FlightsPlanRepository : IFlightsPlanRepository
+    public class FlightScheduleRepository : IFlightScheduleRepository
     {
         #region Fields
 
@@ -17,7 +16,7 @@ namespace FLyTicketService.Repositories.Implementations
 
         #region Constructors
 
-        public FlightsPlanRepository(FLyTicketDbContext context, ILogger<FlightsPlanRepository> logger)
+        public FlightScheduleRepository(FLyTicketDbContext context, ILogger<FlightsPlanRepository> logger)
         {
             this._context = context;
             this._logger = logger;
@@ -27,17 +26,17 @@ namespace FLyTicketService.Repositories.Implementations
 
         #region Methods
 
-        public async Task<FlightsPlan?> GetFlightsPlanAsync(Guid flightsPlanId)
+        public async Task<FlightSchedule?> GetFlightsPlanAsync(Guid flightsPlanId)
         {
             try
             {
-                return await this._context.FlightsPlans
+                return await this._context.FlightScheduler
                                  .Include(fp => fp.Airline)
                                  .Include(fp => fp.Aircraft)
                                  .Include(fp => fp.Seats)
                                  .Include(fp => fp.Origin)
                                  .Include(fp => fp.Destination)
-                                 .FirstOrDefaultAsync(fp => fp.FlightsPlanId == flightsPlanId);
+                                 .FirstOrDefaultAsync(fp => fp.FlightScheduleId == flightsPlanId);
             }
             catch (Exception ex)
             {
@@ -68,11 +67,11 @@ namespace FLyTicketService.Repositories.Implementations
                             SeatNumber = seat.SeatNumber,
                             Class = seat.Class,
                             IsAvailable = !seat.OutOfService,
-                            FlightsPlan = null
+                            FlightSchedule = null
                         });
                 }
 
-                FlightsPlan flightsPlan = new FlightsPlan
+                FlightSchedule flightSchedule = new FlightSchedule
                 {
                     Airline = airline,
                     Aircraft = aircraft,
@@ -81,10 +80,10 @@ namespace FLyTicketService.Repositories.Implementations
                     Destination = destination,
                     Departure = departureTime,
                     Arrival = arrivalTime,
-                    FlyNumber = flyNumber
+                    FlightId = flyNumber
                 };
 
-                await this._context.FlightsPlans.AddAsync(flightsPlan);
+                await this._context.FlightScheduler.AddAsync(flightSchedule);
                 return await this._context.SaveChangesAsync() > 0;
             }
             catch (Exception ex)
@@ -94,17 +93,17 @@ namespace FLyTicketService.Repositories.Implementations
             }
         }
 
-        public async Task<bool> UpdateFlightsPlanAsync(FlightsPlan flightsPlan)
+        public async Task<bool> UpdateFlightsPlanAsync(FlightSchedule flightSchedule)
         {
             try
             {
-                this._context.FlightsPlans.Update(flightsPlan);
+                this._context.FlightScheduler.Update(flightSchedule);
                 return await this._context.SaveChangesAsync() > 0;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error occurred while updating FlightsPlan with ID {FlightsPlanId}", flightsPlan.FlightId);
-                throw new Exception($"Error occurred while updating FlightsPlan with ID {flightsPlan.FlightId}", ex);
+                _logger.LogError(ex, "Error occurred while updating FlightsPlan with ID {FlightsPlanId}", flightSchedule.FlightId);
+                throw new Exception($"Error occurred while updating FlightsPlan with ID {flightSchedule.FlightId}", ex);
             }
         }
 
@@ -112,10 +111,10 @@ namespace FLyTicketService.Repositories.Implementations
         {
             try
             {
-                FlightsPlan? flightsPlan = await this.GetFlightsPlanAsync(flightsPlanId);
+                FlightSchedule? flightsPlan = await this.GetFlightsPlanAsync(flightsPlanId);
                 if (flightsPlan != null)
                 {
-                    this._context.FlightsPlans.Remove(flightsPlan);
+                    this._context.FlightScheduler.Remove(flightsPlan);
                     return await this._context.SaveChangesAsync() > 0;
                 }
                 return false;
@@ -127,11 +126,11 @@ namespace FLyTicketService.Repositories.Implementations
             }
         }
 
-        public async Task<IEnumerable<FlightsPlan>> GetAllFlightsPlansAsync()
+        public async Task<IEnumerable<FlightSchedule>> GetAllFlightsPlansAsync()
         {
             try
             {
-                return await this._context.FlightsPlans
+                return await this._context.FlightScheduler
                                  .Include(fp => fp.Airline)
                                  .Include(fp => fp.Aircraft)
                                  .Include(fp => fp.Seats)

@@ -16,14 +16,16 @@ namespace FLyTicketService.Data
 
         #region Properties
 
-        public DbSet<Airline> Operators { get; set; }
         public DbSet<Airport> Airports { get; set; }
         public DbSet<Aircraft> Aircrafts { get; set; }
         public DbSet<AircraftSeat> AircraftSeats { get; set; }
         public DbSet<FlightSeat> FlightSeats { get; set; }
-        public DbSet<FlightsPlan> FlightsPlans { get; set; }
+        public DbSet<FlightSchedule> FlightScheduler { get; set; }
         public DbSet<Airline> Airlines { get; set; }
         public DbSet<Tenant> Tenants { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<FlightType> FlightTypes { get; set; }
+        public DbSet<DiscountType> DiscountTypes { get; set; }
 
         #endregion
 
@@ -31,7 +33,7 @@ namespace FLyTicketService.Data
 
         public FLyTicketDbContext(DbContextOptions<FLyTicketDbContext> options, IConfiguration configuration): base(options)
         {
-            this._configuration = configuration;
+            _configuration = configuration;
             Database.EnsureCreated();
         }
 
@@ -62,12 +64,15 @@ namespace FLyTicketService.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new FlightSeatConfiguration());
-            modelBuilder.ApplyConfiguration(new FlightsPlanConfiguration());
+            modelBuilder.ApplyConfiguration(new FlightScheduleConfiguration());
+            modelBuilder.ApplyConfiguration(new FlightTypeConfiguration());
             modelBuilder.ApplyConfiguration(new AircraftSeatConfiguration());
             modelBuilder.ApplyConfiguration(new AircraftConfiguration());
             modelBuilder.ApplyConfiguration(new AirportConfiguration());
             modelBuilder.ApplyConfiguration(new AirlineConfiguration());
             modelBuilder.ApplyConfiguration(new TenantConfiguration());
+            modelBuilder.ApplyConfiguration(new TicketConfiguration());
+            modelBuilder.ApplyConfiguration(new DiscountTypeConfiguration());
 
             string airportsJson = File.ReadAllText("Data/WarmingUpData/airports.json");
             List<Airport>? airports = JsonSerializer.Deserialize<List<Airport>>(airportsJson);

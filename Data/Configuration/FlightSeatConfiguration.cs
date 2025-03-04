@@ -8,17 +8,19 @@ namespace FLyTicketService.Data.Configuration
     {
         #region Methods
 
+        #region Methods
+
         public void Configure(EntityTypeBuilder<FlightSeat> builder)
         {
             builder.HasKey(fs => fs.FlightSeatId);
 
-            builder.Property(fs => fs.FlightSeatId)
-                   .IsRequired()
-                   .ValueGeneratedOnAdd();
-
             builder.Property(fs => fs.SeatNumber)
-                   .IsRequired()
-                   .HasMaxLength(10);
+                   .IsRequired();
+
+            builder.HasOne<FlightSchedule>()
+                   .WithMany()
+                   .HasForeignKey(fs => fs.FlightScheduleId)
+                   .OnDelete(DeleteBehavior.ClientCascade);
 
             builder.Property(fs => fs.Class)
                    .IsRequired();
@@ -26,18 +28,15 @@ namespace FLyTicketService.Data.Configuration
             builder.Property(fs => fs.IsAvailable)
                    .IsRequired();
 
-            builder.HasOne(fs => fs.FlightsPlan)
-                   .WithMany(fp => fp.Seats)
-                   .HasForeignKey(fs => fs.FlightsPlanId)
-                   .IsRequired();
+            builder.Property(fs => fs.Locked)
+                   .IsRequired(false);
 
             builder.HasOne(fs => fs.Ticket)
-                   .WithMany()
-                   .HasForeignKey("TicketId");
+                   .WithOne()
+                   .HasForeignKey<Ticket>(t => t.TicketId)
+                   .OnDelete(DeleteBehavior.NoAction);
 
-            builder.HasOne(fs => fs.Reservation)
-                   .WithMany()
-                   .HasForeignKey("ReservationId");
+            #endregion
         }
 
         #endregion

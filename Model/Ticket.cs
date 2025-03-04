@@ -1,20 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using FLyTicketService.Model.Enums;
 
 namespace FLyTicketService.Model
 {
     public class Ticket
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid TicketId { get; set; }
-
-        [ForeignKey("FlightSeatId")]
         public required FlightSeat FlightSeat { get; set; }
-
-        [ForeignKey("TenantId")]
         public required Tenant Tenant { get; set; }
-
-        public decimal Price { get; set; }
+        public required decimal Price { get; set; }
+        public decimal Discount => Discounts.Sum(s => s.Discount); 
+        public required TicketStatus Status { get; set; }
+        public DateTimeOffset? ReleaseDate { get; set; }
+        public ICollection<DiscountTypes> Discounts { get; set; } = new List<DiscountTypes>();
     }
 }

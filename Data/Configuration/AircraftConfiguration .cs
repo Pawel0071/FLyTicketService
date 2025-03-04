@@ -22,12 +22,12 @@ namespace FLyTicketService.Data.Configuration
 
             builder.Property(a => a.RegistrationNumber)
                    .IsRequired()
-                   .HasMaxLength(10);
+                   .HasMaxLength(15);
 
             builder.HasMany(a => a.Seats)
-                   .WithOne(s => s.Aircraft)
-                   .HasForeignKey(s => s.AircraftId)
-                   .IsRequired();
+                   .WithOne()
+                   .HasForeignKey("AircraftId")
+                   .OnDelete(DeleteBehavior.Cascade);
         }
 
         #endregion

@@ -2,18 +2,19 @@
 
 namespace FLyTicketService.Model
 {
-    public class FlightsPlan: IValidatableObject
+    public class FlightSchedule: IValidatableObject
     {
-        public Guid FlightsPlanId { get; set; } = Guid.NewGuid();
+        public Guid FlightScheduleId { get; set; } = Guid.NewGuid();
         public required Airline Airline { get; set; }
         public required Aircraft Aircraft { get; set; }
         public required ICollection<FlightSeat> Seats { get; set; }
         public int TotalSeats => this.Seats.Count;
         public int AvailableSeats => this.Seats.Count(s => s.IsAvailable);
         public int OccupiedSeats => this.Seats.Count(s => !s.IsAvailable);
-        public required string FlyNumber { get; set; }
-        public DateTime Departure { get; set; }
-        public DateTime Arrival { get; set; }
+        public required string FlightId { get; set; }
+        public required FlightType Type { get; set; }
+        public required DateTimeOffset Departure { get; set; }
+        public required DateTimeOffset Arrival { get; set; }
         public required Airport Origin { get; set; }
         public required Airport Destination { get; set; }
         public decimal Price { get; set; }

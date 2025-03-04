@@ -48,7 +48,7 @@ namespace FLyTicketService.Data.Configuration
             builder.Property(a => a.Timezone)
                    .IsRequired();
 
-            builder.Property(a => a.DST)
+            builder.Property(a => a.DaylightSavingTime)
                    .IsRequired()
                    .HasMaxLength(1);
         }

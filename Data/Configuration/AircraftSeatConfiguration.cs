@@ -26,10 +26,10 @@ namespace FLyTicketService.Data.Configuration
             builder.Property(ast => ast.OutOfService)
                    .IsRequired();
 
-            builder.HasOne(ast => ast.Aircraft)
-                   .WithMany(a => a.Seats)
+            builder.HasOne<Aircraft>()
+                   .WithMany()
                    .HasForeignKey(ast => ast.AircraftId)
-                   .IsRequired();
+                   .OnDelete(DeleteBehavior.ClientCascade);
         }
 
         #endregion

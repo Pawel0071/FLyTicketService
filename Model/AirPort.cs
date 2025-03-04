@@ -1,4 +1,6 @@
-﻿namespace FLyTicketService.Model
+﻿using FLyTicketService.Model.Enums;
+
+namespace FLyTicketService.Model
 {
     public class Airport
     {
@@ -13,8 +15,8 @@
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public double Altitude { get; set; }
-        public string Timezone { get; set; }
-        public string DST { get; set; }
+        public SimplyTimeZone Timezone { get; set; }
+        public bool DaylightSavingTime { get; set; }
 
         #endregion
     }

@@ -4,7 +4,7 @@ namespace FLyTicketService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SaleController : ControllerBase
+    public class TicketController : ControllerBase
     {
     }
 }

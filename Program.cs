@@ -1,35 +1,54 @@
 using FLyTicketService.Data;
+using FLyTicketService.Mapper;
 using FLyTicketService.Middleware;
+using FLyTicketService.Model;
+using FLyTicketService.Repositories;
+using FLyTicketService.Repositories.Interfaces;
+using FLyTicketService.Service;
+using FLyTicketService.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Add FlyTicketDbContext
-builder.Services.AddDbContext<FLyTicketDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.")));
+builder.Services.AddDbContext<FLyTicketDbContext>(
+    options =>
+        options.UseSqlServer(
+            builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.")));
 
-var app = builder.Build();
+// Correct AutoMapper configuration
+builder.Services.AddAutoMapper(cfg => { cfg.AddProfile<MappingProfile>(); }, AppDomain.CurrentDomain.GetAssemblies());
 
-using (var scope = app.Services.CreateScope())
+// Register repositories and services
+
+builder.Services.AddScoped<IGenericRepository<Ticket>, GenericRepository<Ticket>>();
+builder.Services.AddScoped<IGenericRepository<Tenant>, GenericRepository<Tenant>>();
+builder.Services.AddScoped<IGenericRepository<FlightSchedule>, GenericRepository<FlightSchedule>>();
+builder.Services.AddScoped<ITicketService, TicketService>();
+builder.Services.AddScoped<ITenantService, TenantService>();
+builder.Services.AddScoped<IFlightScheduleService, FlightScheduleService>();
+
+WebApplication app = builder.Build();
+
+using (IServiceScope scope = app.Services.CreateScope())
 {
-    var services = scope.ServiceProvider;
+    IServiceProvider services = scope.ServiceProvider;
 
     try
     {
-        var context = services.GetRequiredService<FLyTicketDbContext>();
+        FLyTicketDbContext context = services.GetRequiredService<FLyTicketDbContext>();
         context.Database.EnsureCreated(); // For initial database creation
         context.Database.Migrate();
     }
     catch (Exception ex)
     {
-        var logger = services.GetRequiredService<ILogger<Program>>();
+        ILogger<Program> logger = services.GetRequiredService<ILogger<Program>>();
         logger.LogError(ex, "An error occurred creating the DB.");
     }
 }
@@ -50,5 +69,3 @@ app.UseMiddleware<ExceptionHandlingMiddleware>(); // Add custom exception handli
 app.MapControllers();
 
 app.Run();
-
-// ExceptionHandlingMiddleware class

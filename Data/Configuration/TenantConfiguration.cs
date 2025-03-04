@@ -6,6 +6,8 @@ namespace FLyTicketService.Data.Configuration
 {
     public class TenantConfiguration: IEntityTypeConfiguration<Tenant>
     {
+        #region Methods
+
         public void Configure(EntityTypeBuilder<Tenant> builder)
         {
             builder.HasKey(t => t.TenantId);
@@ -29,5 +31,7 @@ namespace FLyTicketService.Data.Configuration
             builder.Property(t => t.Email)
                    .HasAnnotation("EmailAddress", true); // Custom annotation for email validation
         }
+
+        #endregion
     }
 }

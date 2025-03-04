@@ -1,4 +1,5 @@
-﻿using FLyTicketService.Infrastructure;
+﻿using FLyTicketService.DTO;
+using FLyTicketService.Infrastructure;
 using FLyTicketService.Model;
 using FLyTicketService.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -21,7 +22,7 @@ namespace FLyTicketService.Controllers
         [OpenApiOperation("GetTenantById", "Get a tenant by ID.")]
         public async Task<ActionResult<Tenant>> GetTenant(Guid tenantId)
         {
-            Tenant? tenant = await _tenantService.GetTenantAsync(tenantId);
+            TenantDTO? tenant = await _tenantService.GetTenantAsync(tenantId);
             if (tenant is null)
             {
                 return NotFound();
