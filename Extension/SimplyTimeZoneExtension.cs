@@ -17,11 +17,11 @@ namespace FLyTicketService.Extension
                 new SimplyTimeZoneInfo(SimplyTimeZone.EST, "Eastern Standard Time", TimeSpan.FromHours(-5)),
                 new SimplyTimeZoneInfo(SimplyTimeZone.EDT, "Eastern Daylight Time", TimeSpan.FromHours(-4)),
                 new SimplyTimeZoneInfo(SimplyTimeZone.PST, "Pacific Standard Time", TimeSpan.FromHours(-8)),
-                new SimplyTimeZoneInfo (SimplyTimeZone.PDT, "Pacific Daylight Time", TimeSpan.FromHours(-7)),
-                new SimplyTimeZoneInfo (SimplyTimeZone.JST, "Japan Standard Time", TimeSpan.FromHours(9)),
-                new SimplyTimeZoneInfo (SimplyTimeZone.AEST, "Australian Eastern Standard Time", TimeSpan.FromHours(10)),
-                new SimplyTimeZoneInfo (SimplyTimeZone.AEDT, "Australian Eastern Daylight Time", TimeSpan.FromHours(11)),
-                new SimplyTimeZoneInfo (SimplyTimeZone.IST, "India Standard Time", TimeSpan.FromHours(5.5))
+                new SimplyTimeZoneInfo(SimplyTimeZone.PDT, "Pacific Daylight Time", TimeSpan.FromHours(-7)),
+                new SimplyTimeZoneInfo(SimplyTimeZone.JST, "Japan Standard Time", TimeSpan.FromHours(9)),
+                new SimplyTimeZoneInfo(SimplyTimeZone.AEST, "Australian Eastern Standard Time", TimeSpan.FromHours(10)),
+                new SimplyTimeZoneInfo(SimplyTimeZone.AEDT, "Australian Eastern Daylight Time", TimeSpan.FromHours(11)),
+                new SimplyTimeZoneInfo(SimplyTimeZone.IST, "India Standard Time", TimeSpan.FromHours(5.5))
             };
         }
 
@@ -62,4 +62,5 @@ namespace FLyTicketService.Extension
             TimeZoneInfo localZone = TimeZoneInfo.Local;
             return TimeZones.Find(tz => TimeZoneInfo.Equals(TimeZoneInfo.FindSystemTimeZoneById(tz.TimeZone.ToString()), localZone)).TimeZone;
         }
+    }
 }

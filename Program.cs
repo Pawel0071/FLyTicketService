@@ -6,7 +6,6 @@ using FLyTicketService.Repositories.Interfaces;
 using FLyTicketService.Service;
 using FLyTicketService.Service.Interfaces;
 using FLyTicketService.Services;
-using FLyTicketService.Services.Implementations;
 using FLyTicketService.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 

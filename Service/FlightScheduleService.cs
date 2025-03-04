@@ -12,6 +12,7 @@ namespace FLyTicketService.Services
     {
         #region Fields
 
+        private readonly decimal _minimalPrice = 20;
         private readonly IGenericRepository<FlightSchedule> _flightScheduleRepository;
         private readonly IGenericRepository<Aircraft> _aircraftRepository;
         private readonly IGenericRepository<Airline> _airlineRepository;
@@ -39,6 +40,10 @@ namespace FLyTicketService.Services
             _flightTypeRepository = flightTypeRepository;
             _logger = logger;
         }
+
+        #endregion
+
+        #region Methods
 
         public async Task<OperationResult<FlightScheduleDTO?>> GetFlightAsync(string flightId)
         {
@@ -80,13 +85,24 @@ namespace FLyTicketService.Services
 
         public async Task<OperationResult<bool>> ScheduleFlightAsync(FlightScheduleDTO flightSchedule)
         {
-            Airline airline = await _airlineRepository.GetByAsync(x => x.IATA == flightSchedule.AirlineIATA);
-            Aircraft aircraft = await _aircraftRepository.GetByAsync(x => x.RegistrationNumber == flightSchedule.AircraftRegistrationNumber);
-            Airport origin = await _airportRepository.GetByAsync(x => x.IATA == flightSchedule.OriginIATA);
-            Airport destination = await _airportRepository.GetByAsync(x => x.IATA == flightSchedule.DestinationIATA);
-            FlightType flightType = await _flightTypeRepository.GetByAsync(x => x.Name == flightSchedule.FlightType);
+            if (ValidateFlightScheduleDTO(flightSchedule))
+            {
+                return new OperationResult<bool>(OperationStatus.BadRequest, "Invalid flight schedule details", false);
+            }
 
-            FlightSchedule flight = MapFromFlightScheduleDTO(flightSchedule, airline, aircraft, origin, destination, flightType);
+            (Airline? Airline, Aircraft? Aircraft, Airport? Origin, Airport? Destination, FlightType? FlightType) flightDetails =
+                await GetFlightDetailsAsync(flightSchedule);
+
+            if (flightDetails.Airline == null ||
+                flightDetails.Aircraft == null ||
+                flightDetails.Origin == null ||
+                flightDetails.Destination == null ||
+                flightDetails.FlightType == null)
+            {
+                return new OperationResult<bool>(OperationStatus.BadRequest, "Invalid flight details", false);
+            }
+
+            FlightSchedule flight = MapFromFlightScheduleDTO(flightSchedule, flightDetails);
 
             bool result = await _flightScheduleRepository.AddAsync(flight);
             return new OperationResult<bool>(OperationStatus.Created, string.Empty, result);
@@ -94,17 +110,42 @@ namespace FLyTicketService.Services
 
         public async Task<OperationResult<bool>> ScheduleRecurringFlightAsync(FlightScheduleDTO flightSchedule, DaysOfWeekMask dayOfWeek, int numberOfOccuring)
         {
-            Airline airline = await _airlineRepository.GetByAsync(x => x.IATA == flightSchedule.AirlineIATA);
-            Aircraft aircraft = await _aircraftRepository.GetByAsync(x => x.RegistrationNumber == flightSchedule.AircraftRegistrationNumber);
-            Airport origin = await _airportRepository.GetByAsync(x => x.IATA == flightSchedule.OriginIATA);
-            Airport destination = await _airportRepository.GetByAsync(x => x.IATA == flightSchedule.DestinationIATA);
-            FlightType flightType = await _flightTypeRepository.GetByAsync(x => x.Name == flightSchedule.FlightType);
-            
-            List<Task<bool>> tasks = new List<Task<bool>>();
-            for (int i = 0; i < numberOfOccuring; i++)
+            if (!ValidateFlightScheduleDTO(flightSchedule))
             {
-                FlightSchedule flight = MapFromFlightScheduleDTO(flightSchedule, airline, aircraft, origin, destination, flightType);
-                tasks.Add(_flightScheduleRepository.AddAsync(flight));
+                return new OperationResult<bool>(OperationStatus.BadRequest, "Invalid flight schedule details", false);
+            }
+
+            (Airline? Airline, Aircraft? Aircraft, Airport? Origin, Airport? Destination, FlightType? FlightType) flightDetails =
+                await GetFlightDetailsAsync(flightSchedule);
+
+            if (flightDetails.Airline == null ||
+                flightDetails.Aircraft == null ||
+                flightDetails.Origin == null ||
+                flightDetails.Destination == null ||
+                flightDetails.FlightType == null)
+            {
+                return new OperationResult<bool>(OperationStatus.BadRequest, "Invalid flight details", false);
+            }
+
+            List<Task<bool>> tasks = new List<Task<bool>>();
+            DateTimeOffset departureDate = flightSchedule.Departure;
+            DateTimeOffset arrivalDate = flightSchedule.Arrival;
+            int occurrences = 0;
+
+            while (occurrences < numberOfOccuring)
+            {
+                if ((dayOfWeek & (DaysOfWeekMask)(1 << (int)departureDate.DayOfWeek)) != 0)
+                {
+                    FlightSchedule flight = MapFromFlightScheduleDTO(flightSchedule, flightDetails);
+                    flight.Departure = departureDate;
+                    flight.Arrival = arrivalDate;
+
+                    tasks.Add(_flightScheduleRepository.AddAsync(flight));
+                    occurrences++;
+                }
+
+                departureDate = departureDate.AddDays(1);
+                arrivalDate = arrivalDate.AddDays(1);
             }
 
             bool[] results = await Task.WhenAll(tasks);
@@ -113,32 +154,65 @@ namespace FLyTicketService.Services
 
         public async Task<OperationResult<bool>> UpdateFlightAsync(Guid flightScheduleId, FlightScheduleDTO flightSchedule, bool allRecurrences)
         {
+            if (ValidateFlightScheduleDTO(flightSchedule))
+            {
+                return new OperationResult<bool>(OperationStatus.BadRequest, "Invalid flight schedule details", false);
+            }
+
             FlightSchedule? flight = await _flightScheduleRepository.GetByIdAsync(flightScheduleId);
             if (flight == null)
             {
-                return new OperationResult<bool>(false, false);
+                _logger.LogWarning("Flight not found");
+                return new OperationResult<bool>(OperationStatus.NotFound, "Flight not found", false);
             }
 
-            flight.Airline = new Airline { IATA = flightSchedule.AirlineIATA };
-            flight.Aircraft = new Aircraft { RegistrationNumber = flightSchedule.AircraftRegistrationNumber };
-            flight.FlightId = flightSchedule.Number + flightSchedule.NumberSuffix;
-            flight.Type = new FlightType { Name = flightSchedule.FlightType };
-            flight.Departure = flightSchedule.Departure;
-            flight.Arrival = flightSchedule.Arrival;
-            flight.Origin = new Airport { IATA = flightSchedule.OriginIATA };
-            flight.Destination = new Airport { IATA = flightSchedule.DestinationIATA };
-            flight.Price = flightSchedule.Price;
+            (Airline? Airline, Aircraft? Aircraft, Airport? Origin, Airport? Destination, FlightType? FlightType) flightDetails =
+                await GetFlightDetailsAsync(flightSchedule);
 
-            bool result = await _flightScheduleRepository.UpdateAsync(flight);
-            return new OperationResult<bool>(result, result);
+            if (flightDetails.Airline == null ||
+                flightDetails.Aircraft == null ||
+                flightDetails.Origin == null ||
+                flightDetails.Destination == null ||
+                flightDetails.FlightType == null)
+            {
+                return new OperationResult<bool>(OperationStatus.BadRequest, "Invalid flight details", false);
+            }
+
+            bool result = true;
+            if (!allRecurrences)
+            {
+                flight = MapFromFlightScheduleDTO(flightSchedule, flightDetails);
+                flight.FlightScheduleId = flightScheduleId;
+                result = await _flightScheduleRepository.UpdateAsync(flight);
+            }
+            else
+            {
+                IEnumerable<FlightSchedule> flights = await _flightScheduleRepository.FilterByAsync(x => x.FlightId == flight.FlightId);
+                foreach (FlightSchedule f in flights)
+                {
+                    FlightSchedule? updated = MapFromFlightScheduleDTO(flightSchedule, flightDetails);
+                    updated.FlightScheduleId = f.FlightScheduleId;
+                    bool internalResult = await _flightScheduleRepository.UpdateAsync(updated);
+                    result = result && internalResult;
+                }
+            }
+
+            return new OperationResult<bool>(OperationStatus.Ok, string.Empty, result);
         }
 
         public async Task<OperationResult<bool>> DeleteFlightAsync(Guid flightScheduleId, FlightScheduleDTO flightSchedule, bool allRecurrences)
         {
+            FlightSchedule? flight = await _flightScheduleRepository.GetByIdAsync(flightScheduleId);
+            if (flight == null)
+            {
+                _logger.LogWarning("Flight not found");
+                return new OperationResult<bool>(OperationStatus.NotFound, "Flight not found", false);
+            }
+
             bool result = await _flightScheduleRepository.RemoveAsync(flightScheduleId);
-            return new OperationResult<bool>(result, result);
+            return new OperationResult<bool>(OperationStatus.Ok, string.Empty, result);
         }
-    
+
         private FlightScheduleDTO MapToFlightScheduleDTO(FlightSchedule flightSchedule)
         {
             return new FlightScheduleDTO
@@ -157,11 +231,14 @@ namespace FLyTicketService.Services
             };
         }
 
-        private FlightSchedule MapFromFlightScheduleDTO(FlightScheduleDTO flightSchedule, Airline airline, Aircraft aircraft, Airport origin, Airport destination, FlightType flightType)
+        private FlightSchedule MapFromFlightScheduleDTO(
+            FlightScheduleDTO flightSchedule,
+            (Airline? Airline, Aircraft? Aircraft, Airport? Origin, Airport? Destination, FlightType? FlightType) flightDetails
+        )
         {
             List<FlightSeat> flightSeats = new List<FlightSeat>();
 
-            foreach (AircraftSeat aircraftSeat in aircraft.Seats)
+            foreach (AircraftSeat aircraftSeat in flightDetails.Aircraft.Seats)
             {
                 flightSeats.Add(
                     new FlightSeat
@@ -175,17 +252,61 @@ namespace FLyTicketService.Services
             return new FlightSchedule
             {
                 FlightScheduleId = flightSchedule.FlightScheduleId,
-                Airline = airline,
-                Aircraft = aircraft,
-                FlightId = flightSchedule.Number + flightSchedule.NumberSuffix,
+                Airline = flightDetails.Airline,
+                Aircraft = flightDetails.Aircraft,
+                FlightId = $"{flightSchedule.AirlineIATA} {flightSchedule.Number} {flightSchedule.NumberSuffix}",
                 Seats = flightSeats,
-                Type = flightType,
+                Type = flightDetails.FlightType,
                 Departure = flightSchedule.Departure,
                 Arrival = flightSchedule.Arrival,
-                Origin = origin,
-                Destination = destination,
+                Origin = flightDetails.Origin,
+                Destination = flightDetails.Destination,
                 Price = flightSchedule.Price
             };
+        }
+
+        private async Task<(Airline? Airline, Aircraft? Aircraft, Airport? Origin, Airport? Destination, FlightType? FlightType)> GetFlightDetailsAsync(
+            FlightScheduleDTO flightSchedule
+        )
+        {
+            Task<Airline?> airlineTask = _airlineRepository.GetByAsync(x => x.IATA == flightSchedule.AirlineIATA);
+            Task<Aircraft> aircraftTask = _aircraftRepository.GetByAsync(x => x.RegistrationNumber == flightSchedule.AircraftRegistrationNumber);
+            Task<Airport> originTask = _airportRepository.GetByAsync(x => x.IATA == flightSchedule.OriginIATA);
+            Task<Airport> destinationTask = _airportRepository.GetByAsync(x => x.IATA == flightSchedule.DestinationIATA);
+            Task<FlightType> flightTypeTask = _flightTypeRepository.GetByAsync(x => x.Name == flightSchedule.FlightType);
+
+            await Task.WhenAll(
+                airlineTask,
+                aircraftTask,
+                originTask,
+                destinationTask,
+                flightTypeTask);
+
+            return (
+                await airlineTask,
+                await aircraftTask,
+                await originTask,
+                await destinationTask,
+                await flightTypeTask
+            );
+        }
+
+        private bool ValidateFlightScheduleDTO(FlightScheduleDTO flightSchedule)
+        {
+            if (!string.IsNullOrWhiteSpace(flightSchedule.AirlineIATA) &&
+                !string.IsNullOrWhiteSpace(flightSchedule.AircraftRegistrationNumber) &&
+                !string.IsNullOrWhiteSpace(flightSchedule.OriginIATA) &&
+                !string.IsNullOrWhiteSpace(flightSchedule.DestinationIATA) &&
+                !string.IsNullOrWhiteSpace(flightSchedule.FlightType) &&
+                flightSchedule.Departure != default &&
+                flightSchedule.Arrival != default &&
+                flightSchedule.Price > _minimalPrice)
+            {
+                return true;
+            }
+
+            _logger.LogWarning("Invalid flight schedule details");
+            return false;
         }
 
         #endregion

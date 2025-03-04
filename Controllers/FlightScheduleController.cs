@@ -1,6 +1,5 @@
 ﻿using FLyTicketService.DTO;
 using FLyTicketService.Infrastructure;
-using FLyTicketService.Model;
 using FLyTicketService.Model.Enums;
 using FLyTicketService.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -21,14 +20,14 @@ namespace FLyTicketService.Controllers
         [HttpGet("{flightId}")]
         public async Task<IActionResult> GetFlight(string flightId)
         {
-            OperationResult<FlightSchedule?> result = await _flightScheduleService.GetFlightAsync(flightId);
+            OperationResult<FlightScheduleDTO?> result = await _flightScheduleService.GetFlightAsync(flightId);
             return result.GetResult();
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllFlights()
         {
-            OperationResult<IEnumerable<FlightSchedule>> result = await _flightScheduleService.GetAllFlightsAsync();
+            OperationResult<IEnumerable<FlightScheduleDTO>> result = await _flightScheduleService.GetAllFlightsAsync();
             return result.GetResult();
         }
 
