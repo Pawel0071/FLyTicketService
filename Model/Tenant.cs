@@ -13,6 +13,7 @@ namespace FLyTicketService.Model
         public required DateTime BirthDate { get; set; }
         public string? Phone { get; set; }
         public string? Email { get; set; }
+        public IEnumerable<Ticket> Tickets { get; set; }
 
         #endregion
     }

@@ -15,11 +15,29 @@ namespace FLyTicketService.Data.Configuration
             builder.Property(f => f.Departure).IsRequired();
             builder.Property(f => f.Arrival).IsRequired();
             builder.Property(f => f.Price).IsRequired().HasColumnType("decimal(18,2)");
-            builder.HasOne(f => f.Airline).WithMany().IsRequired();
-            builder.HasOne(f => f.Aircraft).WithMany().IsRequired();
-            builder.HasOne(f => f.Origin).WithMany().IsRequired();
-            builder.HasOne(f => f.Destination).WithMany().IsRequired();
+
+            // Configure relationships with explicit delete behavior
+            builder.HasOne(f => f.Airline)
+                   .WithMany()
+                   .IsRequired()
+                   .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(f => f.Aircraft)
+                   .WithMany()
+                   .IsRequired()
+                   .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(f => f.Origin)
+                   .WithMany()
+                   .IsRequired()
+                   .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(f => f.Destination)
+                   .WithMany()
+                   .IsRequired()
+                   .OnDelete(DeleteBehavior.Restrict);
         }
+
     }
 
 }

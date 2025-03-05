@@ -14,11 +14,19 @@ namespace FLyTicketService.Data.Configuration
             builder.Property(fs => fs.SeatNumber).IsRequired().HasMaxLength(10);
             builder.Property(fs => fs.Class).IsRequired();
             builder.Property(fs => fs.IsAvailable).IsRequired();
+
             builder.HasOne(fs => fs.FlightSchedule)
                    .WithMany(f => f.Seats)
                    .HasForeignKey(fs => fs.FlightScheduleId)
                    .OnDelete(DeleteBehavior.Cascade);
+
+            // Explicitly configure the relationship with Ticket
+            builder.HasOne(fs => fs.Ticket)
+                   .WithOne(t => t.FlightSeat)
+                   .HasForeignKey<Ticket>(t => t.TicketId) // Assumes Ticket has FlightSeatId as FK
+                   .IsRequired();
         }
+
     }
 
 }

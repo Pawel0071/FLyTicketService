@@ -1,5 +1,7 @@
 ﻿using FLyTicketService.Data.Configuration;
 using FLyTicketService.Model;
+using FLyTicketService.Model.Enums;
+using FLyTicketService.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using System.Text.Json;
@@ -73,16 +75,25 @@ namespace FLyTicketService.Data
             modelBuilder.ApplyConfiguration(new DiscountConfiguration());
             modelBuilder.ApplyConfiguration(new ConditionConfiguration());
 
+            var options = new JsonSerializerOptions();
+            options.Converters.Add(new EnumConverter<SimplyTimeZone>());
+            options.Converters.Add(new EnumConverter<DaylightSavingTime>());
+            options.Converters.Add(new EnumConverter<SeatClass>());
+            options.Converters.Add(new EnumConverter<DiscountCondition>());
+            options.Converters.Add(new EnumConverter<DiscountCategory>());
+            options.Converters.Add(new EnumConverter<DaysOfWeekMask>());
+            options.Converters.Add(new EnumConverter<TenantGroup>());
+            options.Converters.Add(new EnumConverter<TicketStatus>());
 
             string airportsJson = File.ReadAllText("Data/WarmingUpData/airports.json");
-            List<Airport>? airports = JsonSerializer.Deserialize<List<Airport>>(airportsJson);
+            List<Airport>? airports = JsonSerializer.Deserialize<List<Airport>>(airportsJson, options);
             if (airports != null)
             {
                 modelBuilder.Entity<Airport>().HasData(data: airports);
             }
 
             string aircraftsJson = File.ReadAllText("Data/WarmingUpData/aircrafts.json");
-            List<Aircraft>? aircrafts = JsonSerializer.Deserialize<List<Aircraft>>(aircraftsJson);
+            List<Aircraft>? aircrafts = JsonSerializer.Deserialize<List<Aircraft>>(aircraftsJson, options);
             List<AircraftSeat> aircraftSeats = new List<AircraftSeat>();
 
             if (aircrafts != null)
@@ -106,11 +117,34 @@ namespace FLyTicketService.Data
             }
 
             string airlinesJson = File.ReadAllText("Data/WarmingUpData/airlines.json");
-            List<Airline>? airlines = JsonSerializer.Deserialize<List<Airline>>(airlinesJson);
+            List<Airline>? airlines = JsonSerializer.Deserialize<List<Airline>>(airlinesJson, options);
             if (airlines != null)
             {
                 modelBuilder.Entity<Airline>().HasData(data: airlines);
             }
+
+            string discountJson = File.ReadAllText("Data/WarmingUpData/discount.json");
+            List<Discount>? discounts = JsonSerializer.Deserialize<List<Discount>>(discountJson, options);
+            List<Condition> discountConditions = new List<Condition>();
+            if (discounts != null)
+            {
+                foreach (Discount discount in discounts)
+                {
+                    if (discount.Conditions != null)
+                    {
+                        foreach (Condition condition in discount.Conditions)
+                        {
+                            condition.DiscountId = discount.DiscountId;
+                            discountConditions.Add(condition);
+                        }
+                    }
+                    discount.Conditions = new List<Condition>(); // Initialize with an empty list to avoid null reference
+                }
+                modelBuilder.Entity<Discount>().HasData(data: discounts);
+                modelBuilder.Entity<Condition>().HasData(data: discountConditions);
+            }
+
+
         }
 
         #endregion

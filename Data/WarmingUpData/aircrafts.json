@@ -5,80 +5,222 @@
     "Seats": [
       {
         "SeatNumber": "1A",
-        "Class": 1,
+        "Class": "First",
         "OutOfService": false
       },
       {
         "SeatNumber": "1B",
-        "Class": 1,
+        "Class": "First",
         "OutOfService": false
       },
       {
         "SeatNumber": "1C",
-        "Class": 1,
+        "Class": "First",
         "OutOfService": false
       },
       {
         "SeatNumber": "1D",
-        "Class": 1,
+        "Class": "First",
         "OutOfService": false
       },
       {
         "SeatNumber": "1E",
-        "Class": 1,
+        "Class": "First",
         "OutOfService": false
       },
       {
+        "SeatNumber": "1F",
+        "Class": "First",
+        "OutOfService": false
+      },
+
+      {
         "SeatNumber": "2A",
-        "Class": 1,
+        "Class": "Business",
         "OutOfService": false
       },
       {
         "SeatNumber": "2B",
-        "Class": 1,
+        "Class": "Business",
         "OutOfService": false
       },
       {
         "SeatNumber": "2C",
-        "Class": 1,
+        "Class": "Business",
         "OutOfService": false
       },
       {
         "SeatNumber": "2D",
-        "Class": 1,
+        "Class": "Business",
         "OutOfService": false
       },
       {
         "SeatNumber": "2E",
-        "Class": 1,
+        "Class": "Business",
         "OutOfService": false
       },
       {
+        "SeatNumber": "2F",
+        "Class": "Business",
+        "OutOfService": false
+      },
+
+      {
         "SeatNumber": "3A",
-        "Class": 1,
+        "Class": "Business",
         "OutOfService": false
       },
       {
         "SeatNumber": "3B",
-        "Class": 1,
-        "OutOfService": false
+        "Class": "Business",
+        "OutOfService": true
       },
-      {       
+      {
         "SeatNumber": "3C",
-        "Class": 1,
+        "Class": "Business",
         "OutOfService": false
       },
       {
         "SeatNumber": "3D",
-        "Class": 1,
+        "Class": "Business",
         "OutOfService": false
       },
       {
         "SeatNumber": "3E",
-        "Class": 1,
+        "Class": "Business",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "3F",
+        "Class": "Business",
+        "OutOfService": false
+      },
+
+      {
+        "SeatNumber": "4A",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "4B",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "4C",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "4D",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "4E",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "4F",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+
+      {
+        "SeatNumber": "5A",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "5B",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "5C",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "5D",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "5E",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "5F",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+
+      {
+        "SeatNumber": "6A",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "6B",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "6C",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "6D",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "6E",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "6F",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+
+      {
+        "SeatNumber": "7A",
+        "Class": "Economy",
+        "OutOfService": true
+      },
+      {
+        "SeatNumber": "7B",
+        "Class": "Economy",
+        "OutOfService": true
+      },
+      {
+        "SeatNumber": "7C",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "7D",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "7E",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "7F",
+        "Class": "Economy",
         "OutOfService": false
       }
     ]
+
   },
   {
     "Model": "Airbus A320Neo",
@@ -86,52 +228,185 @@
     "Seats": [
       {
         "SeatNumber": "1A",
-        "Class": 1,
+        "Class": "First",
         "OutOfService": false
       },
       {
         "SeatNumber": "1B",
-        "Class": 1,
+        "Class": "First",
         "OutOfService": false
       },
       {
         "SeatNumber": "1C",
-        "Class": 1,
+        "Class": "First",
         "OutOfService": false
       },
       {
         "SeatNumber": "1D",
-        "Class": 1,
+        "Class": "First",
         "OutOfService": false
       },
       {
         "SeatNumber": "1E",
-        "Class": 1,
+        "Class": "First",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "1F",
+        "Class": "First",
         "OutOfService": false
       },
       {
         "SeatNumber": "2A",
-        "Class": 1,
+        "Class": "First",
         "OutOfService": false
       },
       {
         "SeatNumber": "2B",
-        "Class": 1,
+        "Class": "First",
         "OutOfService": false
       },
       {
         "SeatNumber": "2C",
-        "Class": 1,
+        "Class": "First",
         "OutOfService": false
       },
       {
         "SeatNumber": "2D",
-        "Class": 1,
+        "Class": "First",
         "OutOfService": false
       },
       {
         "SeatNumber": "2E",
-        "Class": 1,
+        "Class": "First",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "2F",
+        "Class": "First",
+        "OutOfService": false
+      },
+
+      {
+        "SeatNumber": "3A",
+        "Class": "Business",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "3B",
+        "Class": "Business",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "3C",
+        "Class": "Business",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "3D",
+        "Class": "Business",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "3E",
+        "Class": "Business",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "3F",
+        "Class": "Business",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "4A",
+        "Class": "Business",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "4B",
+        "Class": "Business",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "4C",
+        "Class": "Business",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "4D",
+        "Class": "Business",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "4E",
+        "Class": "Business",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "4F",
+        "Class": "Business",
+        "OutOfService": false
+      },
+
+      {
+        "SeatNumber": "5A",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "5B",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "5C",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "5D",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "5E",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "5F",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+
+      {
+        "SeatNumber": "6A",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "6B",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "6C",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "6D",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "6E",
+        "Class": "Economy",
+        "OutOfService": false
+      },
+      {
+        "SeatNumber": "6F",
+        "Class": "Economy",
         "OutOfService": false
       }
     ]

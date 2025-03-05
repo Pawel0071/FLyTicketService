@@ -82,7 +82,7 @@ public class DiscountService: IDiscountService
     {
         _logger.LogInformation($"Updating discount type with ID {discountId}");
 
-        Discount? discount = await _discountRepository.GetByAsync(x => x.DiscountTypeId == discountId);
+        Discount? discount = await _discountRepository.GetByAsync(x => x.DiscountId == discountId);
 
         if (discount == null)
         {
@@ -105,7 +105,7 @@ public class DiscountService: IDiscountService
     {
         _logger.LogInformation($"Deleting discount type with ID {discountId}");
 
-        Discount? discount = await _discountRepository.GetByAsync(x => x.DiscountTypeId == discountId);
+        Discount? discount = await _discountRepository.GetByAsync(x => x.DiscountId == discountId);
 
         if (discount == null)
         {
@@ -113,7 +113,7 @@ public class DiscountService: IDiscountService
             return new OperationResult<bool>(OperationStatus.NotFound, "Discount type not found", false);
         }
 
-        await _discountRepository.RemoveAsync(discount.DiscountTypeId);
+        await _discountRepository.RemoveAsync(discount.DiscountId);
 
         _logger.LogInformation("Discount type deleted successfully");
         return new OperationResult<bool>(OperationStatus.Ok, "Discount type deleted successfully", true);

@@ -13,6 +13,7 @@ namespace FLyTicketService.Model
         public SeatClass Class { get; set; }
         public bool IsAvailable { get; set; }
         public DateTime? Locked { get; set; }
+        public Guid? TicketId { get; set; }
         public Ticket? Ticket { get; set; }
 
         #endregion

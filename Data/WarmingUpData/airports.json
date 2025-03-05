@@ -8,7 +8,7 @@
     "Latitude": 33.6367,
     "Longitude": -84.4281,
     "Altitude": 1026.0,
-    "Timezone": "America/New_York",
+    "Timezone": "EDT",
     "DST": "A",
     "Continent": "North America"
   },
@@ -21,7 +21,7 @@
     "Latitude": 40.0801,
     "Longitude": 116.5846,
     "Altitude": 116.0,
-    "Timezone": "Asia/Shanghai",
+    "Timezone": "CST",
     "DST": "N",
     "Continent": "Asia"
   },
@@ -34,7 +34,7 @@
     "Latitude": 33.9425,
     "Longitude": -118.4081,
     "Altitude": 125.0,
-    "Timezone": "America/Los_Angeles",
+    "Timezone": "PDT",
     "DST": "A",
     "Continent": "North America"
   },
@@ -47,7 +47,7 @@
     "Latitude": 41.9786,
     "Longitude": -87.9048,
     "Altitude": 672.0,
-    "Timezone": "America/Chicago",
+    "Timezone": "CDT",
     "DST": "A",
     "Continent": "North America"
   },
@@ -60,7 +60,7 @@
     "Latitude": 32.8968,
     "Longitude": -97.038,
     "Altitude": 607.0,
-    "Timezone": "America/Chicago",
+    "Timezone": "CDT",
     "DST": "A",
     "Continent": "North America"
   },
@@ -73,7 +73,7 @@
     "Latitude": 39.8617,
     "Longitude": -104.6731,
     "Altitude": 5431.0,
-    "Timezone": "America/Denver",
+    "Timezone": "MDT",
     "DST": "A",
     "Continent": "North America"
   },
@@ -86,7 +86,7 @@
     "Latitude": 40.6413,
     "Longitude": -73.7781,
     "Altitude": 13.0,
-    "Timezone": "America/New_York",
+    "Timezone": "EDT",
     "DST": "A",
     "Continent": "North America"
   },
@@ -99,7 +99,7 @@
     "Latitude": 37.6188,
     "Longitude": -122.375,
     "Altitude": 13.0,
-    "Timezone": "America/Los_Angeles",
+    "Timezone": "PDT",
     "DST": "A",
     "Continent": "North America"
   },
@@ -112,7 +112,7 @@
     "Latitude": 47.4502,
     "Longitude": -122.3088,
     "Altitude": 433.0,
-    "Timezone": "America/Los_Angeles",
+    "Timezone": "PDT",
     "DST": "A",
     "Continent": "North America"
   },
@@ -125,7 +125,7 @@
     "Latitude": 25.7959,
     "Longitude": -80.287,
     "Altitude": 8.0,
-    "Timezone": "America/New_York",
+    "Timezone": "EDT",
     "DST": "A",
     "Continent": "North America"
   },
@@ -138,7 +138,7 @@
     "Latitude": 51.4706,
     "Longitude": -0.4619,
     "Altitude": 83.0,
-    "Timezone": "Europe/London",
+    "Timezone": "BST",
     "DST": "E",
     "Continent": "Europe"
   },
@@ -151,7 +151,7 @@
     "Latitude": 49.0097,
     "Longitude": 2.5479,
     "Altitude": 392.0,
-    "Timezone": "Europe/Paris",
+    "Timezone": "CEST",
     "DST": "E",
     "Continent": "Europe"
   },
@@ -164,7 +164,7 @@
     "Latitude": 50.0379,
     "Longitude": 8.5622,
     "Altitude": 364.0,
-    "Timezone": "Europe/Berlin",
+    "Timezone": "CEST",
     "DST": "E",
     "Continent": "Europe"
   },
@@ -177,7 +177,7 @@
     "Latitude": 52.3086,
     "Longitude": 4.7639,
     "Altitude": -11.0,
-    "Timezone": "Europe/Amsterdam",
+    "Timezone": "CEST",
     "DST": "E",
     "Continent": "Europe"
   },
@@ -190,7 +190,7 @@
     "Latitude": 40.4719,
     "Longitude": -3.5626,
     "Altitude": 1998.0,
-    "Timezone": "Europe/Madrid",
+    "Timezone": "CEST",
     "DST": "E",
     "Continent": "Europe"
   },
@@ -203,7 +203,7 @@
     "Latitude": 41.8003,
     "Longitude": 12.2389,
     "Altitude": 13.0,
-    "Timezone": "Europe/Rome",
+    "Timezone": "CEST",
     "DST": "E",
     "Continent": "Europe"
   },
@@ -216,7 +216,7 @@
     "Latitude": 48.3538,
     "Longitude": 11.7861,
     "Altitude": 1487.0,
-    "Timezone": "Europe/Berlin",
+    "Timezone": "CEST",
     "DST": "E",
     "Continent": "Europe"
   },
@@ -229,7 +229,7 @@
     "Latitude": 41.2974,
     "Longitude": 2.0833,
     "Altitude": 12.0,
-    "Timezone": "Europe/Madrid",
+    "Timezone": "CEST",
     "DST": "E",
     "Continent": "Europe"
   },
@@ -242,8 +242,8 @@
     "Latitude": 41.2753,
     "Longitude": 28.7519,
     "Altitude": 325.0,
-    "Timezone": "Europe/Istanbul",
-    "DST": "E",
+    "Timezone": "TRT",
+    "DST": "N",
     "Continent": "Europe"
   },
   {
@@ -255,7 +255,7 @@
     "Latitude": 47.4647,
     "Longitude": 8.5492,
     "Altitude": 1416.0,
-    "Timezone": "Europe/Zurich",
+    "Timezone": "CEST",
     "DST": "E",
     "Continent": "Europe"
   },
@@ -268,7 +268,7 @@
     "Latitude": 52.1657,
     "Longitude": 20.9671,
     "Altitude": 362.0,
-    "Timezone": "Europe/Warsaw",
+    "Timezone": "CEST",
     "DST": "E",
     "Continent": "Europe"
   },
@@ -281,7 +281,7 @@
     "Latitude": 50.0777,
     "Longitude": 19.7848,
     "Altitude": 791.0,
-    "Timezone": "Europe/Warsaw",
+    "Timezone": "CEST",
     "DST": "E",
     "Continent": "Europe"
   },
@@ -294,7 +294,7 @@
     "Latitude": -26.1338,
     "Longitude": 28.2425,
     "Altitude": 5558.0,
-    "Timezone": "Africa/Johannesburg",
+    "Timezone": "SAST",
     "DST": "N",
     "Continent": "Africa"
   },
@@ -307,7 +307,7 @@
     "Latitude": 30.1219,
     "Longitude": 31.4056,
     "Altitude": 382.0,
-    "Timezone": "Africa/Cairo",
+    "Timezone": "EET",
     "DST": "N",
     "Continent": "Africa"
   },
@@ -320,7 +320,7 @@
     "Latitude": -33.9648,
     "Longitude": 18.6017,
     "Altitude": 151.0,
-    "Timezone": "Africa/Johannesburg",
+    "Timezone": "SAST",
     "DST": "N",
     "Continent": "Africa"
   }

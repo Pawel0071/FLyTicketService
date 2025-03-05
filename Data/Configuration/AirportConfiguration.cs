@@ -20,7 +20,7 @@ namespace FLyTicketService.Data.Configuration
             builder.Property(a => a.Longitude).IsRequired();
             builder.Property(a => a.Altitude).IsRequired();
             builder.Property(a => a.Timezone).IsRequired();
-            builder.Property(a => a.DaylightSavingTime).IsRequired();
+            builder.Property(a => a.DST).IsRequired();
             builder.Property(a => a.Continent).IsRequired().HasMaxLength(50); // Maximum length for the continent name
             builder.HasIndex(a => a.IATA).HasDatabaseName("IX_Airport_IATA").IsUnique(); // Ensure IATA codes are unique
             builder.HasIndex(a => a.ICAO).HasDatabaseName("IX_Airport_ICAO").IsUnique(); // Ensure ICAO codes are unique

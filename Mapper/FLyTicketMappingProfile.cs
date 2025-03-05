@@ -61,7 +61,7 @@ namespace FLyTicketService.Mapper
         {
             return new DiscountDTO
             {
-                DiscountTypeId = discount.DiscountTypeId,
+                DiscountTypeId = discount.DiscountId,
                 Name = discount.Name,
                 Value = discount.Value,
                 Description = discount.Description,
@@ -74,7 +74,7 @@ namespace FLyTicketService.Mapper
         {
             return new Discount
             {
-                DiscountTypeId = discountDTO.DiscountTypeId,
+                DiscountId = discountDTO.DiscountTypeId,
                 Name = discountDTO.Name,
                 Value = discountDTO.Value,
                 Description = discountDTO.Description,
