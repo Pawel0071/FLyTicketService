@@ -12,7 +12,6 @@ namespace FLyTicketService.Model
         public int AvailableSeats => this.Seats.Count(s => s.IsAvailable);
         public int OccupiedSeats => this.Seats.Count(s => !s.IsAvailable);
         public required string FlightId { get; set; }
-        public required FlightType Type { get; set; }
         public required DateTimeOffset Departure { get; set; }
         public required DateTimeOffset Arrival { get; set; }
         public required Airport Origin { get; set; }
@@ -31,6 +30,5 @@ namespace FLyTicketService.Model
                 yield return new ValidationResult("Origin and Destination cannot be the same.", new[] { nameof(Origin), nameof(Destination) });
             }
         }
-
     }
 }

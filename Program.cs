@@ -23,17 +23,27 @@ builder.Services.AddDbContext<FLyTicketDbContext>(
         options.UseSqlServer(
             builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.")));
 
-
 // Register repositories and services
 
 builder.Services.AddScoped<IGenericRepository<Ticket>, GenericRepository<Ticket>>();
 builder.Services.AddScoped<IGenericRepository<Tenant>, GenericRepository<Tenant>>();
 builder.Services.AddScoped<IGenericRepository<FlightSchedule>, GenericRepository<FlightSchedule>>();
-builder.Services.AddScoped<IGenericRepository<DiscountType>, GenericRepository<DiscountType>>();
+builder.Services.AddScoped<IGenericRepository<Discount>, GenericRepository<Discount>>();
+builder.Services.AddScoped<IGenericRepository<Aircraft>, GenericRepository<Aircraft>>();
+builder.Services.AddScoped<IGenericRepository<Airline>, GenericRepository<Airline>>();
+builder.Services.AddScoped<IGenericRepository<Airport>, GenericRepository<Airport>>();
+builder.Services.AddScoped<IGenericRepository<FlightSeat>, GenericRepository<FlightSeat>>();
+builder.Services.AddScoped<IGenericRepository<AircraftSeat>, GenericRepository<AircraftSeat>>();
+builder.Services.AddScoped<IGenericRepository<Condition>, GenericRepository<Condition>>();
+
 builder.Services.AddScoped<ITicketService, TicketService>();
 builder.Services.AddScoped<ITenantService, TenantService>();
 builder.Services.AddScoped<IFlightScheduleService, FlightScheduleService>();
-builder.Services.AddScoped<IDiscountTypeService, DiscountTypeService>();
+builder.Services.AddScoped<IDiscountService, DiscountService>();
+builder.Services.AddScoped<IFlightPriceService, FlightPriceService>();
+builder.Services.AddTransient<IGroupStrategy, GroupAStrategy>();
+builder.Services.AddTransient<IGroupStrategy, GroupBStrategy>();
+builder.Services.AddSingleton<IGroupStrategyFactory, GroupStrategyFactory>();
 
 WebApplication app = builder.Build();
 

@@ -1,5 +1,5 @@
 ﻿using FLyTicketService.DTO;
-using FLyTicketService.Infrastructure;
+using FLyTicketService.Shared;
 
 namespace FLyTicketService.Service.Interfaces
 {

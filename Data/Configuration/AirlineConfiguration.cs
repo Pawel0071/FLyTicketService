@@ -10,23 +10,12 @@ namespace FLyTicketService.Data.Configuration
 
         public void Configure(EntityTypeBuilder<Airline> builder)
         {
+            builder.ToTable("Airlines");
             builder.HasKey(a => a.AirlineId);
-
-            builder.Property(a => a.AirlineId)
-                   .IsRequired()
-                   .ValueGeneratedOnAdd();
-
-            builder.Property(a => a.Country)
-                   .IsRequired()
-                   .HasMaxLength(100);
-
-            builder.Property(a => a.IATA)
-                   .IsRequired()
-                   .HasMaxLength(3);
-
-            builder.Property(a => a.AirlineName)
-                   .IsRequired()
-                   .HasMaxLength(200);
+            builder.Property(a => a.AirlineId).IsRequired().ValueGeneratedOnAdd();
+            builder.Property(a => a.Country).IsRequired().HasMaxLength(100);
+            builder.Property(a => a.IATA).IsRequired().HasMaxLength(3);
+            builder.Property(a => a.AirlineName).IsRequired().HasMaxLength(150);
         }
 
         #endregion

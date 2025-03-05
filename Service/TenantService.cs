@@ -1,8 +1,9 @@
 ﻿using FLyTicketService.DTO;
-using FLyTicketService.Infrastructure;
+using FLyTicketService.Mapper;
 using FLyTicketService.Model;
 using FLyTicketService.Repositories.Interfaces;
 using FLyTicketService.Service.Interfaces;
+using FLyTicketService.Shared;
 
 namespace FLyTicketService.Services
 {
@@ -37,14 +38,7 @@ namespace FLyTicketService.Services
                 return new OperationResult<bool>(OperationStatus.BadRequest, "Invalid tenant data", false);
             }
 
-            Tenant newTenant = new Tenant
-            {
-                Name = tenant.Name,
-                Address = tenant.Address,
-                BirthDate = tenant.BirthDate,
-                Phone = tenant.Phone,
-                Email = tenant.Email
-            };
+            Tenant newTenant = tenant.ToDomain();
 
             bool success = await _tenantRepository.AddAsync(newTenant);
 
@@ -89,15 +83,7 @@ namespace FLyTicketService.Services
                 return new OperationResult<TenantDTO>(OperationStatus.NotFound, "Invalid tenant Id", null);
             }
 
-            TenantDTO tenantDTO = new TenantDTO
-            {
-                TenantId = tenant.TenantId,
-                Name = tenant.Name,
-                Address = tenant.Address,
-                BirthDate = tenant.BirthDate,
-                Phone = tenant.Phone,
-                Email = tenant.Email
-            };
+            TenantDTO tenantDTO = tenant.ToDTO();
 
             _logger.LogInformation("Tenant retrieved successfully");
 
@@ -109,21 +95,7 @@ namespace FLyTicketService.Services
             _logger.LogInformation("Getting all tenants");
 
             IEnumerable<Tenant> tenants = await _tenantRepository.GetAllAsync();
-            List<TenantDTO> tenantDTOs = new List<TenantDTO>();
-
-            foreach (Tenant tenant in tenants)
-            {
-                tenantDTOs.Add(
-                    new TenantDTO
-                    {
-                        TenantId = tenant.TenantId,
-                        Name = tenant.Name,
-                        Address = tenant.Address,
-                        BirthDate = tenant.BirthDate,
-                        Phone = tenant.Phone,
-                        Email = tenant.Email
-                    });
-            }
+            List<TenantDTO> tenantDTOs = tenants.Select(x => x.ToDTO()).ToList();
 
             _logger.LogInformation("Tenants retrieved successfully");
 
@@ -150,6 +122,7 @@ namespace FLyTicketService.Services
 
             existingTenant.Name = tenant.Name;
             existingTenant.Address = tenant.Address;
+            existingTenant.Group = tenant.Group;
             existingTenant.BirthDate = tenant.BirthDate;
             existingTenant.Phone = tenant.Phone;
             existingTenant.Email = tenant.Email;

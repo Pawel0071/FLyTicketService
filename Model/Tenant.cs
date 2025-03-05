@@ -1,4 +1,6 @@
-﻿namespace FLyTicketService.Model
+﻿using FLyTicketService.Model.Enums;
+
+namespace FLyTicketService.Model
 {
     public class Tenant
     {
@@ -7,6 +9,7 @@
         public Guid TenantId { get; set; }
         public required string Name { get; set; }
         public required string Address { get; set; }
+        public required TenantGroup Group { get; set; }
         public required DateTime BirthDate { get; set; }
         public string? Phone { get; set; }
         public string? Email { get; set; }

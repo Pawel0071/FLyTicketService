@@ -1,6 +1,6 @@
 ﻿using FLyTicketService.DTO;
-using FLyTicketService.Infrastructure;
 using FLyTicketService.Service.Interfaces;
+using FLyTicketService.Shared;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FLyTicketService.Controllers
@@ -29,21 +29,26 @@ namespace FLyTicketService.Controllers
         [HttpPost("reserve")]
         public async Task<IActionResult> ReserveTicket([FromQuery] string flightId, [FromQuery] string seatNo, [FromQuery] Guid tenantId)
         {
-            OperationResult<bool> result = await _ticketService.ReserveTicketAsync(flightId, seatNo, tenantId);
-            return StatusCode(result.Status.ToInt(), result.Message);
+            OperationResult<TicketDTO?> result = await _ticketService.ReserveTicketAsync(flightId, seatNo, tenantId);
+            return result.GetResult();
         }
 
         [HttpPost("sell")]
-        public async Task<IActionResult> SellTicket([FromQuery] string flightId, [FromQuery] string seatNo, [FromQuery] Guid tenantId, [FromQuery] decimal discount)
+        public async Task<IActionResult> SellTicket(
+            [FromQuery] string flightId,
+            [FromQuery] string seatNo,
+            [FromQuery] Guid tenantId,
+            [FromBody] IEnumerable<DiscountDTO> discounts
+        )
         {
-            OperationResult<bool> result = await _ticketService.SoldTicketAsync(flightId, seatNo, tenantId, discount);
+            OperationResult<TicketDTO?> result = await _ticketService.SaleTicketAsync(flightId, seatNo, tenantId, discounts);
             return result.GetResult();
         }
 
         [HttpPost("sell-reserved")]
-        public async Task<IActionResult> SellReservedTicket([FromQuery] string ticketNumber, [FromQuery] decimal discount)
+        public async Task<IActionResult> SellReservedTicket([FromQuery] string ticketNumber)
         {
-            OperationResult<bool> result = await _ticketService.SoldReservedTicketAsync(ticketNumber, discount);
+            OperationResult<TicketDTO?> result = await _ticketService.SaleReservedTicketAsync(ticketNumber);
             return result.GetResult();
         }
 
@@ -62,12 +67,45 @@ namespace FLyTicketService.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetTickets([FromQuery] string? flyNumber, [FromQuery] Guid? tenantId)
+        public async Task<IActionResult> GetTickets(
+            [FromQuery] string? flyNumber,
+            [FromQuery] Guid? tenantId,
+            [FromQuery] DateTime? departure,
+            [FromQuery] string? originIATA,
+            [FromQuery] string? destinationIATA
+        )
         {
-            OperationResult<IEnumerable<TicketDTO>> result = await _ticketService.GetTicketsAsync(flyNumber, tenantId);
+            var result = await _ticketService.GetTicketListByAsync(
+                flyNumber,
+                tenantId,
+                departure,
+                originIATA,
+                destinationIATA);
+
             return result.GetResult();
         }
 
-        #endregion
+        [HttpGet("discounts/{ticketNumber}")]
+        public async Task<IActionResult> GetAllApplicableDiscounts(string ticketNumber)
+        {
+            OperationResult<IEnumerable<DiscountDTO>> result = await _ticketService.GetAllApplicableDiscountsAsync(ticketNumber);
+            return result.GetResult();
+        }
+
+        [HttpPost("apply-discount")]
+        public async Task<IActionResult> ApplyDiscount([FromQuery] string ticketNumber, [FromBody] IEnumerable<DiscountDTO> discounts)
+        {
+            OperationResult<bool> result = await _ticketService.ApplyDiscountAsync(ticketNumber, discounts);
+            return result.GetResult();
+        }
+
+        [HttpGet("can-apply-discount/{ticketNumber}")]
+        public async Task<IActionResult> CanDiscountBeApplied(string ticketNumber, [FromQuery] DiscountDTO discount)
+        {
+            OperationResult<bool> result = await _ticketService.CanDiscountAppliedAsync(ticketNumber, discount);
+            return result.GetResult();
+
+            #endregion
+        }
     }
 }

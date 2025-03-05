@@ -4,34 +4,17 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FLyTicketService.Data.Configuration
 {
-    public class AircraftSeatConfiguration: IEntityTypeConfiguration<AircraftSeat>
+    public class AircraftSeatConfiguration : IEntityTypeConfiguration<AircraftSeat>
     {
-        #region Methods
-
         public void Configure(EntityTypeBuilder<AircraftSeat> builder)
         {
-            builder.HasKey(ast => ast.AircraftSeatId);
-
-            builder.Property(ast => ast.AircraftSeatId)
-                   .IsRequired()
-                   .ValueGeneratedOnAdd();
-
-            builder.Property(ast => ast.SeatNumber)
-                   .IsRequired()
-                   .HasMaxLength(10);
-
-            builder.Property(ast => ast.Class)
-                   .IsRequired();
-
-            builder.Property(ast => ast.OutOfService)
-                   .IsRequired();
-
-            builder.HasOne<Aircraft>()
-                   .WithMany()
-                   .HasForeignKey(ast => ast.AircraftId)
-                   .OnDelete(DeleteBehavior.ClientCascade);
+            builder.ToTable("AircraftSeats");
+            builder.HasKey(s => s.AircraftSeatId);
+            builder.Property(s => s.AircraftSeatId).IsRequired().ValueGeneratedOnAdd();
+            builder.Property(s => s.SeatNumber).IsRequired().HasMaxLength(10);
+            builder.Property(s => s.Class).IsRequired();
+            builder.Property(s => s.OutOfService).IsRequired();
         }
-
-        #endregion
     }
+
 }

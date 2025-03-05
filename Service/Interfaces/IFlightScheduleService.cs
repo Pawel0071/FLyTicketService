@@ -1,6 +1,6 @@
 ﻿using FLyTicketService.DTO;
-using FLyTicketService.Infrastructure;
 using FLyTicketService.Model.Enums;
+using FLyTicketService.Shared;
 
 namespace FLyTicketService.Services.Interfaces
 {

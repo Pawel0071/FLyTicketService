@@ -9,9 +9,9 @@ namespace FLyTicketService.Model
         public required FlightSeat FlightSeat { get; set; }
         public required Tenant Tenant { get; set; }
         public required decimal Price { get; set; }
-        public decimal Discount => Discounts.Sum(s => s.Discount); 
+        public decimal Discount => Discounts.Sum(s => s.Value); 
         public required TicketStatus Status { get; set; }
         public DateTimeOffset? ReleaseDate { get; set; }
-        public ICollection<DiscountType> Discounts { get; set; } = new List<DiscountType>();
+        public IEnumerable<Discount> Discounts { get; set; } = new List<Discount>();
     }
 }

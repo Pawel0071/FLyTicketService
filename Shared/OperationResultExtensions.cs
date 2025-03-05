@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace FLyTicketService.Infrastructure
+namespace FLyTicketService.Shared
 {
     public static class OperationResultExtensions
     {

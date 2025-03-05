@@ -24,8 +24,7 @@ namespace FLyTicketService.Data
         public DbSet<Airline> Airlines { get; set; }
         public DbSet<Tenant> Tenants { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
-        public DbSet<FlightType> FlightTypes { get; set; }
-        public DbSet<DiscountType> DiscountTypes { get; set; }
+        public DbSet<Discount> DiscountTypes { get; set; }
 
         #endregion
 
@@ -65,14 +64,15 @@ namespace FLyTicketService.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new FlightSeatConfiguration());
             modelBuilder.ApplyConfiguration(new FlightScheduleConfiguration());
-            modelBuilder.ApplyConfiguration(new FlightTypeConfiguration());
             modelBuilder.ApplyConfiguration(new AircraftSeatConfiguration());
             modelBuilder.ApplyConfiguration(new AircraftConfiguration());
             modelBuilder.ApplyConfiguration(new AirportConfiguration());
             modelBuilder.ApplyConfiguration(new AirlineConfiguration());
             modelBuilder.ApplyConfiguration(new TenantConfiguration());
             modelBuilder.ApplyConfiguration(new TicketConfiguration());
-            modelBuilder.ApplyConfiguration(new DiscountTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new DiscountConfiguration());
+            modelBuilder.ApplyConfiguration(new ConditionConfiguration());
+
 
             string airportsJson = File.ReadAllText("Data/WarmingUpData/airports.json");
             List<Airport>? airports = JsonSerializer.Deserialize<List<Airport>>(airportsJson);

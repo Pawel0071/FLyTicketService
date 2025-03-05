@@ -1,7 +1,7 @@
 ﻿using FLyTicketService.DTO;
-using FLyTicketService.Infrastructure;
 using FLyTicketService.Model.Enums;
 using FLyTicketService.Services.Interfaces;
+using FLyTicketService.Shared;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FLyTicketService.Controllers

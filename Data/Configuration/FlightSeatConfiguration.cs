@@ -4,41 +4,21 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FLyTicketService.Data.Configuration
 {
-    public class FlightSeatConfiguration: IEntityTypeConfiguration<FlightSeat>
+    public class FlightSeatConfiguration : IEntityTypeConfiguration<FlightSeat>
     {
-        #region Methods
-
-        #region Methods
-
         public void Configure(EntityTypeBuilder<FlightSeat> builder)
         {
+            builder.ToTable("FlightSeats");
             builder.HasKey(fs => fs.FlightSeatId);
-
-            builder.Property(fs => fs.SeatNumber)
-                   .IsRequired();
-
-            builder.HasOne<FlightSchedule>()
-                   .WithMany()
+            builder.Property(fs => fs.FlightSeatId).IsRequired().ValueGeneratedOnAdd();
+            builder.Property(fs => fs.SeatNumber).IsRequired().HasMaxLength(10);
+            builder.Property(fs => fs.Class).IsRequired();
+            builder.Property(fs => fs.IsAvailable).IsRequired();
+            builder.HasOne(fs => fs.FlightSchedule)
+                   .WithMany(f => f.Seats)
                    .HasForeignKey(fs => fs.FlightScheduleId)
-                   .OnDelete(DeleteBehavior.ClientCascade);
-
-            builder.Property(fs => fs.Class)
-                   .IsRequired();
-
-            builder.Property(fs => fs.IsAvailable)
-                   .IsRequired();
-
-            builder.Property(fs => fs.Locked)
-                   .IsRequired(false);
-
-            builder.HasOne(fs => fs.Ticket)
-                   .WithOne()
-                   .HasForeignKey<Ticket>(t => t.TicketId)
-                   .OnDelete(DeleteBehavior.NoAction);
-
-            #endregion
+                   .OnDelete(DeleteBehavior.Cascade);
         }
-
-        #endregion
     }
+
 }

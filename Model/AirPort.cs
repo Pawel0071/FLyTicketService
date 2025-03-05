@@ -17,6 +17,7 @@ namespace FLyTicketService.Model
         public double Altitude { get; set; }
         public SimplyTimeZone Timezone { get; set; }
         public bool DaylightSavingTime { get; set; }
+        public string Continent { get; set; }
 
         #endregion
     }

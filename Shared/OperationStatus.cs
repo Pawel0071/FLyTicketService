@@ -1,4 +1,4 @@
-﻿namespace FLyTicketService.Infrastructure
+﻿namespace FLyTicketService.Shared
 {
     public enum OperationStatus
     {

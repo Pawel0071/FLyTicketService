@@ -4,34 +4,20 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FLyTicketService.Data.Configuration
 {
-    public class TenantConfiguration: IEntityTypeConfiguration<Tenant>
+    public class TenantConfiguration : IEntityTypeConfiguration<Tenant>
     {
-        #region Methods
-
         public void Configure(EntityTypeBuilder<Tenant> builder)
         {
+            builder.ToTable("Tenants");
             builder.HasKey(t => t.TenantId);
-
-            builder.Property(t => t.TenantId)
-                   .IsRequired()
-                   .ValueGeneratedOnAdd();
-
-            builder.Property(t => t.Name)
-                   .IsRequired()
-                   .HasMaxLength(100);
-
-            builder.Property(t => t.Address)
-                   .IsRequired()
-                   .HasMaxLength(200);
-
-            builder.Property(t => t.Phone)
-                   .HasMaxLength(15) // Typical length for phone number
-                   .HasAnnotation("Phone", true); // Custom annotation for phone validation
-
-            builder.Property(t => t.Email)
-                   .HasAnnotation("EmailAddress", true); // Custom annotation for email validation
+            builder.Property(t => t.TenantId).IsRequired().ValueGeneratedOnAdd();
+            builder.Property(t => t.Name).IsRequired().HasMaxLength(150);
+            builder.Property(t => t.Address).IsRequired().HasMaxLength(250);
+            builder.Property(t => t.Group).IsRequired();
+            builder.Property(t => t.BirthDate).IsRequired();
+            builder.Property(t => t.Phone).HasMaxLength(15);
+            builder.Property(t => t.Email).HasMaxLength(100);
         }
-
-        #endregion
     }
+
 }
