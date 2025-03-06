@@ -22,20 +22,35 @@ namespace FLyTicketService.Data.Configuration
                    .IsRequired()
                    .OnDelete(DeleteBehavior.Restrict);
 
+            builder.Navigation(f => f.Airline).AutoInclude();
+
             builder.HasOne(f => f.Aircraft)
                    .WithMany()
                    .IsRequired()
                    .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Navigation(f => f.Aircraft).AutoInclude();
 
             builder.HasOne(f => f.Origin)
                    .WithMany()
                    .IsRequired()
                    .OnDelete(DeleteBehavior.Restrict);
 
+            builder.Navigation(f => f.Origin).AutoInclude();
+
             builder.HasOne(f => f.Destination)
                    .WithMany()
                    .IsRequired()
                    .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Navigation(f => f.Destination).AutoInclude();
+
+            builder.HasMany(f => f.Seats)
+                   .WithOne(s => s.FlightSchedule)
+                   .IsRequired()
+                   .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Navigation(f => f.Seats).AutoInclude();
         }
 
     }

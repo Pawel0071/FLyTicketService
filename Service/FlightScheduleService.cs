@@ -1,5 +1,5 @@
 ﻿using FLyTicketService.DTO;
-using FLyTicketService.Extension;
+using FLyTicketService.Mapper;
 using FLyTicketService.Model;
 using FLyTicketService.Model.Enums;
 using FLyTicketService.Repositories.Interfaces;
@@ -42,7 +42,7 @@ namespace FLyTicketService.Services
 
         #region Methods
 
-        public async Task<OperationResult<FlightScheduleDTO?>> GetFlightAsync(string flightId)
+        public async Task<OperationResult<FlightScheduleFullDTO?>> GetFlightAsync(string flightId)
         {
             _logger.LogInformation($"Getting flight with ID {flightId}");
 
@@ -51,17 +51,17 @@ namespace FLyTicketService.Services
             if (flightSchedule == null)
             {
                 _logger.LogWarning("Flight not found");
-                return new OperationResult<FlightScheduleDTO?>(OperationStatus.NotFound, "Flight not found", null);
+                return new OperationResult<FlightScheduleFullDTO?>(OperationStatus.NotFound, "Flight not found", null);
             }
 
-            FlightScheduleDTO flightScheduleDTO = MapToFlightScheduleDTO(flightSchedule);
+            FlightScheduleFullDTO flightScheduleDTO = flightSchedule.ToDTO();
 
             _logger.LogInformation("Flight retrieved successfully");
 
-            return new OperationResult<FlightScheduleDTO?>(OperationStatus.Ok, "Flight retrieved successfully", flightScheduleDTO);
+            return new OperationResult<FlightScheduleFullDTO?>(OperationStatus.Ok, "Flight retrieved successfully", flightScheduleDTO);
         }
 
-        public async Task<OperationResult<IEnumerable<FlightScheduleDTO>>> GetAllFlightsAsync()
+        public async Task<OperationResult<IEnumerable<FlightScheduleFullDTO>>> GetAllFlightsAsync()
         {
             _logger.LogInformation("Getting all flights");
 
@@ -70,14 +70,14 @@ namespace FLyTicketService.Services
             if (!flightSchedules.Any())
             {
                 _logger.LogWarning("No flights found");
-                return new OperationResult<IEnumerable<FlightScheduleDTO>>(OperationStatus.NotFound, "No flights found", Enumerable.Empty<FlightScheduleDTO>());
+                return new OperationResult<IEnumerable<FlightScheduleFullDTO>>(OperationStatus.NotFound, "No flights found", Enumerable.Empty<FlightScheduleFullDTO>());
             }
 
-            IEnumerable<FlightScheduleDTO> flightScheduleDTOs = flightSchedules.Select(MapToFlightScheduleDTO);
+            IEnumerable<FlightScheduleFullDTO> flightScheduleDTOs = flightSchedules.Select(x => x.ToDTO());
 
             _logger.LogInformation("Flights retrieved successfully");
 
-            return new OperationResult<IEnumerable<FlightScheduleDTO>>(OperationStatus.Ok, "Flights retrieved successfully", flightScheduleDTOs);
+            return new OperationResult<IEnumerable<FlightScheduleFullDTO>>(OperationStatus.Ok, "Flights retrieved successfully", flightScheduleDTOs);
         }
 
         public async Task<OperationResult<bool>> ScheduleFlightAsync(FlightScheduleDTO flightSchedule)
@@ -86,7 +86,7 @@ namespace FLyTicketService.Services
             {
                 return new OperationResult<bool>(OperationStatus.BadRequest, "Invalid flight schedule details", false);
             }
-
+                
             FlightDetails flightDetails = await GetFlightDetailsAsync(flightSchedule);
 
             if (flightDetails.Airline == null ||
@@ -214,27 +214,6 @@ namespace FLyTicketService.Services
             return new OperationResult<bool>(OperationStatus.Ok, string.Empty, result);
         }
 
-        private FlightScheduleDTO MapToFlightScheduleDTO(FlightSchedule flightSchedule)
-        {
-            return new FlightScheduleDTO
-            {
-                FlightScheduleId = flightSchedule.FlightScheduleId,
-                AirlineIATA = flightSchedule.Airline.IATA,
-                AircraftRegistrationNumber = flightSchedule.Aircraft.RegistrationNumber,
-                Number = flightSchedule.FlightId.Replace(" ", "").Length >= 8
-                    ? flightSchedule.FlightId.Replace(" ", "").Substring(3, 5)
-                    : string.Empty,
-                NumberSuffix = flightSchedule.FlightId.Replace(" ", "").Length >= 3
-                    ? flightSchedule.FlightId.Replace(" ", "").Substring(flightSchedule.FlightId.Replace(" ", "").Length - 3)
-                    : flightSchedule.FlightId.Replace(" ", ""),
-                Departure = flightSchedule.Departure.ConvertToTargetTimeZone(SimplyTimeZoneExtension.GetSystemTimeZone(), flightSchedule.Origin.Timezone),
-                Arrival = flightSchedule.Arrival.ConvertToTargetTimeZone(SimplyTimeZoneExtension.GetSystemTimeZone(), flightSchedule.Destination.Timezone),
-                OriginIATA = flightSchedule.Origin.IATA,
-                DestinationIATA = flightSchedule.Destination.IATA,
-                Price = flightSchedule.Price
-            };
-        }
-
         private FlightSchedule MapFromFlightScheduleDTO(
             FlightScheduleDTO flightSchedule,
             FlightDetails flightDetails
@@ -270,22 +249,23 @@ namespace FLyTicketService.Services
 
         private async Task<FlightDetails> GetFlightDetailsAsync(FlightScheduleDTO flightSchedule)
         {
-            Task<Airline?> airlineTask = _airlineRepository.GetByAsync(x => x.IATA == flightSchedule.AirlineIATA);
-            Task<Aircraft> aircraftTask = _aircraftRepository.GetByAsync(x => x.RegistrationNumber == flightSchedule.AircraftRegistrationNumber);
-            Task<Airport?> originTask = _airportRepository.GetByAsync(x => x.IATA == flightSchedule.OriginIATA);
-            Task<Airport?> destinationTask = _airportRepository.GetByAsync(x => x.IATA == flightSchedule.DestinationIATA);
-
+            Airline? airlineTask = await _airlineRepository.GetByAsync(x => x.IATA == flightSchedule.AirlineIATA);
+            Aircraft aircraftTask = await _aircraftRepository.GetByAsync(x => x.RegistrationNumber == flightSchedule.AircraftRegistrationNumber);
+            Airport? originTask = await _airportRepository.GetByAsync(x => x.IATA == flightSchedule.OriginIATA);
+            Airport? destinationTask = await _airportRepository.GetByAsync(x => x.IATA == flightSchedule.DestinationIATA);
+/*
+ parallel need configure
             await Task.WhenAll(
                 airlineTask,
                 aircraftTask,
                 originTask,
                 destinationTask);
-
+*/
             return new FlightDetails(
-                await airlineTask,
-                await aircraftTask,
-                await originTask,
-                await destinationTask);
+                airlineTask,
+                aircraftTask,
+                originTask,
+                destinationTask);
         }
 
         private bool ValidateFlightScheduleDTO(FlightScheduleDTO flightSchedule)

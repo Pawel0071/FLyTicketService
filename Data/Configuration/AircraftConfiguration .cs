@@ -18,6 +18,8 @@ namespace FLyTicketService.Data.Configuration
                    .HasForeignKey(s => s.AircraftId)
                    .OnDelete(DeleteBehavior.Cascade);
             builder.HasIndex(a => a.RegistrationNumber).IsUnique();
+            builder.Navigation(a => a.Seats).AutoInclude();
+
         }
     }
 

@@ -1,18 +1,31 @@
 using FLyTicketService.Data;
 using FLyTicketService.Middleware;
 using FLyTicketService.Model;
+using FLyTicketService.Model.Enums;
 using FLyTicketService.Repositories;
 using FLyTicketService.Repositories.Interfaces;
 using FLyTicketService.Service;
 using FLyTicketService.Service.Interfaces;
 using FLyTicketService.Services;
 using FLyTicketService.Services.Interfaces;
+using FLyTicketService.Shared;
 using Microsoft.EntityFrameworkCore;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+       .AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.Converters.Add(new EnumConverter<SimplyTimeZone>());
+            options.JsonSerializerOptions.Converters.Add(new EnumConverter<DaylightSavingTime>());
+            options.JsonSerializerOptions.Converters.Add(new EnumConverter<SeatClass>());
+            options.JsonSerializerOptions.Converters.Add(new EnumConverter<DiscountCondition>());
+            options.JsonSerializerOptions.Converters.Add(new EnumConverter<DiscountCategory>());
+            options.JsonSerializerOptions.Converters.Add(new EnumConverter<DaysOfWeekMask>());
+            options.JsonSerializerOptions.Converters.Add(new EnumConverter<TenantGroup>());
+            options.JsonSerializerOptions.Converters.Add(new EnumConverter<TicketStatus>());
+        });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -21,7 +34,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<FLyTicketDbContext>(
     options =>
         options.UseSqlServer(
-            builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.")));
+            builder.Configuration.GetConnectionString("DefaultConnection") ??
+            Environment.GetEnvironmentVariable("CONNECTION_STRING") ??
+            throw new InvalidOperationException("Connection string 'DefaultConnection' not found."),
+            sqlServerOptions => sqlServerOptions.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null)));
 
 // Register repositories and services
 
@@ -54,7 +70,6 @@ using (IServiceScope scope = app.Services.CreateScope())
     try
     {
         FLyTicketDbContext context = services.GetRequiredService<FLyTicketDbContext>();
-        context.Database.EnsureCreated(); // For initial database creation
         context.Database.Migrate();
     }
     catch (Exception ex)

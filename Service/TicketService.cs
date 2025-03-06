@@ -126,6 +126,14 @@ namespace FLyTicketService.Service
             return new OperationResult<IEnumerable<DiscountDTO>>(OperationStatus.Ok, "Discounts found", discounts.Select(x => x.ToDTO()));
         }
 
+        public async Task<OperationResult<IEnumerable<DiscountDTO>>> GetAllDiscountsAsync()
+        {
+
+            List<Discount> discounts = await _flightPriceService.GetAllDiscountsAsync();
+
+            return new OperationResult<IEnumerable<DiscountDTO>>(OperationStatus.Ok, "Discounts found", discounts.Select(x => x.ToDTO()));
+        }
+
         public async Task<OperationResult<bool>> ApplyDiscountAsync(string ticketNumber, IEnumerable<DiscountDTO> discounts)
         {
             Ticket? ticket = await GetTicketInternalAsync(ticketNumber);
@@ -255,7 +263,7 @@ namespace FLyTicketService.Service
                 return null;
             }
 
-            FlightSeat? seat = flightSchedule.Seats.FirstOrDefault(x => x.SeatNumber == seatNo && x.IsAvailable);
+            FlightSeat? seat = flightSchedule.Seats.FirstOrDefault(x => x.IsAvailable && x.SeatNumber == seatNo);
             if (seat == null)
             {
                 _logger.LogWarning("Seat not available");

@@ -13,6 +13,8 @@ namespace FLyTicketService.Service.Interfaces
 
         public Task<OperationResult<IEnumerable<DiscountDTO>>> GetAllApplicableDiscountsAsync(string ticketNumber);
 
+        public Task<OperationResult<IEnumerable<DiscountDTO>>> GetAllDiscountsAsync();
+
         public Task<OperationResult<bool>> ApplyDiscountAsync(string ticketNumber, IEnumerable<DiscountDTO> discounts);
 
         public Task<OperationResult<bool>> CanDiscountAppliedAsync(string ticketNumber, DiscountDTO discounts);

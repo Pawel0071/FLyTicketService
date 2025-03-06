@@ -35,7 +35,7 @@ namespace FLyTicketService.Data
         public FLyTicketDbContext(DbContextOptions<FLyTicketDbContext> options, IConfiguration configuration): base(options)
         {
             _configuration = configuration;
-            Database.EnsureCreated();
+             //Database.EnsureCreated();
         }
 
         #endregion
@@ -44,22 +44,31 @@ namespace FLyTicketService.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.EnableSensitiveDataLogging();
-
-            if (optionsBuilder.IsConfigured)
+            if (!optionsBuilder.IsConfigured)
             {
-                return;
+                string? connectionString = _configuration.GetConnectionString("DefaultConnection");
+                if (string.IsNullOrWhiteSpace(connectionString))
+                {
+                    throw new InvalidOperationException("Connection string 'DefaultConnection' is missing.");
+                }
+
+                optionsBuilder.UseSqlServer(connectionString, options =>
+                {
+                    options.MigrationsHistoryTable("__EFMigrationsHistory", "FLyTicket");
+                });
+
+                optionsBuilder.UseSqlServer(connectionString, sqlOptions =>
+                    sqlOptions.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null));
             }
 
-            string connectionString = _configuration.GetConnectionString("DefaultConnection")!;
-            if (string.IsNullOrEmpty(connectionString))
+            if (_configuration.GetValue<string>("ASPNETCORE_ENVIRONMENT") == "Development")
             {
-                throw new InvalidOperationException("The ConnectionString property has not been initialized.");
+                optionsBuilder.EnableSensitiveDataLogging();
+                optionsBuilder.ConfigureWarnings(warnings =>
+                    warnings.Throw(RelationalEventId.PendingModelChangesWarning));
             }
-
-            optionsBuilder.UseSqlServer(connectionString, options => options.MigrationsHistoryTable("__EFMigrationsHistory", "FLyTicket"))
-                          .ConfigureWarnings(warnings => warnings.Throw(RelationalEventId.PendingModelChangesWarning));
         }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

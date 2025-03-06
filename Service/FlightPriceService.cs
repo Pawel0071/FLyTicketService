@@ -81,6 +81,12 @@ namespace FLyTicketService.Service
             return true;
         }
 
+        public async Task<List<Discount>> GetAllDiscountsAsync()
+        {
+            IEnumerable<Discount> allDiscounts = await _genericDiscountRepository.GetAllAsync();
+            return allDiscounts.ToList();
+        }
+
         private object? GetTargetObject(Condition condition, Ticket ticket)
         {
             return condition.Category switch

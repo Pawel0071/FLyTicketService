@@ -14,5 +14,7 @@ namespace FLyTicketService.DTO
         public decimal Discount { get; set; }
         public TicketStatus Status { get; set; }
         public DateTime? ReleaseDate { get; set; }
+        public FlightSeatDTO FlightSeat { get; set; }
+        public FlightScheduleFullDTO FlightSchedule { get; set; }
     }
 }

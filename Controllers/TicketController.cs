@@ -92,6 +92,14 @@ namespace FLyTicketService.Controllers
             return result.GetResult();
         }
 
+        [HttpGet("all-discounts")]
+        public async Task<IActionResult> GetAllDiscounts()
+        {
+            OperationResult<IEnumerable<DiscountDTO>> result = await _ticketService.GetAllDiscountsAsync();
+            return result.GetResult();
+        }
+
+
         [HttpPost("apply-discount")]
         public async Task<IActionResult> ApplyDiscount([FromQuery] string ticketNumber, [FromBody] IEnumerable<DiscountDTO> discounts)
         {

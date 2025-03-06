@@ -8,7 +8,7 @@ namespace FLyTicketService.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class FlightScheduleController: ControllerBase
+    public class FlightScheduleController : ControllerBase
     {
         private readonly IFlightScheduleService _flightScheduleService;
 
@@ -20,14 +20,14 @@ namespace FLyTicketService.Controllers
         [HttpGet("{flightId}")]
         public async Task<IActionResult> GetFlight(string flightId)
         {
-            OperationResult<FlightScheduleDTO?> result = await _flightScheduleService.GetFlightAsync(flightId);
+            OperationResult<FlightScheduleFullDTO?> result = await _flightScheduleService.GetFlightAsync(flightId);
             return result.GetResult();
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllFlights()
         {
-            OperationResult<IEnumerable<FlightScheduleDTO>> result = await _flightScheduleService.GetAllFlightsAsync();
+            OperationResult<IEnumerable<FlightScheduleFullDTO>> result = await _flightScheduleService.GetAllFlightsAsync();
             return result.GetResult();
         }
 

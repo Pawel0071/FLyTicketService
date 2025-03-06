@@ -14,6 +14,7 @@ namespace FLyTicketService.Data.Configuration
             builder.Property(s => s.SeatNumber).IsRequired().HasMaxLength(10);
             builder.Property(s => s.Class).IsRequired();
             builder.Property(s => s.OutOfService).IsRequired();
+
         }
     }
 

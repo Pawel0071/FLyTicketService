@@ -7,7 +7,6 @@ WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
-
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
@@ -27,4 +26,11 @@ RUN dotnet publish "./FLyTicketService.csproj" -c $BUILD_CONFIGURATION -o /app/p
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+
+# Set environment variables for SQL Server connection
+ENV SQL_SERVER=sql1
+ENV SQL_PORT=1433
+ENV CONNECTION_STRING="Server=${SQL_SERVER},${SQL_PORT};Database=YourDatabaseName;User Id=sa;Password=2019Venza;"
+
+# Ensure the app listens on HTTPS and the required port
 ENTRYPOINT ["dotnet", "FLyTicketService.dll"]

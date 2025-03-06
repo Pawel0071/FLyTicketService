@@ -28,5 +28,25 @@
     "AirlineName": "LOT",
     "Country": "Poland",
     "IATA": "LO"
+  },
+  {
+    "AirlineName": "Qantas",
+    "Country": "Australia",
+    "IATA": "QF"
+  },
+  {
+    "AirlineName": "Cathay Pacific",
+    "Country": "Hong Kong",
+    "IATA": "CX"
+  },
+  {
+    "AirlineName": "Singapore Airlines",
+    "Country": "Singapore",
+    "IATA": "SQ"
+  },
+  {
+    "AirlineName": "Virgin Australia",
+    "Country": "Australia",
+    "IATA": "VA"
   }
   ]
