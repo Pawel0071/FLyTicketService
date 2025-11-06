@@ -1,7 +1,7 @@
 # FLyTicketService
 
 [![Build Status](https://github.com/Pawel0071/FLyTicketService/workflows/Unit%20Tests/badge.svg)](https://github.com/Pawel0071/FLyTicketService/actions)
-[![Tests](https://img.shields.io/badge/tests-43%20passing-brightgreen)](https://github.com/Pawel0071/FLyTicketService)
+[![Tests](https://img.shields.io/badge/tests-181%20passing-brightgreen)](https://github.com/Pawel0071/FLyTicketService)
 [![.NET](https://img.shields.io/badge/.NET-8.0-512BD4)](https://dotnet.microsoft.com/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
@@ -166,57 +166,157 @@ docker run -p 8080:8080 -e CONNECTION_STRING="YourConnectionString" flyticketser
 
 ```
 FlyTicketService/
-├── Controllers/              # Kontrolery API
-│   ├── TicketController.cs
-│   ├── FlightScheduleController.cs
-│   ├── TenantController.cs
-│   └── DiscountTypeController.cs
-├── Service/                  # Logika biznesowa
-│   ├── TicketService.cs
-│   ├── FlightPriceService.cs
-│   ├── FlightScheduleService.cs
-│   ├── TenantService.cs
-│   ├── DiscountService.cs
-│   ├── GroupAStrategy.cs
-│   ├── GroupBStrategy.cs
-│   └── GroupStrategyFactory.cs
-├── Repositories/             # Warstwa dostępu do danych
-│   ├── GenericRepository.cs
-│   └── Interfaces/
-├── Model/                    # Modele domenowe
-│   ├── Ticket.cs
-│   ├── FlightSchedule.cs
-│   ├── Tenant.cs
-│   ├── Discount.cs
-│   ├── Aircraft.cs
-│   ├── Airline.cs
-│   ├── Airport.cs
-│   └── Enums/
-├── DTO/                      # Data Transfer Objects
-│   ├── TicketDTO.cs
-│   ├── FlightScheduleDTO.cs
-│   └── ...
-├── Data/                     # Konfiguracja EF Core
-│   ├── FLyTicketDbContext.cs
-│   ├── Configuration/
-│   └── WarmingUpData/
-├── Mapper/                   # Profile AutoMapper
-│   └── FLyTicketMappingProfile.cs
-├── Middleware/               # Custom middleware
-│   └── ExceptionHandlingMiddleware.cs
-├── Shared/                   # Wspólne komponenty
-│   ├── OperationResult.cs
-│   └── FlightDetails.cs
-├── Extension/                # Rozszerzenia
-│   └── SimplyTimeZoneExtension.cs
-├── Migrations/               # Migracje EF Core
-├── Scripts/                  # Skrypty PowerShell
-└── FlyTicketService.Tests/   # Projekt testowy
-    └── Services/
-        ├── TicketServiceTests.cs
-        ├── FlightPriceServiceTests.cs
-        └── ...
+├── 📂 Controllers/                    # Kontrolery API (REST endpoints)
+│   ├── TicketController.cs           # Zarządzanie biletami (rezerwacja, sprzedaż)
+│   ├── FlightScheduleController.cs   # Harmonogramy lotów
+│   ├── TenantController.cs           # Zarządzanie klientami
+│   └── DscountTypeController.cs      # Typy rabatów i warunki
+│
+├── 📂 Service/                        # Logika biznesowa
+│   ├── ✈️ TicketService.cs           # Zarządzanie cyklem życia biletu
+│   ├── 💰 FlightPriceService.cs      # Obliczanie cen i rabatów
+│   ├── 📅 FlightScheduleService.cs   # Obsługa harmonogramów lotów
+│   ├── 👥 TenantService.cs           # Zarządzanie klientami
+│   ├── 🎫 DiscountService.cs         # System rabatowy
+│   ├── 🔷 GroupAStrategy.cs          # Strategia dla klientów Group A
+│   ├── 🔶 GroupBStrategy.cs          # Strategia dla klientów Group B
+│   ├── 🏭 GroupStrategyFactory.cs    # Fabryka strategii grupowych
+│   └── Interfaces/                   # Interfejsy serwisów
+│
+├── 📂 Repositories/                   # Warstwa dostępu do danych
+│   ├── GenericRepositorycs.cs        # Generyczne repozytorium (CRUD)
+│   └── Interfaces/                   # Interfejsy repozytoriów
+│       └── IGenericRepository.cs
+│
+├── 📂 Model/                          # Modele domenowe (Entity Framework)
+│   ├── Ticket.cs                     # Bilet lotniczy
+│   ├── FlightSchedule.cs             # Harmonogram lotu
+│   ├── FlightSeat.cs                 # Miejsce w samolocie
+│   ├── Tenant.cs                     # Klient/Najemca
+│   ├── Discount.cs                   # Rabat
+│   ├── Condition.cs                  # Warunek rabatu
+│   ├── Aircraft.cs                   # Samolot
+│   ├── AircraftSeat.cs               # Konfiguracja miejsc w samolocie
+│   ├── Airline.cs                    # Linia lotnicza
+│   ├── AirPort.cs                    # Port lotniczy
+│   └── Enums/                        # Enumy (TicketStatus, TenantGroup, etc.)
+│
+├── 📂 DTO/                            # Data Transfer Objects (API contracts)
+│   ├── TicketDTO.cs                  # DTO biletu
+│   ├── FlightScheduleDTO.cs          # DTO harmonogramu
+│   ├── FlightScheduleFullDTO.cs      # Pełne info o locie (z zagnieżdżonymi obiektami)
+│   ├── FlightSeatDTO.cs              # DTO miejsca
+│   ├── TenantDTO.cs                  # DTO klienta
+│   ├── DiscountDTO.cs                # DTO rabatu
+│   ├── ConditionDTO.cs               # DTO warunku
+│   ├── AircraftDTO.cs                # DTO samolotu
+│   ├── AirlineDTO.cs                 # DTO linii lotniczej
+│   └── AirportDTO.cs                 # DTO portu lotniczego
+│
+├── 📂 Data/                           # Konfiguracja Entity Framework Core
+│   ├── FLyTicketDbContext.cs         # DbContext z konfiguracją
+│   ├── Configuration/                # Fluent API configurations
+│   │   ├── AircraftConfiguration.cs
+│   │   ├── AircraftSeatConfiguration.cs
+│   │   ├── AirlineConfiguration.cs
+│   │   ├── AirportConfiguration.cs
+│   │   ├── ConditionConfiguration.cs
+│   │   ├── DiscountConfiguration.cs
+│   │   ├── FlightScheduleConfiguration.cs
+│   │   ├── FlightSeatConfiguration.cs
+│   │   ├── TenantConfiguration.cs
+│   │   └── TicketConfigurationcs.cs
+│   └── WarmingUpData/                # Dane początkowe (seed data)
+│       ├── aircrafts.json            # ~10 samolotów
+│       ├── airlines.json             # ~10 linii lotniczych
+│       ├── airports.json             # ~30 portów lotniczych
+│       └── discount.json             # Przykładowe rabaty
+│
+├── 📂 Mapper/                         # AutoMapper profiles
+│   └── FLyTicketMappingProfile.cs    # Mapowania DTO ↔ Domain
+│
+├── 📂 Middleware/                     # Custom middleware
+│   └── ExceptionHandlingMiddleware.cs # Globalna obsługa błędów HTTP
+│
+├── 📂 Shared/                         # Wspólne komponenty
+│   ├── OperationResult.cs            # Wzorzec Result dla operacji
+│   ├── OperationResultExtensions.cs  # Rozszerzenia konwersji do IActionResult
+│   ├── OperationStatus.cs            # Enum statusów operacji
+│   ├── FlightDetails.cs              # Record ze szczegółami lotu
+│   └── EnumConverter.cs              # JSON converter dla enumów
+│
+├── 📂 Extension/                      # Rozszerzenia
+│   ├── SimplyTimeZoneExtension.cs    # Konwersje stref czasowych
+│   └── SimplyTimeZoneInfo.cs         # Helper dla stref czasowych
+│
+├── 📂 Migrations/                     # Migracje Entity Framework Core
+│   ├── 20250306152449_InitialCreate.cs
+│   ├── 20250306152449_InitialCreate.Designer.cs
+│   └── FLyTicketDbContextModelSnapshot.cs
+│
+├── 📂 Scripts/                        # Skrypty testowe API
+│   ├── test-api.sh                   # Bash script (Linux/macOS)
+│   ├── GetData.ps1                   # PowerShell - pobieranie danych
+│   ├── tenant.ps1                    # PowerShell - dodawanie tenantów
+│   ├── Flight.ps1                    # PowerShell - dodawanie lotów
+│   └── Tickets.ps1                   # PowerShell - operacje na biletach
+│
+├── 📂 FlyTicketService.Tests/         # 🧪 Projekt testowy (181 testów)
+│   │
+│   ├── 📂 Controllers/                # Testy kontrolerów (32 testy)
+│   │   ├── DscountTypeControllerTests.cs (8 testów)
+│   │   ├── FlightScheduleControllerTests.cs (11 testów)
+│   │   ├── TenantControllerTests.cs (8 testów)
+│   │   └── TicketControllerTests.cs (5 testów)
+│   │
+│   ├── 📂 Services/                   # Testy serwisów (41 testów)
+│   │   ├── TicketServiceTests.cs (9 testów)
+│   │   ├── FlightPriceServiceTests.cs (7 testów)
+│   │   ├── TenantServiceTests.cs (6 testów)
+│   │   ├── FlightScheduleServiceTests.cs (6 testów)
+│   │   ├── DiscountServiceTests.cs (6 testów)
+│   │   ├── GroupStrategyTests.cs (8 testów)
+│   │   └── GroupStrategyFactoryTests.cs (5 testów)
+│   │
+│   ├── 📂 Repositories/               # Testy repozytoriów (11 testów)
+│   │   └── GenericRepositoryTests.cs (11 testów - integration z In-Memory DB)
+│   │
+│   ├── 📂 Middleware/                 # Testy middleware (5 testów)
+│   │   └── ExceptionHandlingMiddlewareTests.cs (5 testów)
+│   │
+│   ├── 📂 Shared/                     # Testy komponentów wspólnych (73 testy)
+│   │   ├── OperationResultTests.cs (19 testów)
+│   │   ├── OperationResultExtensionsTests.cs (10 testów)
+│   │   ├── EnumConverterTests.cs (11 testów)
+│   │   ├── SimplyTimeZoneExtensionTests.cs (10 testów)
+│   │   ├── SimplyTimeZoneInfoTests.cs (8 testów)
+│   │   ├── FlightDetailsTests.cs (6 testów)
+│   │   └── TicketStatusExtensionTests.cs (9 testów)
+│   │
+│   └── 📂 Mapper/                     # Testy mapowań (12 testów)
+│       └── FLyTicketMappingProfileTests.cs (12 testów)
+│
+├── 📄 Program.cs                      # Punkt wejścia aplikacji
+├── 📄 appsettings.json                # Konfiguracja produkcyjna
+├── 📄 appsettings.Development.json    # Konfiguracja deweloperska
+├── 📄 FLyTicketService.csproj         # Plik projektu .NET
+├── 📄 Dockerfile                      # Konteneryzacja Docker
+├── 📄 README.md                       # Dokumentacja projektu
+├── 📄 PROJECT_REVIEW.md               # Szczegółowa analiza projektu
+├── 📄 CHANGELOG.md                    # Historia zmian
+└── 📄 LICENSE.txt                     # Licencja MIT
 ```
+
+### 📊 Statystyki projektu
+
+- **Linie kodu**: ~8,000+
+- **Pliki źródłowe**: ~50
+- **Testy**: 181 (100% passing)
+- **Pokrycie testami**: ~100%
+- **Controllers**: 4
+- **Services**: 7
+- **Modele domenowe**: 10
+- **DTO**: 10
 
 ## 🌐 API Endpoints
 
@@ -377,28 +477,79 @@ cd Scripts
 
 ### Struktura testów
 
-Projekt zawiera **43 testy jednostkowe** z pokryciem **100%** kluczowych komponentów:
+Projekt zawiera **181 testów jednostkowych i integracyjnych** z pokryciem **~100%** wszystkich warstw aplikacji:
 
-- **Controllers** (10 testów) - testy API endpoints
-- **Services** (31 testów) - testy logiki biznesowej
-  - TicketService - zarządzanie biletami
-  - FlightPriceService - obliczanie cen i rabatów
-  - TenantService - zarządzanie klientami
-  - FlightScheduleService - harmonogramy lotów
-  - DiscountService - system rabatowy
-  - GroupStrategy - strategie grup klientów
-  - GroupStrategyFactory - fabryka strategii
-- **Middleware** (1 test) - obsługa wyjątków
-- **Shared** (1 test) - komponenty współdzielone
+#### **Kontrolery API** (32 testy)
+- ✅ **DiscountTypeControllerTests** (8 testów) - endpointy rabatów
+- ✅ **FlightScheduleControllerTests** (11 testów) - endpointy harmonogramów lotów
+- ✅ **TenantControllerTests** (8 testów) - endpointy klientów
+- ✅ **TicketControllerTests** (5 testów) - endpointy biletów
 
-✅ **Status testów**: 43/43 passing (100% success rate)
+#### **Logika biznesowa - Serwisy** (41 testów)
+- ✅ **TicketService** (9 testów) - zarządzanie biletami (rezerwacja, sprzedaż, anulowanie)
+- ✅ **FlightPriceService** (7 testów) - obliczanie cen i aplikacja rabatów
+- ✅ **TenantService** (6 testów) - zarządzanie klientami
+- ✅ **FlightScheduleService** (6 testów) - harmonogramy lotów
+- ✅ **DiscountService** (6 testów) - system rabatowy
+- ✅ **GroupStrategyTests** (8 testów) - strategie grup A i B
+- ✅ **GroupStrategyFactory** (5 testów) - fabryka strategii
+
+#### **Warstwa dostępu do danych** (11 testów)
+- ✅ **GenericRepositoryTests** (11 testów integracyjnych z In-Memory DB)
+  - CRUD operations (Add, GetAll, GetById, Update, Remove)
+  - Predicate queries (GetByAsync, FilterByAsync)
+
+#### **Middleware** (5 testów)
+- ✅ **ExceptionHandlingMiddleware** (5 testów) - obsługa błędów HTTP
+
+#### **Utilities & Shared** (73 testy)
+- ✅ **OperationResultTests** (19 testów) - wzorzec Result
+- ✅ **OperationResultExtensionsTests** (10 testów) - konwersja na IActionResult
+- ✅ **EnumConverterTests** (11 testów) - serializacja JSON enums
+- ✅ **SimplyTimeZoneExtensionTests** (10 testów) - konwersje stref czasowych
+- ✅ **SimplyTimeZoneInfoTests** (8 testów) - informacje o strefach czasowych
+- ✅ **FlightDetailsTests** (6 testów) - record type validation
+
+#### **Mapowania DTO** (12 testów)
+- ✅ **FLyTicketMappingProfileTests** (12 testów)
+  - Mapowania DTO ↔ Domain (Tenant, Discount, Condition, FlightSchedule, Ticket)
+
+### 📊 Podsumowanie pokrycia testami
+
+✅ **Status testów**: **181/181 passing (100% success rate)**
+
+| Warstwa | Testy | Pokrycie |
+|---------|-------|----------|
+| Controllers | 32 | 100% |
+| Services | 41 | 100% |
+| Repositories | 11 | 100% |
+| Middleware | 5 | 100% |
+| Utilities/Shared | 73 | 100% |
+| Mappers | 12 | 100% |
+| **RAZEM** | **181** | **~100%** |
 
 ### Technologie testowe
 
 - **xUnit** - framework testowy
 - **Moq** - mockowanie zależności
 - **FluentAssertions** - czytelne asercje
+- **EF Core InMemory** - testy integracyjne z bazą w pamięci
 - **AAA Pattern** - Arrange-Act-Assert
+
+### Uruchamianie testów
+
+```bash
+# Wszystkie testy
+dotnet test
+
+# Tylko testy konkretnej warstwy
+dotnet test --filter FullyQualifiedName~Controllers
+dotnet test --filter FullyQualifiedName~Services
+dotnet test --filter FullyQualifiedName~Repositories
+
+# Testy z pokryciem (coverage)
+dotnet test --collect:"XPlat Code Coverage"
+```
 
 ## ⚙️ Konfiguracja
 
