@@ -4,7 +4,7 @@
 # Usage: ./Tickets.sh [host] [port]
 
 SERVER=${1:-localhost}
-PORT=${2:-5000}
+PORT=${2:-5042}
 BASE_URL="http://${SERVER}:${PORT}/api"
 TICKET_URL="${BASE_URL}/Ticket"
 TENANT_URL="${BASE_URL}/Tenant"

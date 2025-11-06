@@ -4,7 +4,7 @@
 # Usage: ./tenant.sh [host] [port]
 
 SERVER=${1:-localhost}
-PORT=${2:-5000}
+PORT=${2:-5042}
 BASE_URL="http://${SERVER}:${PORT}/api"
 TENANT_URL="${BASE_URL}/Tenant"
 

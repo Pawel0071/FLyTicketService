@@ -5,19 +5,21 @@ namespace FLyTicketService.Service
 {
     public class GroupStrategyFactory: IGroupStrategyFactory
     {
-        private readonly IServiceProvider _serviceProvider;
+        private readonly GroupAStrategy _groupAStrategy;
+        private readonly GroupBStrategy _groupBStrategy;
 
-        public GroupStrategyFactory(IServiceProvider serviceProvider)
+        public GroupStrategyFactory(GroupAStrategy groupAStrategy, GroupBStrategy groupBStrategy)
         {
-            _serviceProvider = serviceProvider;
+            _groupAStrategy = groupAStrategy;
+            _groupBStrategy = groupBStrategy;
         }
 
         public IGroupStrategy GetStrategy(TenantGroup group)
         {
             return group switch
             {
-                TenantGroup.GroupA => _serviceProvider.GetRequiredService<GroupAStrategy>(),
-                TenantGroup.GroupB => _serviceProvider.GetRequiredService<GroupBStrategy>(),
+                TenantGroup.GroupA => _groupAStrategy,
+                TenantGroup.GroupB => _groupBStrategy,
                 _ => throw new ArgumentException("Invalid group specified")
             };
 

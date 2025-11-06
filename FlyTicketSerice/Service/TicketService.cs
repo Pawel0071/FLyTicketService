@@ -5,6 +5,7 @@ using FLyTicketService.Model.Enums;
 using FLyTicketService.Repositories.Interfaces;
 using FLyTicketService.Service.Interfaces;
 using FLyTicketService.Shared;
+using System.Collections.Concurrent;
 
 namespace FLyTicketService.Service
 {
@@ -23,6 +24,9 @@ namespace FLyTicketService.Service
         private readonly IFlightPriceService _flightPriceService;
         private readonly ILogger<TicketService> _logger;
 
+        // Dictionary to hold semaphores per seat to prevent concurrent reservations
+        private static readonly ConcurrentDictionary<Guid, SemaphoreSlim> _seatLocks = new ConcurrentDictionary<Guid, SemaphoreSlim>();
+
         #endregion
 
         #region Constructors
@@ -30,7 +34,6 @@ namespace FLyTicketService.Service
         public TicketService(
             IGenericRepository<Ticket> ticketRepository,
             ILogger<TicketService> logger,
-            IGroupStrategy groupStrategy,
             IGenericRepository<FlightSeat> flightSeatRepository,
             IGenericRepository<Tenant> tenantRepository,
             IFlightPriceService flightPriceService,
@@ -98,18 +101,43 @@ namespace FLyTicketService.Service
                 return new OperationResult<TicketDTO>(OperationStatus.NotFound, "Ticket not found", null);
             }
 
-            ticket.Status = TicketStatus.Sold;
+            // Get the seat lock to prevent concurrent modifications
+            SemaphoreSlim semaphore = _seatLocks.GetOrAdd(ticket.FlightSeat.FlightSeatId, _ => new SemaphoreSlim(1, 1));
+            
+            await semaphore.WaitAsync();
+            try
+            {
+                // Re-fetch ticket to ensure we have latest state
+                ticket = await GetTicketInternalAsync(ticketNumber);
+                if (ticket == null)
+                {
+                    _logger.LogWarning("Ticket not found after acquiring lock");
+                    return new OperationResult<TicketDTO>(OperationStatus.NotFound, "Ticket not found", null);
+                }
 
-            bool result = await _ticketRepository.UpdateAsync(ticket);
+                if (ticket.Status == TicketStatus.Sold)
+                {
+                    _logger.LogWarning($"Ticket {ticketNumber} already sold");
+                    return new OperationResult<TicketDTO>(OperationStatus.Conflict, "Ticket already sold", null);
+                }
 
-            return new OperationResult<TicketDTO>(
-                result
-                    ? OperationStatus.Ok
-                    : OperationStatus.InternalServerError,
-                result
-                    ? "Ticket sold successfully"
-                    : "Failed to sale ticket",
-                ticket.ToDTO());
+                ticket.Status = TicketStatus.Sold;
+
+                bool result = await _ticketRepository.UpdateAsync(ticket);
+
+                return new OperationResult<TicketDTO>(
+                    result
+                        ? OperationStatus.Ok
+                        : OperationStatus.InternalServerError,
+                    result
+                        ? "Ticket sold successfully"
+                        : "Failed to sale ticket",
+                    ticket.ToDTO());
+            }
+            finally
+            {
+                semaphore.Release();
+            }
         }
 
         public async Task<OperationResult<IEnumerable<DiscountDTO>>> GetAllApplicableDiscountsAsync(string ticketNumber)
@@ -143,17 +171,15 @@ namespace FLyTicketService.Service
                 return new OperationResult<bool>(OperationStatus.NotFound, "Ticket not found", false);
             }
 
-            List<DiscountDTO> applicableDiscounts = GetApplicableDiscounts(discounts, ticket);
+        List<DiscountDTO> applicableDiscounts = GetApplicableDiscounts(discounts, ticket);
 
-            IGroupStrategy strategy = _strategyFactory.GetStrategy(ticket.Tenant.Group);
-            (decimal Price, decimal Discount) discount = strategy.ApplyDiscountBasedOnTenantGroup(applicableDiscounts.Select(x => x.ToDomain()), ticket);
+        IGroupStrategy strategy = _strategyFactory.GetStrategy(ticket.Tenant.Group);
+        (decimal Price, decimal Discount) discount = strategy.ApplyDiscountBasedOnTenantGroup(applicableDiscounts.Select(x => x.ToDomain()), ticket);
 
-            ticket.Price = discount.Price;
-            ticket.Discounts = strategy.GetListBasedOnTenantGroup(applicableDiscounts.Select(x => x.ToDomain()));
+        ticket.Price = discount.Price;
+        ticket.Discounts = strategy.GetListBasedOnTenantGroup(applicableDiscounts.Select(x => x.ToDomain())).ToList();
 
-            bool result = await _ticketRepository.UpdateAsync(ticket);
-
-            return new OperationResult<bool>(
+        bool result = await _ticketRepository.UpdateAsync(ticket);            return new OperationResult<bool>(
                 result
                     ? OperationStatus.Ok
                     : OperationStatus.InternalServerError,
@@ -193,16 +219,35 @@ namespace FLyTicketService.Service
                 return new OperationResult<bool>(OperationStatus.NotFound, "Ticket not found", false);
             }
 
-            bool result = await _ticketRepository.RemoveAsync(ticket.TicketId);
+            // Get the seat lock to prevent concurrent modifications
+            SemaphoreSlim semaphore = _seatLocks.GetOrAdd(ticket.FlightSeat.FlightSeatId, _ => new SemaphoreSlim(1, 1));
+            
+            await semaphore.WaitAsync();
+            try
+            {
+                // Re-fetch ticket to ensure we have latest state
+                ticket = await GetTicketInternalAsync(ticketNumber);
+                if (ticket == null)
+                {
+                    _logger.LogWarning("Ticket not found after acquiring lock");
+                    return new OperationResult<bool>(OperationStatus.NotFound, "Ticket not found", false);
+                }
 
-            return new OperationResult<bool>(
-                result
-                    ? OperationStatus.Ok
-                    : OperationStatus.InternalServerError,
-                result
-                    ? "Ticket canceled successfully"
-                    : "Failed to canceled ticket",
-                result);
+                bool result = await _ticketRepository.RemoveAsync(ticket.TicketId);
+
+                return new OperationResult<bool>(
+                    result
+                        ? OperationStatus.Ok
+                        : OperationStatus.InternalServerError,
+                    result
+                        ? "Ticket canceled successfully"
+                        : "Failed to canceled ticket",
+                    result);
+            }
+            finally
+            {
+                semaphore.Release();
+            }
         }
 
         public async Task<OperationResult<TicketDTO?>> GetTicketAsync(string ticketNumber)
@@ -304,47 +349,64 @@ namespace FLyTicketService.Service
                 return null;
             }
 
-            Ticket? existingTicket = await _ticketRepository.GetByAsync(x => x.FlightSeat.FlightSeatId == seat.FlightSeatId);
-            if (existingTicket != null)
+            // Get or create a semaphore for this specific seat
+            SemaphoreSlim semaphore = _seatLocks.GetOrAdd(seat.FlightSeatId, _ => new SemaphoreSlim(1, 1));
+            
+            // Wait to acquire the lock for this seat
+            await semaphore.WaitAsync();
+            try
             {
-                seat = flightSchedule.Seats?.FirstOrDefault(x => x.SeatNumber == seatNo);
-                if (seat == null)
+                // Double-check if this seat is already reserved/sold (after acquiring lock)
+                FlightSeat? existingSeat = await _flightSeatRepository.GetByAsync(x => x.FlightSeatId == seat.FlightSeatId && x.TicketId != null);
+                if (existingSeat != null)
                 {
-                    _logger.LogWarning("Seat not available");
-                    _operationResult = new OperationResult<TicketDTO>(OperationStatus.NotFound, "Seat not available", null);
-                    return null;
+                    // Try to get the ticket to check its status
+                    Ticket? existingTicket = await _ticketRepository.GetByIdAsync(existingSeat.TicketId.Value);
+                    if (existingTicket != null)
+                    {
+                        if (existingTicket.Status == TicketStatus.Reserved && existingTicket.ReleaseDate > DateTime.Now)
+                        {
+                            _logger.LogWarning($"Seat {seatNo} already reserved for flight {flightSchedule.FlightId}");
+                            _operationResult = new OperationResult<TicketDTO>(OperationStatus.Conflict, "Seat already reserved", null);
+                            return null;
+                        }
+                        else if (existingTicket.Status == TicketStatus.Sold)
+                        {
+                            _logger.LogWarning($"Seat {seatNo} already sold for flight {flightSchedule.FlightId}");
+                            _operationResult = new OperationResult<TicketDTO>(OperationStatus.Conflict, "Seat already sold", null);
+                            return null;
+                        }
+                    }
                 }
 
-                if (existingTicket.Status == TicketStatus.Reserved && existingTicket.ReleaseDate > DateTime.Now)
+                Ticket ticket = new Ticket
                 {
-                    _logger.LogWarning("Seat already reserved");
-                    _operationResult = new OperationResult<TicketDTO>(OperationStatus.Conflict, "Seat already reserved", null);
-                    return null;
-                }
+                    TicketNumber = Guid.NewGuid().ToString().Replace("-", ""),
+                    FlightSeat = seat,
+                    Tenant = tenant,
+                    Status = TicketStatus.Reserved,
+                    Price = flightSchedule.Price,
+                    ReleaseDate = DateTime.Now.AddDays(_maxReservationIDays)
+                };
+
+                bool result = await _ticketRepository.AddAsync(ticket);
+
+                _operationResult = new OperationResult<TicketDTO>(
+                    result
+                        ? OperationStatus.Created
+                        : OperationStatus.InternalServerError,
+                    result
+                        ? "Ticket reserved successfully"
+                        : "Failed to reserve ticket",
+                    ticket.ToDTO());
+
+                return ticket;
             }
-
-            Ticket ticket = new Ticket
+            finally
             {
-                TicketNumber = Guid.NewGuid().ToString().Replace("-", ""),
-                FlightSeat = seat,
-                Tenant = tenant,
-                Status = TicketStatus.Reserved,
-                Price = flightSchedule.Price,
-                ReleaseDate = DateTime.Now.AddDays(_maxReservationIDays)
-            };
-
-            bool result = await _ticketRepository.AddAsync(ticket);
-
-            _operationResult = new OperationResult<TicketDTO>(
-                result
-                    ? OperationStatus.Created
-                    : OperationStatus.InternalServerError,
-                result
-                    ? "Ticket reserved successfully"
-                    : "Failed to reserve ticket",
-                ticket.ToDTO());
-
-            return ticket;
+                // Always release the semaphore
+                semaphore.Release();
+            }
         }
         private List<DiscountDTO> GetApplicableDiscounts(IEnumerable<DiscountDTO> discounts, Ticket ticket)
         {
