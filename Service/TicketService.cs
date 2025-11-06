@@ -255,6 +255,39 @@ namespace FLyTicketService.Service
                 return null;
             }
 
+            _logger.LogInformation($"Flight found: {flightSchedule.FlightId}, Seats count: {flightSchedule.Seats?.Count ?? 0}");
+
+            // Initialize seats if they don't exist
+            if (flightSchedule.Seats == null || !flightSchedule.Seats.Any())
+            {
+                _logger.LogWarning($"Flight {flightSchedule.FlightId} has no seats initialized. Initializing seats from aircraft.");
+                
+                if (flightSchedule.Aircraft?.Seats != null && flightSchedule.Aircraft.Seats.Any())
+                {
+                    List<FlightSeat> flightSeats = new List<FlightSeat>();
+                    foreach (AircraftSeat aircraftSeat in flightSchedule.Aircraft.Seats)
+                    {
+                        FlightSeat newSeat = new FlightSeat
+                        {
+                            FlightSchedule = flightSchedule,
+                            Class = aircraftSeat.Class,
+                            SeatNumber = aircraftSeat.SeatNumber,
+                            IsAvailable = !aircraftSeat.OutOfService
+                        };
+                        flightSeats.Add(newSeat);
+                        await _flightSeatRepository.AddAsync(newSeat);
+                    }
+                    flightSchedule.Seats = flightSeats;
+                    _logger.LogInformation($"Initialized {flightSeats.Count} seats for flight {flightSchedule.FlightId}");
+                }
+                else
+                {
+                    _logger.LogError($"Cannot initialize seats - Aircraft or Aircraft.Seats is null for flight {flightSchedule.FlightId}");
+                    _operationResult = new OperationResult<TicketDTO>(OperationStatus.InternalServerError, "Flight seats not available", null);
+                    return null;
+                }
+            }
+
             Tenant? tenant = await _tenantRepository.GetByIdAsync(tenantId);
             if (tenant == null)
             {
@@ -263,10 +296,10 @@ namespace FLyTicketService.Service
                 return null;
             }
 
-            FlightSeat? seat = flightSchedule.Seats.FirstOrDefault(x => x.IsAvailable && x.SeatNumber == seatNo);
+            FlightSeat? seat = flightSchedule.Seats?.FirstOrDefault(x => x.IsAvailable && x.SeatNumber == seatNo);
             if (seat == null)
             {
-                _logger.LogWarning("Seat not available");
+                _logger.LogWarning($"Seat {seatNo} not available for flight {flightSchedule.FlightId}");
                 _operationResult = new OperationResult<TicketDTO>(OperationStatus.NotFound, "Seat not available", null);
                 return null;
             }
@@ -274,7 +307,7 @@ namespace FLyTicketService.Service
             Ticket? existingTicket = await _ticketRepository.GetByAsync(x => x.FlightSeat.FlightSeatId == seat.FlightSeatId);
             if (existingTicket != null)
             {
-                seat = flightSchedule.Seats.FirstOrDefault(x => x.SeatNumber == seatNo);
+                seat = flightSchedule.Seats?.FirstOrDefault(x => x.SeatNumber == seatNo);
                 if (seat == null)
                 {
                     _logger.LogWarning("Seat not available");

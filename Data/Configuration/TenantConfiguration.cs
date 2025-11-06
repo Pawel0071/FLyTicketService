@@ -14,7 +14,7 @@ namespace FLyTicketService.Data.Configuration
             builder.Property(t => t.Name).IsRequired().HasMaxLength(150);
             builder.Property(t => t.Address).IsRequired().HasMaxLength(250);
             builder.Property(t => t.Group).IsRequired();
-            builder.Property(t => t.BirthDate).IsRequired();
+            builder.Property(t => t.Birthday).IsRequired();
             builder.Property(t => t.Phone).HasMaxLength(15);
             builder.Property(t => t.Email).HasMaxLength(100);
         }

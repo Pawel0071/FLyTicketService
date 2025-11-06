@@ -8,7 +8,7 @@ namespace FLyTicketService.DTO
         public required string Name { get; set; }
         public required string Address { get; set; }
         public required TenantGroup Group { get; set; }
-        public required DateTime BirthDate { get; set; }
+        public required DateTime Birthday { get; set; }
         public string? Phone { get; set; }
         public string? Email { get; set; }
     }

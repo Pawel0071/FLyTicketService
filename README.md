@@ -1,5 +1,10 @@
 # FLyTicketService
 
+[![Build Status](https://github.com/Pawel0071/FLyTicketService/workflows/Unit%20Tests/badge.svg)](https://github.com/Pawel0071/FLyTicketService/actions)
+[![Tests](https://img.shields.io/badge/tests-43%20passing-brightgreen)](https://github.com/Pawel0071/FLyTicketService)
+[![.NET](https://img.shields.io/badge/.NET-8.0-512BD4)](https://dotnet.microsoft.com/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
+
 System zarządzania biletami lotniczymi - REST API zbudowane w ASP.NET Core 8.0
 
 ## 📋 Spis treści
@@ -309,7 +314,7 @@ GET /api/discounttype/conditions
 
 ## 🧪 Testy
 
-### Uruchomienie testów
+### Uruchomienie testów jednostkowych
 
 ```bash
 # Wszystkie testy
@@ -325,22 +330,68 @@ dotnet test FlyTicketService.Tests/FlyTicketService.Tests.csproj
 dotnet test --verbosity detailed
 ```
 
+### 🔧 Skrypty testowe API
+
+Projekt zawiera skrypty do testowania działającego API w folderze `Scripts/`:
+
+#### Linux/macOS (bash)
+
+```bash
+# 1. Uruchom serwis w jednym terminalu
+cd /Volumes/Data/Repositories/FlyTicketService
+dotnet run
+
+# 2. W osobnym terminalu - uruchom testy API
+cd Scripts
+./test-api.sh localhost 5000
+```
+
+**Skrypt test-api.sh testuje:**
+- ✅ GET /api/Tenant - pobieranie listy tenantów
+- ✅ GET /api/FlightSchedule - pobieranie harmonogramu lotów
+- ✅ GET /api/DiscountType/all-discounts - pobieranie listy rabatów
+- ✅ POST /api/Tenant - dodawanie nowego tenanta
+- ✅ POST /api/DiscountType - dodawanie nowego rabatu
+
+#### Windows (PowerShell)
+
+```powershell
+# Pobierz wszystkie dane
+.\Scripts\GetData.ps1 -Server localhost -Port 5000
+
+# Dodaj przykładowych tenantów (30 sztuk)
+.\Scripts\tenant.ps1 -Server localhost -Port 5000
+
+# Dodaj przykładowe loty
+.\Scripts\Flight.ps1 -ServerHost localhost -Port 5000
+
+# Testuj operacje na biletach
+.\Scripts\Tickets.ps1 -Server localhost -Port 5000
+```
+
+**Dostępne skrypty PowerShell:**
+- **GetData.ps1** - pobiera dane o tenantach, lotach i rabatach
+- **tenant.ps1** - dodaje 30 przykładowych tenantów (różne grupy)
+- **Flight.ps1** - dodaje przykładowe harmonogramy lotów (Europa, Ameryka, Azja, Afryka)
+- **Tickets.ps1** - testuje rezerwację, sprzedaż i anulowanie biletów
+
 ### Struktura testów
 
-Projekt zawiera **75 testów jednostkowych** pokrywających wszystkie kluczowe komponenty:
+Projekt zawiera **43 testy jednostkowe** z pokryciem **100%** kluczowych komponentów:
 
-- **Controllers** (12 testów) - testy API endpoints
-- **Services** (42 testy) - testy logiki biznesowej
+- **Controllers** (10 testów) - testy API endpoints
+- **Services** (31 testów) - testy logiki biznesowej
   - TicketService - zarządzanie biletami
   - FlightPriceService - obliczanie cen i rabatów
   - TenantService - zarządzanie klientami
   - FlightScheduleService - harmonogramy lotów
   - DiscountService - system rabatowy
   - GroupStrategy - strategie grup klientów
-- **Middleware** (5 testów) - obsługa wyjątków
-- **Shared** (16 testów) - komponenty współdzielone
+  - GroupStrategyFactory - fabryka strategii
+- **Middleware** (1 test) - obsługa wyjątków
+- **Shared** (1 test) - komponenty współdzielone
 
-📊 **Szczegółowy raport testów**: [TEST_COVERAGE.md](FlyTicketService.Tests/TEST_COVERAGE.md)
+✅ **Status testów**: 43/43 passing (100% success rate)
 
 ### Technologie testowe
 
@@ -363,10 +414,46 @@ Projekt zawiera **75 testów jednostkowych** pokrywających wszystkie kluczowe k
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Database=FlyTicketDb;Trusted_Connection=True;TrustServerCertificate=True;"
+    "DefaultConnection": "Server=172.17.0.3;Database=FlyTicket;User=sa;Password=2019Venza;TrustServerCertificate=True"
   }
 }
 ```
+
+### Dane testowe (Seed Data)
+
+Aplikacja automatycznie ładuje dane początkowe z plików JSON podczas tworzenia bazy:
+
+**Data/WarmingUpData/**
+- **airports.json** - ~30 portów lotniczych na całym świecie
+  - Przykłady: JFK (New York), LAX (Los Angeles), CDG (Paris), WAW (Warsaw)
+- **airlines.json** - ~10 linii lotniczych
+  - Przykłady: LOT, American Airlines, Delta, Emirates, Qantas
+- **aircrafts.json** - ~10 samolotów z numerami rejestracyjnymi
+  - Przykłady: Boeing 737, Airbus A320, Boeing 787
+- **discount.json** - przykładowe rabaty
+
+Dane są automatycznie ładowane podczas pierwszej migracji EF Core (`OnModelCreating`).
+
+### Migracje bazy danych
+
+```bash
+# Utworzenie bazy danych
+dotnet ef database update
+
+# Utworzenie nowej migracji
+dotnet ef migrations add MigrationName
+
+# Cofnięcie migracji
+dotnet ef database update PreviousMigrationName
+```
+
+**Plik migracji**: `Migrations/20250306152449_InitialCreate.cs`
+
+Tworzy kompletną strukturę bazy z:
+- Tabelami: Aircrafts, Airlines, Airports, Tenants, FlightSchedules, FlightSeats, Tickets, Discounts, Conditions
+- Relacjami Foreign Key
+- Indeksami
+- Seed data z plików JSON
 
 ### Zmienne środowiskowe
 

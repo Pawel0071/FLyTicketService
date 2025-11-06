@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # SQL Server database
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: flyticket-sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=FlyTicket2025!
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "FlyTicket2025!" -Q "SELECT 1" || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - flyticket-network
+
+  # FlyTicketService API
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: flyticket-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=FlyTicket;User=sa;Password=FlyTicket2025!;TrustServerCertificate=True
+    ports:
+      - "5000:80"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    networks:
+      - flyticket-network
+    restart: unless-stopped
+
+volumes:
+  sqlserver_data:
+    driver: local
+
+networks:
+  flyticket-network:
+    driver: bridge

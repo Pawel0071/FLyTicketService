@@ -43,7 +43,7 @@ namespace FLyTicketService.Mapper
                 Name = tenantDTO.Name,
                 Address = tenantDTO.Address,
                 Group = tenantDTO.Group,
-                BirthDate = tenantDTO.BirthDate,
+                Birthday = tenantDTO.Birthday,
                 Phone = tenantDTO.Phone,
                 Email = tenantDTO.Email
             };
@@ -58,7 +58,7 @@ namespace FLyTicketService.Mapper
                 Name = tenant.Name,
                 Address = tenant.Address,
                 Group = tenant.Group,
-                BirthDate = tenant.BirthDate,
+                Birthday = tenant.Birthday,
                 Phone = tenant.Phone,
                 Email = tenant.Email
             };

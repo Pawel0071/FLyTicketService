@@ -65,7 +65,7 @@ namespace FLyTicketService.Data
             {
                 optionsBuilder.EnableSensitiveDataLogging();
                 optionsBuilder.ConfigureWarnings(warnings =>
-                    warnings.Throw(RelationalEventId.PendingModelChangesWarning));
+                    warnings.Log(RelationalEventId.PendingModelChangesWarning));
             }
         }
 

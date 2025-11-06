@@ -123,7 +123,7 @@ namespace FLyTicketService.Services
             existingTenant.Name = tenant.Name;
             existingTenant.Address = tenant.Address;
             existingTenant.Group = tenant.Group;
-            existingTenant.BirthDate = tenant.BirthDate;
+            existingTenant.Birthday = tenant.Birthday;
             existingTenant.Phone = tenant.Phone;
             existingTenant.Email = tenant.Email;
 
