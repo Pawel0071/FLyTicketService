@@ -6,6 +6,8 @@ using FLyTicketService.Service.Interfaces;
 using FLyTicketService.Services.Interfaces;
 using FLyTicketService.Shared;
 
+namespace FLyTicketService.Service;
+
 public class DiscountService: IDiscountService
 {
     #region Fields

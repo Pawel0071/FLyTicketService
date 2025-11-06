@@ -10,7 +10,7 @@ namespace FLyTicketService.Service
     {
         #region Constants
 
-        private const decimal minPrice = 20m;
+        private const decimal MinPrice = 20m;
 
         #endregion
 
@@ -40,7 +40,7 @@ namespace FLyTicketService.Service
             {
                 if (IsDiscountApplicable(discount, ticket))
                 {
-                    discountValue += Math.Max(price - discount.Value, minPrice);
+                    discountValue += Math.Max(price - discount.Value, MinPrice);
                 }
             }
 
@@ -52,14 +52,11 @@ namespace FLyTicketService.Service
             List<Discount> applicableDiscounts = new List<Discount>();
             IEnumerable<Discount> allDiscounts = await _genericDiscountRepository.GetAllAsync();
 
-            if (allDiscounts != null)
+            foreach (Discount discount in allDiscounts)
             {
-                foreach (Discount discount in allDiscounts)
+                if (IsDiscountApplicable(discount, ticket))
                 {
-                    if (IsDiscountApplicable(discount, ticket))
-                    {
-                        applicableDiscounts.Add(discount);
-                    }
+                    applicableDiscounts.Add(discount);
                 }
             }
 
@@ -102,9 +99,9 @@ namespace FLyTicketService.Service
             };
         }
 
-        private bool CompareValues(object propertyValue, string? conditionValue, DiscountCondition conditionType)
+        private bool CompareValues(object? propertyValue, string? conditionValue, DiscountCondition conditionType)
         {
-            if (propertyValue == null)
+            if (propertyValue == null && propertyValue != null && propertyValue.ToString() == null)
             {
                 return false;
             }
@@ -142,7 +139,8 @@ namespace FLyTicketService.Service
                     return propertyValue.ToString().EndsWith(conditionValue, StringComparison.OrdinalIgnoreCase);
 
                 case DiscountCondition.DayOfWeek:
-                    if (propertyValue is DateTime dateTimeValue && Enum.TryParse(conditionValue, out DayOfWeek dayOfWeek))
+                    if (propertyValue is DateTime dateTimeValue &&
+                        Enum.TryParse(conditionValue, out DayOfWeek dayOfWeek))
                     {
                         return dateTimeValue.DayOfWeek == dayOfWeek;
                     }
@@ -167,9 +165,9 @@ namespace FLyTicketService.Service
             }
         }
 
-        private bool EvaluateCondition(Condition condition, object targetObject)
+        private bool EvaluateCondition(Condition condition, object? targetObject)
         {
-            object propertyValue;
+            object? propertyValue;
 
             if (condition.Property.Equals("self", StringComparison.OrdinalIgnoreCase))
             {
@@ -191,7 +189,7 @@ namespace FLyTicketService.Service
             return CompareValues(propertyValue, condition.ConditionValue, condition.ConditionType);
         }
 
-        private bool CompareNumeric(object propertyValue, string? conditionValue, Func<decimal, decimal, bool> comparator)
+        private bool CompareNumeric(object? propertyValue, string? conditionValue, Func<decimal, decimal, bool> comparator)
         {
             if (decimal.TryParse(propertyValue.ToString(), out decimal propertyNumeric) &&
                 decimal.TryParse(conditionValue, out decimal conditionNumeric))
