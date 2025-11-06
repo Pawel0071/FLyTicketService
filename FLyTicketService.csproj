@@ -7,10 +7,11 @@
     <UserSecretsId>a4da34b9-17d2-4390-b001-7f5ac8bcc4af</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.2">
@@ -29,12 +30,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="Model\FlightSchedule.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="FlyTicketService.Tests\obj\FlyTicketService.Tests.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="FlyTicketService.Tests\obj\project.assets.json" />
   </ItemGroup>
 
 </Project>

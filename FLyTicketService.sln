@@ -5,7 +5,7 @@ VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FLyTicketService", "FLyTicketService.csproj", "{CD2FD709-020C-40B8-9F74-B33CF7A29D21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyTicketService.Tests", "FlyTicketService.Tests\FlyTicketService.Tests.csproj", "{1D8DFA9D-455B-40A5-B14A-011CA343BB8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyTicketService.Tests", "..\FlyTicketService.Tests\FlyTicketService.Tests.csproj", "{1D8DFA9D-455B-40A5-B14A-011CA343BB8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
