@@ -48,73 +48,73 @@ namespace FLyTicketService.Migrations
                     b.HasData(
                         new
                         {
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Model = "Boeing 737-MAX",
                             RegistrationNumber = "SP-LAA"
                         },
                         new
                         {
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Model = "Airbus A320Neo",
                             RegistrationNumber = "SP-LBG"
                         },
                         new
                         {
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Model = "Boeing 787-9",
                             RegistrationNumber = "SP-LCC"
                         },
                         new
                         {
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Model = "Airbus A380",
                             RegistrationNumber = "SP-LLL"
                         },
                         new
                         {
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Model = "Boeing 777-300ER",
                             RegistrationNumber = "SP-LRR"
                         },
                         new
                         {
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Model = "Boeing 787-9",
                             RegistrationNumber = "SP-LGG"
                         },
                         new
                         {
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Model = "Boeing 777-300ER",
                             RegistrationNumber = "SP-LLA"
                         },
                         new
                         {
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Model = "Airbus A380",
                             RegistrationNumber = "SP-LKK"
                         },
                         new
                         {
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Model = "Airbus A320",
                             RegistrationNumber = "SP-LOO"
                         },
                         new
                         {
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Model = "Boeing 767",
                             RegistrationNumber = "SP-LPP"
                         },
                         new
                         {
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Model = "Boeing 747-8",
                             RegistrationNumber = "SP-LQQ"
                         },
                         new
                         {
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Model = "Boeing 737 MAX",
                             RegistrationNumber = "SP-LRA"
                         });
@@ -149,4744 +149,4744 @@ namespace FLyTicketService.Migrations
                     b.HasData(
                         new
                         {
-                            AircraftSeatId = new Guid("e33a2bb5-a981-4347-a106-192747933b56"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("965df9bb-1e36-4ed4-96aa-0a9a946f00da"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c87953d1-a626-441c-809e-4952b4db7afd"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("ade2962b-3bdd-4291-b552-e5ad5c4fb926"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("01ad3345-1e81-4357-ba16-bb965db90685"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("27e447b1-4ed2-4d67-a21a-059395031786"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4cd2cfe9-258f-46bd-bc9f-1b817b52da52"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("5cf3037d-b29f-460f-8536-5d4343e02b9a"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("29abe4bd-cad3-40d8-8ba6-248b1425ad29"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("5a4e4ecc-cd72-423b-9f70-d180fc5e8d43"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3c9b0e09-3d9a-408d-8bd3-d2872db92543"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("415f749b-d42a-482b-97ef-877c5e7a60cd"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("371be532-dcc1-4d99-b082-cff6e0f51796"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("27f9e744-5180-42fd-8285-17a1764b629e"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("51ec7d10-206c-484b-8f9f-5611f49c9f8f"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("5b8be7ee-efff-4c55-9d42-7c472783ea00"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d690f5fb-126c-4090-ae33-6ad9f7f4f9b6"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("b6829a34-93c6-4673-bbb8-0d7e05240246"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b123cc1c-6e1c-4149-9278-d7c2a319afdf"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("c889aba7-44ef-4665-b941-e6bf5239d802"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("22897bbb-fff4-4a7c-a601-7fae2a50b58d"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("63c1e391-4ae6-4685-9972-c9f045a66f89"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("00fc0107-5d52-4b2e-b55b-2182fac38ae4"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("871e9d93-305d-42b4-bffe-d0126cd0866c"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("178b9eef-dd0d-45a9-9d6b-356604bad44a"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("f17b848e-3b2b-47b1-9188-37ad2d0eb18b"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("31216987-df23-46af-86a7-a38b28719287"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("a0e20320-b5a1-41c8-96fc-e3a7b42f9022"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 2,
                             OutOfService = true,
                             SeatNumber = "3B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("99b1a096-238f-4c2a-b5b7-a49d4b7235e4"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("d2a5daa2-d5c1-4d6e-94bd-9c38c213c9e2"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("88b59ed1-f869-401b-9119-ef26e155f48a"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("e0d872f0-907f-4ced-a256-4f1f5224adb2"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a7d97dcf-0498-4084-bf2b-643033e5d4b6"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("f23b5035-d1a2-420f-9bba-a1588a39b42c"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d8112cd2-fd03-451b-be75-f57f46e50789"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("8591ef22-be7c-445e-98b4-29c77ce4188e"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3b236d32-c5f8-470d-b4ae-8fc33e2bd6e3"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("848d77f8-27fc-4543-8ba4-2d3b259499b1"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c7441855-8b8d-484f-9654-806f4f553c6d"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("3657ce91-5a53-41a4-9163-bb2aad592d2a"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2b831fcc-7b00-4d4e-ac9a-4093240711fb"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("4e728932-65da-4163-be0c-9b25aa4de3da"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8a3b2bd3-778d-455c-961d-e80051c07a8e"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("fc73f3b7-fc25-4d8c-adb6-ba820927dcee"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b3a7a72a-8655-491c-b6cc-e577949eae76"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("d136a852-e52a-4749-a474-fbdff31ca7b2"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e1a2d091-8b58-4699-a160-38d7c60a07a3"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("8bc5d230-5326-4435-840f-7e42ce30a3db"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8969ba4d-380c-4425-bfd1-9876ea12e1e1"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("3dad67cc-d986-4c81-ba25-4500fd34ba3d"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("47e3cd88-2534-47b6-bcfd-3f54d735c6ec"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("b88b17b4-385d-4dac-ab59-55aa8d8de946"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("870ca322-022c-40c9-ae67-d866c48db3ee"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("d4715f39-abb1-46d1-9fcf-878fc9c20f17"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("fe920575-3fcc-474d-a8db-7022e9d88c9d"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("a28b80a4-5641-47c3-97af-71066b1dbe7a"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ae4531ed-d65b-4d31-ad00-cdf90a14b908"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("be37ecd1-8152-46d0-94d6-56cd56d8c32e"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("02d474e2-acf7-4100-a61d-f6450e184938"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("bd9b0109-29a2-48e5-9ddb-ed338124ea31"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7c9f69ab-5b13-4f1c-8d07-77a15a54984d"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("2b7167fa-4b7d-4dd3-a118-82577055583e"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("95e0f213-581f-4756-b2cb-0257c4dd6626"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("0361e374-b284-4432-87cd-6b669bea683a"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6fc46095-a5f6-4b14-a52b-7bb18f82e9b6"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("e596496e-c12d-44ff-8ff2-e65cb6e670f4"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d5645acb-cae8-4b9d-b706-ac7352eae141"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("ed8f14d9-7dc8-4eb3-88ef-b4e4ba21787e"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("faabdf9e-715b-4f21-b93d-aab01bb82fdd"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("1c9bdd6a-dbbc-4877-b1e9-876bd802fb3a"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("5220aaab-5f1e-4661-aab5-7e039fb9eeb8"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("8a0ec80f-9947-4f88-94d5-c64364baf913"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("acf7d40f-5f94-4b3d-8a74-fc7a885e3f04"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("29cec334-e1ee-4cc8-b7f9-bde27ca80ebe"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = true,
                             SeatNumber = "7A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("755b3289-d29d-4a0e-aba9-b1965c23686a"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("f72b4254-560e-4965-b78e-82e2c9193a8f"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = true,
                             SeatNumber = "7B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2de4b3fd-e798-4955-af9f-339ce535bd41"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("43b676e0-e327-4d52-b5ac-2080206e01ba"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d60237c6-e8c4-4be5-9d1d-72907c4c6ca2"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("f864a998-ccc2-4005-b66e-9499b7fa4662"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9e3f0063-737d-4e95-8e06-6bc395b32a7b"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("847bf7ce-9b22-4e50-8ce8-436574d697c6"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("cad91ee2-4fca-45ee-825f-e2b847df14e0"),
-                            AircraftId = new Guid("b3fb016d-06cb-405c-ad64-adf591475a78"),
+                            AircraftSeatId = new Guid("8c621ee2-2694-4b7f-a421-072335e20b0c"),
+                            AircraftId = new Guid("25c022e9-b88b-4896-aac5-4eb0af2f3e66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6ba37ec6-e538-4b14-b873-0e5c952af2aa"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("753e6760-fa99-43ea-ac33-8a5393a2a3d8"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f7255390-a1ee-4dc2-8a49-b21abefda90c"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("f87dd07b-722b-43f7-a2b3-559bc92f178d"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a1b9d81d-9f22-4962-a646-0733ddd245ae"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("3a8369e1-bfa0-430c-a4f6-b4e70d9c91f2"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("411aa57e-d4da-494a-9ef2-834a875bf7ff"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("44754d35-837b-43e9-83f0-cc767d18098f"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("57ef7c69-f101-45d6-a30b-6bdb8d4a25a8"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("3cc6f2e1-6827-4d92-b93b-38ce9248b1fa"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3575e342-ed30-4d0c-9eeb-d4b8d2dfda91"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("5398f20d-63ba-448b-b302-a0fe25a98581"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8197e860-35bc-47de-9df4-78f30a17d613"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("9b790168-2c5e-4fe8-a5e3-c0779ff84f4a"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "2A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("66fd662e-da86-483b-9d35-5ef799a1f914"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("48bba9b2-b07b-4105-9058-27ceb30159d5"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "2B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("fa18f2c6-8509-46d5-b65d-67fb0addfb97"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("bf745f45-59ca-45d1-b6f3-f2131400cee6"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "2C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("eb441036-fb87-4a78-b35b-2bb7536f863b"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("f4e92568-c92b-4cd9-9d32-645e0b3cd722"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "2D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2b388519-6b5a-4e82-b40d-7474b470bb4f"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("a64e482a-a488-4f6b-922b-8247906312ca"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "2E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0dd13d7c-f4e2-443a-a49c-06433f4da0c6"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("2ad4a26e-364a-4b17-8d53-9c5ae942de27"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "2F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e3ecd538-29a8-42f2-b251-9247476b9e11"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("d3abcc28-8cd3-4ff0-8c9a-99c1bca610ff"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2468dac2-ce9d-4b40-972c-42ccc871d27b"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("7281b6ca-eacf-4c5e-899c-116319bb5547"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4de81d7a-8b1c-4783-953b-e243a112b429"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("3a82cc38-04d8-4a92-9d97-33c26f29d828"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("931801b3-7359-4d78-bddf-e72ddc75a770"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("c0ac8598-0c12-448a-aa9a-f93f3793a48e"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("80c894d5-1423-4f42-94a1-e16837b68617"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("5078e10c-aca7-46c7-8824-6519d9770efb"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("fb0f2c32-b95c-4e4a-bda7-7a5616babc2c"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("99415760-051c-4618-bc69-7efa0df08da0"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("fe679045-d262-46e8-a594-de680008ddab"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("ff5b179e-a6f5-4f23-af7e-aea481bbf53e"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "4A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("85f4a57f-342b-4059-af21-71875e800b39"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("aa46ea98-6b96-4a71-9f1a-3d732b67f533"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "4B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("71d204ee-77cc-42b7-9914-d062440b8abc"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("8d750932-9ff2-4e22-8707-584d64fa9c36"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "4C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0d310587-95dd-42f2-a371-9d1726d38f13"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("6799fb93-0a8f-4c3e-80a1-c8e0e521091f"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "4D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("dbc90ae6-0109-4a73-872f-0779de432b67"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("8753c4db-f2e3-4876-906b-ad363e80a85a"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "4E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6eed78d1-e139-4840-aec7-aac73d4ada05"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("33cdc424-fa83-48de-b772-3b80b915ebe0"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "4F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("79f65480-3a07-46b4-add3-9f278caf512d"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("03ab014a-7bb4-4c54-b15a-3734c493bfc6"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c3f5f51d-1de1-435d-b292-f3c99122e6ea"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("197f7f9b-caa9-475d-b6ea-e96176b69490"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("31c87efd-fe2a-4072-877a-270d6cf6e424"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("16ac650d-27c0-4707-8816-e27d2bd8a903"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a7928842-5367-4b2d-9315-8e5b8766f4c9"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("feb7220d-f355-4be5-a98c-632d3435e85e"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b8be8bf9-e459-41ad-87cf-80aa7a3495c8"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("1b548fd9-905e-41bb-a3bd-d3e318ca2b9a"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6325d57c-20ee-4286-8de3-1c87c3cbfd06"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("15f35ea9-c634-4247-a4e2-3c66c3315a52"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4b275781-1087-4ed3-80cd-76f32a48eeb2"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("5d8ac25d-b380-4b00-8528-88a55b7ebec2"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f0f60bb1-8cc4-4ea4-9d3f-003969fef210"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("a9e6fe9d-f424-4e42-86f0-6048a53af210"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("81b99e74-778b-44f6-8d88-6c1156c3fc32"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("b96bf4de-4bce-4879-82a3-0a8c989f7d94"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a6152bb5-6108-425b-9dee-3ca1621268b7"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("6a189c2b-3b10-4023-b5c6-741785d218e9"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("14be204d-fcba-4c94-b9c7-60928daeb4db"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("cf679aa0-a4ac-41ce-b3ee-88bf38c989fd"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e23329f4-fb09-4b01-8bca-03e1220b989f"),
-                            AircraftId = new Guid("9e216b53-0ba1-4975-88f1-af73dd56c0ea"),
+                            AircraftSeatId = new Guid("7ec4462e-7aeb-482b-93c4-9ef14166757b"),
+                            AircraftId = new Guid("2e693be0-c464-40c2-b86d-b784f7d2f7a3"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d6e3d607-f882-4bc8-b2d9-096073efc055"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("3da1bee3-3256-4fb9-a51a-33c572fe3805"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7fde5e26-44a8-4e6e-88c4-a291ee8a42d0"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("c1346c25-e16c-4278-b7f5-13ce7b5775eb"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("55fd9b0a-a38c-4b17-9fbe-d194ff376e81"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("1ca52808-5229-44a8-bc3e-661e3bf7b66a"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4a865ed3-f50d-40c6-ab96-9d399cea0288"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("438760f1-6358-4a73-b2e2-c1ab4a39151a"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b9827bb1-e3b2-490a-964b-99e480c5d602"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("3cb631c8-5aaf-4dcb-9b1a-85e9bfd6db7b"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f173e32a-52b4-462f-bfb7-bbdf80440d99"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("8d155d65-8148-41e6-84c2-a5abce98baaf"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("12ec2064-b63f-4b18-b807-77bdc38247bf"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("ee6dde00-4cef-42e1-a966-601581e504cb"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b9a5e8cb-9d59-4396-80e7-ced4eaf4375e"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("a32f10e5-92c9-4dd3-9224-22bc66bb0976"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c8dc30b2-a69b-4fc9-9ba1-4267a6ffb058"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("a5324641-b8d1-4551-b0c4-cde31833755a"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a0344511-9d46-4b5e-924e-ecc9af82dbd8"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("2ceac67c-001f-4160-bdf1-10a84befd8fa"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("85950f81-83a2-47c0-8d70-1503cc1cce4d"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("20db5d37-3b94-449b-aab4-8a678bd1ca09"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("99fcae64-1c75-437e-8635-aebf8bcc2789"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("99f4bf39-b06a-44f9-b37d-ed5883eea3dd"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6bcb4d70-e9ae-48ab-92fb-7528e2adb5b1"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("9051645b-373c-45e0-ab6e-e6128c5ac834"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8f3bb01b-7093-4dd9-8892-9d3a56dcaa79"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("304ed7c7-deb1-4298-b861-f4ae7546bb55"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("98b3638e-c8bc-4787-b144-eb6d27896ea7"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("993fbe47-c0fd-4d06-950f-2965cb45ab77"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c349b615-47a5-4e08-be87-51ddebb71fff"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("711926be-3902-4eed-bbe8-a4b6868594e6"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9d9cc667-291b-4ea1-b1c5-ac86eb728348"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("91d05c01-4d3e-4c0e-a002-7a19b8fb11b2"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("417df507-49b3-411e-aede-25ed674a5c3b"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("b6ae173a-42c9-4c15-8ffd-b5d445ae2327"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e212fc9e-6856-4a09-a221-01f994f87109"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("b48eead5-fae6-4890-b888-a94661c7b1c1"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1d0a9a2b-899d-4677-9a64-85b3e9b40ed4"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("458a2067-1d07-4aa3-a4ea-2ed85087f133"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6f8791fb-1fa0-447c-916d-d1da904ad0e3"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("065c8d20-72e6-469a-9c49-5a66e8d782ea"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2b0d9e06-396c-48de-b9e9-f0bd503f0bb8"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("25a3dd6c-2c27-4a57-8cb8-cb02c2d57703"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("81d54088-3266-4f15-8feb-976d2357ca1a"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("f52b9d7f-f208-45bb-97aa-6a86d3dc6323"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("bbf1d8e2-e8fd-4817-b11b-02c66ed6fc15"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("3384b60f-4f2e-4660-932a-7cf81d96ab37"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f2695d83-b289-46e8-bc46-5a2a3398c122"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("48f612ac-dacd-4b77-a5d2-ae8eadb22c8a"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("fce7d5fa-338d-45b4-9097-f610030f0502"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("b527ec7b-b51b-413a-a6bd-3c78014f50e1"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2778b4a0-0b2c-4eba-951e-33e035633f8f"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("49b126fc-d357-4e9b-99a4-ffbf89f1798e"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b8adb810-2f50-41f6-b6cd-0c1d1183a7ff"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("29780f66-1cd8-4e1d-ad6c-e73ace2443ea"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c04f09e9-13fa-4d50-94d6-68cca0ecbdb4"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("e039da2d-cfd6-4cea-b6f2-849e40ce2805"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f48fc725-16b4-4896-8d2b-7fc6721d737f"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("3c89b8da-189c-4c5c-bbb0-0387e0e5b2fe"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ed615487-9a54-4242-8c62-db9e177f310a"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("3929dc3a-633b-4459-9c49-913deff79b12"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("74872e06-88a7-474f-a556-7efed294ebce"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("04ac083d-4f2c-4ad5-933f-554fc5cea82f"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("88a4e3a1-5f70-4e89-8636-a18dbc183d0c"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("630f74d0-1bc1-4bf4-af41-e92c6b246dbf"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7e814b95-2c28-449f-b68e-eef69e4556e6"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("fc851a83-02e6-4054-bdb7-f2683e55b36f"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4488cb76-5312-4472-85b8-475bb14279a6"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("8603e6be-1f78-48e6-9a5e-4f2a1f79b017"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c4ed4de9-07be-4cd5-b28e-8008313257ff"),
-                            AircraftId = new Guid("c9acfc93-f41a-476d-9f0d-43d92315a54b"),
+                            AircraftSeatId = new Guid("17ba37e5-97f4-4308-b19e-9b3f1169644a"),
+                            AircraftId = new Guid("4c868a0a-6dc6-45e9-8eca-bdedd7f07f66"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1d803262-f2d1-4eab-9ed0-28435152e1ef"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("70b2050b-0105-467c-896e-96148b2f351c"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6381e144-a0af-4d23-9ee3-20d27cae579b"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("8ae7533a-4166-4109-8c63-da496b79770c"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3bd56154-4e0a-4747-b794-e2df931d4f15"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("be87b08f-d52a-420a-92a2-0e5d6281a9e7"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ebc377c6-460a-43c9-84f0-80bbbc8c7e81"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("c3976bf4-d063-4c17-ae90-57ba88727c61"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1f7ccb5b-3d9f-4f59-badc-c6ac1d05c1ae"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("cf62e76d-e650-4aee-998c-f7c6a09ce44d"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("09d302b4-a237-4f7c-a499-20e82d1a4ce2"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("6915cf22-3369-465b-855d-117c4e29e0c3"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c127e6e7-4197-4de7-8534-035cf6fc99d8"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("ed8d504f-bebb-4f02-b5a6-07e833e1c470"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d5665a0e-7c45-469c-9982-c189903311a8"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("a923a2c6-5b51-459d-8812-62d8b7646ff9"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0dde4cc2-e9ee-4e00-a989-9e61d9b54232"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("57574f6d-faab-49b5-b393-d4c69b36986c"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("58afaa66-eb5a-4596-b853-38248d588e25"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("ab8f6db9-e351-4490-ad4a-bbde62e0a7ad"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b56061ae-9523-4d1b-9ca5-ce748ce24acb"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("9ea252e6-7280-4cad-b1e4-97325fd3ced1"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3ca5ecbb-3225-4d42-a3a8-ce5d905f87b6"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("104607f9-1d91-4032-b0d0-7a8809bfa84a"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1a34227e-8763-484f-9f93-a35448156840"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("f0d6c8a9-5102-4139-9f2d-f0f7a7412f9e"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("017239a1-972b-45c0-8598-8a1c6cc1f696"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("40484fb2-6d5f-4191-9b75-42c6fad07ab4"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3077c580-ef5d-462d-be42-7825df24c3b7"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("54c7d025-fb6b-47f7-997a-05aca5fceb48"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4c0d0d5d-9ed5-47ce-a756-fdaa501e57ad"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("344b6ac2-a48c-4636-9345-2934ac16f983"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("da8a99a5-acff-4f87-8ddb-2f60b63524ed"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("1df67982-84a8-498c-8585-f88ab89b72a8"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4ded80b1-9c65-4e14-a66c-01140c48286f"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("bbb14286-92bd-4812-b09c-e76fd6b99f2e"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("eafaa6be-f3d9-45df-924b-a3a0e6211497"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("2180b4cf-45f2-4b38-8e1c-43b046aaa114"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a65b5f1c-5bf0-49cb-9ffa-a81df44353b8"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("98db43c5-6d00-40bd-b77b-6686bea66378"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e73b373e-3256-44b9-bbbc-f8befd59b7e8"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("175bedcd-d1e1-413f-87ca-96128d4952b1"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("80a056f1-0fcc-43b8-b590-a209326eb88e"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("6b336e20-1726-4a5c-99f1-feb406988a63"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c73c3d3a-aa53-4ab2-863a-efa1caf03324"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("2e44cf32-2d10-4a3f-8392-f60a53e88a93"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c04a07c1-b266-409e-8138-aae5b46ce2de"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("976b6fc1-4542-410e-aedf-b92a72261a4f"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e2ab14f7-74a6-496e-9c39-b5af247b4d6d"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("acbdc21e-5b51-47eb-b448-db1d8ab3273e"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c517dc17-38ec-46c8-9efb-8753d464ebf2"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("b303ca0f-7603-44be-9784-1fadca744be6"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b1a801fc-fc23-4a27-b358-3c2ee3a3ba29"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("247e75e3-5cad-4f91-8aa7-de7cdcb8a1fc"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("dc31e5d9-74f7-4977-bbd6-988c23b0ae38"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("9f4fd379-4638-4d91-ac38-118c03732671"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("33bde12c-d829-43fc-a3c5-f434b856690a"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("7b31babf-361e-498b-8528-3a04612518d2"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b01636bf-38b3-4e82-aeb7-f67c144e63ea"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("c4b6f180-32e2-4a7f-88c2-e2ae35edde70"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("87f85cfc-bac8-41c4-abd9-432db743a18e"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("2e3cddd7-5a2e-4dea-ac21-b03a4cdc748f"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("61779ae8-7742-477c-bc30-d94edc7d5237"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("5ea1b76b-412a-4f93-a5cf-6b22503223d7"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d53e09db-7898-4fe7-83b8-17eaa2c2cfbf"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("38c4a42f-4fb1-40cf-adbc-8f583b6809d3"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("85882223-3ed2-4b31-bec2-68b1d3bc07d5"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("5e533f0a-9c00-40ae-985c-d7a2ed639492"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f03f3341-5742-46e2-a018-d24c03e3955b"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("5d478d30-b51f-4dba-9021-179c8d95ee07"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("256326a0-d018-4faf-a97c-6068f263f2c8"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("d88cc120-4751-46dd-b7c9-cf06a052c12b"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("fe87c0ff-c9e2-4d2f-88f5-86e70fced097"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("b95ae8b7-ce58-448e-a144-83dfa9f7839e"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f6d0fffb-2435-424d-a829-2cdd68a47cc1"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("c2e372c0-7e28-456b-a5d1-8a10c0a33b96"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a24d7e31-9f0d-4707-a6da-60f9d2035ec9"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("6f173bf8-caee-40b8-909f-132d7e351523"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f771c526-95a2-45d6-bfb1-ead8cb89c1d9"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("44d61506-9793-490f-afbf-956308a7574b"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("08247f3f-4919-4986-8713-9d4a1a52acd5"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("5b21be7c-766d-433a-b3ab-1849c7d279b6"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d8a3cd1f-2328-4f4c-80a9-175c5affd81d"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("13510593-d41c-447f-8d17-9f6927d1f764"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4e732bc0-8aec-4e62-8415-3ff144507d1d"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("87e1219f-5964-49b5-8f59-a7d258f6ef78"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("193e896c-0e85-4e80-9bd0-7b1b638eaa59"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("7246d7b7-ebe4-4422-bbad-75aed1732bd3"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9bddd1a6-4a00-4d8b-a3b2-3988ca3a3d51"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("c03af405-7bcc-4c39-86f4-c35b1799ac82"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b04ec60e-ee6c-4605-843d-8938d3969bea"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("a64c3f2e-5ac0-448a-898e-3f326ebc67f9"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("5eac06e4-9fb9-4516-8698-324b3a360676"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("fa504d17-2bf7-495d-bde2-0aa971e7d407"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b95ce61a-d72b-4173-919b-fd1f081e9dc5"),
-                            AircraftId = new Guid("e40a19a5-582b-4e56-9409-d9c4c18331e2"),
+                            AircraftSeatId = new Guid("3e9579ed-bc2f-412f-96ab-08c3c9607e61"),
+                            AircraftId = new Guid("249f23b3-4f1e-4729-b80d-39e20a4bf6d7"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("726df720-08e1-487b-b78f-a737d5ad4fd1"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("7eb84c1f-d7b5-4a43-b557-63d45736304a"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9d312420-8cce-4ab1-b43c-aba4c34b98b0"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("c9b0b2f6-f16e-4044-8447-108039ecee1c"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("16609095-ec1e-4718-9237-090883c1ed53"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("9ce09f06-5a18-41b6-998c-b0e6f130502c"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2a131562-2d7c-4d50-8afc-72c0fe3cb707"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("b24efbb9-da96-4911-9451-a47114ac81a4"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8081b2f0-6236-4dbd-8885-044efe330ebd"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("417e6e4d-c58b-427f-8410-f704ef3d4777"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6736ed6c-b802-489c-b176-cddfd5e3a3e1"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("1ab64283-d355-4177-986b-f08c99138df0"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a3aeab03-ac16-47f1-8daf-48d1c6c2983d"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("1cec19a9-1150-4a65-89a4-e1f02218933c"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("bd9efc43-15ac-4ba1-821d-dfd035c8be2c"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("163a63b9-2598-4531-9056-fd99a718927e"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7f8b83d2-d612-4971-9124-d33bdab18166"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("ed27abe0-0b9d-4a43-8f81-5ff8336074be"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1fe94815-5f26-4826-b04d-115427e05324"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("470dcb13-b82c-4a6f-ad0d-47474a5c43af"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a656e2fe-baef-40cc-a52b-97a2f3f3483f"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("eb7fa777-1a2c-4a5e-abe9-bb1174c46408"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("63e78c94-7683-4bd4-be25-7c9d3d8eec34"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("91b5f51b-93aa-4ab8-8b9b-399e4bbd74ab"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("10114f69-f393-4d96-8dc5-0aed5c34945d"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("23b36098-ef58-4575-a8e9-fffd3abd7441"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4f96b3a3-a978-42b7-9d8a-8ee06b0a3caa"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("2795cf82-68e8-41a2-98f8-092c62bec58e"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4e294056-e9cf-4ff6-ae69-56e7700c42d5"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("ac1591ec-aa0e-44c6-a8e7-bdba1529d693"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("076dd5ba-c530-490d-85be-5307e22c3ba6"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("7ea276f1-cca6-412b-a2f7-7672ad961119"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("cfe813d8-11df-473c-8018-e0c5eec53f90"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("29e7253f-241b-4e69-bf8d-31d0b729a3f6"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("57872fca-0e5a-4afa-9955-54d6451e240c"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("277df0e8-9626-4e00-a9b3-9101965cff4b"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "3F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e34834e9-a433-422c-aa2e-2bdc2c55a907"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("f47c8a5a-9e2d-4d0e-a888-3471fa165d5a"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1eb48212-3b66-4cad-9dd8-8167fbe15808"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("94f55f5e-0511-4756-a97f-9c4b6147f078"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("43c57686-2c0f-4185-bd2a-8c6b53acefc0"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("7a8ff326-e994-4d15-90c2-4da106aad1c9"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("5fe41de9-82b9-474b-8652-ea02425bc6f1"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("1eb9ca8b-3e9c-46c4-9f94-c0c316929ae6"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f1cfd43f-4e3d-4ebe-9feb-796fa3b545f1"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("f687dd90-db66-4d3f-a043-b32974ab5d8f"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("27eb1512-b029-4c05-bd70-ced018b012a7"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("8189e3fb-a2cc-4115-8675-411286d2573d"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c540da05-6926-469b-abe1-ddceee27ee22"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("4d7e43a7-4cd9-4d1f-b10a-267cd331f563"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("031010fd-74f0-4735-965e-9c3d5821cb64"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("aa9e41c5-1c28-49f4-8a4c-3955091cc182"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ce809af9-b995-4766-b5d3-ec6818bc97b8"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("e0820c02-fde4-40d7-a535-4c1a844b2820"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("98b22916-8f71-477b-a9a2-306c5d969b72"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("c92fe3b2-c05e-4b3e-809d-a66d029bc96a"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8d2da010-0e71-4e52-8927-cf40e5ca8dec"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("f193acef-3279-43b7-9946-c4c3cde8e696"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3bfa54a5-3bed-4e18-b737-884688301d28"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("fdc132ce-065b-4374-8e15-9ad66b5158eb"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8648b38d-ef66-4ccf-8f37-936bf3bd4785"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("71de40af-7924-40c0-963f-17e32247b35c"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4ff1118a-9acc-44cc-9a3a-17c11fee9d86"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("dceadbe2-174b-4e9a-aa08-3af6f562d285"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b9d4bb5b-fb21-49f8-917b-2ae72b44cc94"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("e09ba59d-6a8f-490b-ab17-26a8a1193c00"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4fd20f5f-ae89-4f09-8fbf-13a61ee5748d"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("2d8a4951-c36b-4145-91a8-83c56b75026a"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f52685de-255a-409b-b0c5-0d4fe3c8dbae"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("cdcd9065-4329-4bc1-a5dc-a0c631aa0495"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("29bb168c-25ea-4ab0-8279-5b14028e239b"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("6a8c7529-8ffe-44f3-978f-053a20e52e1d"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f666e623-b140-48c6-a67f-4db74a00e92c"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("24c0d315-7aa5-4042-b63b-f7b6d8ca54e3"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b6a3e652-b37a-4484-a25f-61ab6cde3e05"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("ceb7f656-eb2a-4d7c-bd88-6c279b0972a0"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d570d853-da8a-439a-aefc-e70e747d5f94"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("b7f4a9db-717f-497b-aad3-d93e8e248489"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("658e1cc5-754d-483c-a935-8a271d4654f4"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("8021adde-e1e6-475f-af5b-8c27884cde1e"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ae93dafa-c93f-4b1d-97c3-ce5d96c0d49e"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("5ba73ac2-41b2-46be-a2a5-d0e567042035"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2b18e38d-ac0d-4492-9519-fe1909abc2d4"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("90988559-ef28-4429-9e76-dd82a4433283"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("321d09e4-f2ae-4bcc-851a-1f57e4abac92"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("65b600d8-2aa8-4a87-9dad-06721173edd0"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e26f3eb8-dd0d-4621-b039-33c771b650ff"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("446c8ffc-bd4b-40df-a9c7-70c9806c3183"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3f6b5dbf-01fd-46b2-a78a-a6f344a07168"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("30d5bfd9-aab2-4bf9-a4da-08858e1a21e9"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("36d4220a-4789-46c7-af3f-cbc06852a0a2"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("c0e69e70-0cd8-4c4d-ad20-870f8ae57b8b"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f53ec4be-58bb-4356-aa32-230080449791"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("f02c5d50-eabe-409a-a03e-6ada988f93fe"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("83ef6b69-78ea-4d24-b1f7-a022ad9e3c9b"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("67440118-086f-4da5-8ffd-905400a77c15"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6e2a03a6-f4a5-4a64-8303-edf1ebdb617c"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("e53ee610-98a8-4e5e-9280-561f0cb06571"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a7216a18-1e08-49dc-84d3-4fb97c4c7605"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("25da6ac3-3017-49ba-80b0-f4b1359ef417"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e714247b-78e5-4aa7-8ee8-18bf3110a29f"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("7be9c1da-846e-4dd7-a7fb-478064a16a23"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("dfd8635b-0f4e-4715-a2ad-985872d10f73"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("f0b2fe95-2212-41b1-b972-669d4cbdaf4d"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("591e388f-4229-4a58-ae52-44ac2c7df7b5"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("cec4b5db-db98-4a89-9bec-c028eb443d79"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("939f7c9b-fd0f-45aa-aec9-45fed137e19b"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("527deb47-7f0f-4109-a26f-2fb0488048ab"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f2ddec5f-a130-4d98-b2a7-55d358ef7293"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("5b9e2246-fdcc-4304-9d60-e122ca484143"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a078f7c5-f84f-4504-9e9b-c68896155f95"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("2a3bfa32-2c01-4c12-a964-049dcfe9133d"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8bafc3fe-8027-484f-8d36-d9eb8ba706c0"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("d788b773-3e4d-4173-90e3-54c7ff7e0e08"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2853d616-f47b-46b7-ba24-72d0f52dc94f"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("d5b56ae0-7575-4701-b613-1d08327ad355"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8ba44233-c972-45ec-be1b-d85d55df37ab"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("49d222f6-2903-45b2-aaa8-44aee2620046"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2c27e1c9-054f-43e0-8bb6-d8e180ea568d"),
-                            AircraftId = new Guid("eba84182-f8f2-40dd-8612-4e47fe735ce8"),
+                            AircraftSeatId = new Guid("044e0c88-b92f-4fb0-b4a9-1051e8f5ba3d"),
+                            AircraftId = new Guid("3fe28a0e-2f3b-498f-a6f4-ef9b36708c1e"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4ae1705b-4893-4bc3-be88-bdc308f9fd36"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("a5bb2573-03e4-4fad-8d37-9c15064ad6b2"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d6f2eb97-d663-4314-a25b-0616f75151b8"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("954e6e8c-7f23-420b-bdb2-a82a030e9ebf"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6183bea4-e022-4dfc-8795-9b25a209a40c"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("dfdb2482-d5c6-4d30-a1c0-ca81a486884d"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8f1d99aa-1bb5-4f51-8e41-f643db0a69f1"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("599fd186-50d5-46de-be99-26243ff3bee0"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("eab2da83-32f0-4453-9280-2d496a7b86f9"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("5d3698fb-6c75-4ba0-a169-742d8e9d1a2f"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b4626801-aaea-4f28-90d5-1c30e81993b9"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("3acd07a4-148b-4770-a43f-44749c0bffe2"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("811114cf-fb6c-4ace-8e68-882e4f5a6c76"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("68e2112d-ca18-446e-8bbf-2b0536654b9d"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9008b915-0fee-474d-8f4c-43cb2917ed87"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("11e6939c-5438-4250-a5b6-9b85f271e636"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9560e1d4-dc7e-41bd-9dd5-5c569707b844"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("0713ed41-b870-4ed8-b22f-3990f8cc22a1"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c3838061-b13c-46c9-a7f3-208005150b03"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("0fe3a846-02e0-4172-8605-a81a0ad2af02"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c532699b-8ece-4a24-9ada-094d3a00d7cc"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("9109eafd-9596-419d-804c-21fd3001efba"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8ef6b6fc-340b-4b4f-85b0-9f2bd5e9bf2a"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("285017aa-4086-4ed3-b330-aae8d5673bc7"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("20b7ebf1-44d6-43f4-a2fe-58dc24a55a27"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("9908ff59-55f8-41c1-ab34-abb062fd0796"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a1ab2fcc-e0b5-430a-9139-0cb14198bbe1"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("43337085-3b64-4462-bfc4-437c932d228e"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7b7a7bbe-6339-4722-9701-9acaadefac23"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("dc7f9b89-00b0-4496-a1e7-1df3595c62f0"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0e2ccf0a-c1ce-42f0-8cca-dcd50d6dc2e1"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("48e2ea2a-2aa1-4e93-825b-ee5c274faaf2"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("90fc2dc0-47a0-4ebd-8652-ee7876a5d67b"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("19b1ce5c-6444-4457-ab2e-3262092bb5d8"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9608ae37-68aa-4de9-ad76-1c9b95629e7b"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("5de947fa-ae44-4ad0-968e-f391369625fb"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("21740d6d-cbac-4390-9266-6b4478a571cb"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("a75461b1-ec01-420e-b9fd-e4dbac51f9c3"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d1a2a3c3-7b6e-4ef3-b383-b12448928feb"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("d9686ed3-29b4-4e49-b585-ea7dbcf80dee"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("564ba401-9e39-471a-aa1c-9d45f3bbc06d"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("1b200ff1-7760-43af-82cb-01872b3795a5"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7332d035-8408-487c-ac7f-e357ae5a3c8d"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("ccb99729-8f71-4893-ac8b-a6f59732d64d"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7cfac8eb-d4cf-4751-8935-d733da5a29c1"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("c738556e-263e-4eee-8d13-360c7d1d7ae3"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a2457dec-f55a-4346-a098-2be7abdd9579"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("8f02d535-b7e1-458f-90ef-217796c56f88"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("dc8b5c52-836c-4b66-b959-07303904559f"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("e002c1a6-1ba7-4bbb-8da0-779181620f92"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("edb3f580-7e91-43eb-9eae-6451d281f133"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("9caddf77-dc8a-46f4-8a15-5d6957964288"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("fa1762bf-4f85-4828-b900-8aac8ed6bfb9"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("6080147b-3198-4df0-94d0-bcfa1a886052"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2413eccf-eee8-4cdd-b651-fc1194ce1443"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("1f1d0e5d-5ef0-416f-b288-9a0156b6a8f4"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8bb695ea-035b-4e0b-8b89-512c59a869d7"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("25731146-c142-4518-8ba9-549435a962d2"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c9022755-ba0a-4ec7-af1b-4b2268586c15"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("d3bea2e1-6655-4e95-a0f3-bc02c5170065"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f9104bfc-3673-4f09-b562-e4269dbd2a3f"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("726a23ca-b8e7-4dc3-8e4f-bb32a06167e7"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("78d55571-c6dd-4a51-937e-4f4a8db1ec9a"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("a662fdc1-c6ac-4ac8-9af7-0e6c40f6fb7d"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("5858c2b0-647a-42c3-868f-5bfd97af5f1f"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("a5951e2c-1bbe-4baa-9c37-2bff81fba5eb"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("cde62d1e-e28e-4aae-a794-d13ab551b388"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("7c1eb71c-621a-459a-b6a7-ec42e1effb23"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("70459b04-7fc3-498e-8ab1-a6259a2568a8"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("5bf96c06-e86b-4da0-b9a6-daa49154353c"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1906fa7b-8d7b-4a1e-b0ce-fb7a6cb78a33"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("5ea88264-6857-4245-bd70-ac1d372faf10"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("5af3fcca-b73c-41cf-9843-ac8cf812db29"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("5f4fb867-783f-4713-af94-b9826e6dbf00"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("82551992-be4a-45e3-845f-98c84c9ccb9e"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("0a6a0e16-ccba-4d64-860e-0bf5b86b7d6b"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("34372f63-e117-45b6-90fd-5bbcb79aacc9"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("8e3a1e84-3666-4049-b1e1-8e5e0f06efb7"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("55960898-d4e7-4d41-b62d-f3d5fea62326"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("4a602440-0414-44f4-b552-4f4c0fd700a2"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("48abe2e1-a535-4a2e-ac3d-709990c6889b"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("e5cca0c1-32f3-46e8-a546-73309c1bbe08"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6ed63572-c126-4b2c-9ec3-6ba9b4ba364b"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("5ae9b149-cb1c-4684-b430-30a6119e8497"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d2ac1c6f-08bf-4cb7-a76d-1cfc214f5382"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("5ec706a2-8133-4855-b47b-580eb58c35f1"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9d123b7b-be05-49a6-b9c0-9c5fa9c63920"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("94a60310-18cf-4b71-a011-e4a508a0bbd1"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("bd81c58b-a73c-4dc8-92fc-50950dcc5215"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("db415314-325c-4745-bb12-2d1d576ed99b"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("77ffca40-2a16-4fb3-8fc0-50586ef686bd"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("ac0bce4b-b20a-4576-8ece-226336afd4d9"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6905ea0b-6b10-40db-bf61-442773fd91e2"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("0d597c3f-7cb8-4ef8-8672-f21068342f65"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("319c50bf-3ff1-423f-b243-8b44b10967aa"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("3c8afc3f-7773-409c-97e0-5e46abda376e"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e6e629ee-91dc-4310-8ab5-dd564ae685ce"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("42de7419-a4da-4461-9e3a-ea63adaa2c60"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b5a85517-d5c3-457c-885e-db7084725cdb"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("1fb8cf48-e040-4f59-997a-b64d48f5df85"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3ba61cb2-683f-4b2f-972d-9f656ed065a9"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("fc326746-f13c-41e2-a511-4796b242eac2"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a6c4812f-e90a-4b0b-b3ce-c700224c6835"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("63e306b1-3671-45dd-8334-caf72b27526e"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2b3570e6-1fd9-46df-a640-76c2611af222"),
-                            AircraftId = new Guid("7f37cef3-2959-4023-a339-2fcc9a7b69de"),
+                            AircraftSeatId = new Guid("10a6d2d7-0418-4ecb-b098-f411358b426f"),
+                            AircraftId = new Guid("e362a311-4ea9-4bd0-9b76-badc4fcf2082"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("798cddb8-a566-4ff1-a130-24e5066b9f1c"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("5dbc4443-6b88-479c-bd42-9680f294aa05"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("03e71eb7-cd3d-4ce8-8aef-b5fc09eb3c53"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("c5e5d5f2-55b8-4e32-a2c7-eadabe332b0e"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f4db7025-7057-4880-9ee7-36d646eb87fd"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("cb349789-1213-4021-856c-44822132f6fe"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ac944468-32db-472d-a39d-14d454aaaab3"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("a257cba8-13bc-434c-9eb0-18cffd8bc4e4"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a924d14f-acf3-4b94-8f41-a06f41b93cb2"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("b6594872-4bac-4110-b462-4db64b077b72"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f3545dc2-e2b6-4415-963b-53781e4cd46b"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("d8b16839-3b6d-4641-8867-5f58b26eb4b8"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("40e79ad7-3adb-4947-a511-25a97adfa97a"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("5c58f756-8807-4023-b2cb-5cef14099b33"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8292c92b-0a6f-4113-a75f-1691ad6ec579"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("a660c187-541d-40b2-9638-4cc3d70571e3"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("54ccaeca-f83b-4309-bb1a-fa39be32e992"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("1e42aafc-049b-4dec-ae7a-604253f57836"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f35daa86-b990-4a44-a6eb-81d45b250ae4"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("5d4f145f-8989-4c77-b8ac-205267b7b051"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b356fa0f-95d9-4ddd-bf07-c2ef73a9d36b"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("f4431e80-478b-447d-babd-8ea723763f4d"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("966d358b-8580-42b1-a4c7-d8edfe322bb7"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("fe11ae22-a230-4dea-a262-71412110afc0"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f1f9caa0-8d6a-4664-9330-07655b762e55"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("781b282d-7f52-464d-aee5-afd277f4f377"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3c95d403-af8a-46ee-b750-36d75e360f0b"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("4acb8b07-47f0-48bc-95fe-a680859cd97e"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9a569ed1-b2e4-4809-9c4c-9fb0f8b1e781"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("2a446f77-3aa6-47a6-91e6-64c04273121d"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7abf42aa-96d2-420f-b147-67b468002f0c"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("089a7be9-d30a-4848-8780-89441c9c955f"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("91e76d46-196b-41da-bd9c-941fb7d172f2"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("d9a60d0b-54a6-4c03-9426-884c24e0fb7a"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("39147d32-61e0-4ff7-8375-1772f2495707"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("b0c41918-6917-40d0-b6b6-f6e5b134969b"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2082a727-93d0-44aa-9154-1b5022f7a787"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("730ca535-50d9-4f9c-95e0-fd99998691a6"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1b0f774d-e602-4e11-b7c5-35ceff65e3d1"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("99978c1d-8c61-46b5-9dbd-5d6b865f45cf"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d875bee5-9924-4285-b139-d6d05ef2dc80"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("17ab60cf-36f8-4a50-92de-76310f93682e"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("761c35c5-aae6-4d78-8bf6-06a54760cdb6"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("d27723d9-4b33-480d-9a44-3e7514492aaf"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f07f5c72-cc43-482a-aa01-c1eb546263d9"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("d1eac417-58af-4697-85bf-89883a5ce538"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9f28479a-29a9-452e-a08a-ffd3f4a16a20"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("a19ef078-5188-4a44-b53e-51605800abf6"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("563dc7f0-0c8f-4356-9ab4-c39601d2557b"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("12aff332-0ffc-4628-b5ea-548b6a744ac2"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b2548a00-bc96-48fb-bafd-1b5d3fea76c6"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("998487d5-57e4-4ac6-a2d9-5d165800857e"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4cb43e95-8924-40c0-b3c4-46a86eb5235e"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("54b120a7-c52a-4318-8f0a-8172995684f0"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("de263bac-66b0-46bf-83fd-44549e449fd8"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("a9a21545-1c97-4e8b-884c-8cd3ae1193c3"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("06cc71c5-b420-4d3a-b95d-b7d1d4774c9d"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("fd2751ec-43b2-480f-b205-9de4622c090a"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("39f2c87c-1526-4f48-90ff-20a70ec7d623"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("85e0485c-ed0e-44cc-8d70-1b39f47e5cd2"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f7be200f-1e8e-48f0-87ec-ba60b23bbe44"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("be936513-5ae6-4250-aa0a-cf315c5578c1"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1fbb95ca-b836-444f-8901-cc15d4d7fae3"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("c3a016df-ca0b-45da-97cb-ac4ee8b8bae8"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c74b9bee-04a2-40c8-ba3d-6ffc230806fc"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("50a82d93-ae8a-416b-8cbb-100fa0ba7c2a"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7ae1dcb8-c1c2-467d-9c7d-fb58b7325090"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("4f24daf5-1a1c-4edd-a839-c31d4386f76c"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2b8e69a2-885e-4f6f-bc9d-4e2444caa009"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("0449bb38-40d8-4e87-bc77-4a7084b503ee"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3bdd1f39-e876-4e70-ba68-6d70fdd8a561"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("fdd217bf-0e42-4e09-960c-5a7838b3d739"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("bebfee2c-c35c-4010-a444-51e69d7788a1"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("4a9ee6d9-e245-4713-8d02-7354b12ca7d9"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("89cbd79e-1341-4607-bda3-6b4c2d8474e5"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("b71977e0-56d5-401b-916b-1df77340ec32"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2e249b3d-3a6a-45b5-914b-85294b140aaf"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("b4e6d9a8-9824-4e10-ac7f-75a0c7ee2644"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a00cf005-ae10-4c8e-a05e-1c1c553f6afa"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("44251e08-75cb-4956-8f6d-4185680a1541"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e9179a01-eb35-45ea-a72f-e69c0eb51bac"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("ab41d0e7-9c12-4542-8bbe-a22f76fc4511"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f238f514-024d-41bf-adc8-f680e9723c14"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("e1b619c0-0a37-4e34-b981-6d1fc06ef200"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("05d6aaa1-09d0-479d-a75b-5015b5587edd"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("938600a1-cc14-4b23-b915-9194811d6f2e"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("497bade5-534b-4039-80ec-e8dc1f2d5874"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("c4f8b277-f3f4-48fd-9c45-e60120a32649"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7b59745b-a6c8-49eb-a7be-2d71ab3c0265"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("76dfdfba-4a41-4e47-bff2-7a2880f0eb0e"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2a976c86-f270-44b9-afc3-c73980703aa3"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("da813baa-5825-4f31-b559-068e56b0364a"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("384bd3c8-6629-43ac-8c67-131906899ceb"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("89585312-cd95-425b-ad09-a450017f39c6"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("63f33f3f-ccd8-4dc3-becd-cf87873aad80"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("a7f4fa5d-1433-481f-8a9f-9a55607ffc9c"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("931a5e7d-5e00-4b46-8b53-3295324e1a5c"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("406c14ba-3bf1-4be5-a97b-eb6159cea576"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3d518133-798e-41bd-a0ab-acb3b9e849c0"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("313a7ac2-9fdc-48b8-a252-a77c37454dab"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1cceb3d6-03dd-46b5-8b11-2c49b05f3702"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("e5774666-7aaa-4cd3-ba3f-abf90f59a561"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0d3c1e3a-c79e-4f49-a619-f03f7a5ad15d"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("f30b36a1-79a7-4c89-bd30-05ccf08040b4"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b6cf676e-5b31-478b-a6bb-b536f86d9177"),
-                            AircraftId = new Guid("22632089-8b6d-48bc-8db1-b8aa8e364168"),
+                            AircraftSeatId = new Guid("e635205b-e783-4440-bcc4-8af8ea944813"),
+                            AircraftId = new Guid("975368b0-3cf3-4789-9248-70c6d58ccc70"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ff5587b7-72b6-40d2-a0fc-098fef4a2ec5"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("49b8fe5f-2b6f-4b75-a447-ac7a21d9e15d"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("601e80e0-e432-4b25-8592-cb7586f6a2a7"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("ca9d8f92-126b-4bdc-a3c0-421249df1739"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("dc464cfb-bf73-4e31-bf5f-5736b109ca5d"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("402b8101-ed3c-4859-87ea-df4a5850e1dc"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d78a96e4-df44-443e-a3ba-10d756494cd4"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("dfe5bfa7-c348-4bb6-b24b-95f5468b2832"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9a54306e-8f43-428e-b83d-ea603e16301d"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("e05f84d7-9cd5-4d18-ae8d-5fcc2ee7c5f4"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("84228dee-3859-4c99-9283-d93840f582ba"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("02d69444-4efe-4711-b88a-e9aaeb9c0065"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1a47b86f-b58d-47af-a503-5fc639aba821"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("7ae0e3d2-f2d9-4c82-8477-210651ca97e4"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3722a7ab-5c36-49a7-8555-a07a4b6d441f"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("cf1faaaa-20c8-46a9-88ac-a2fd3112b143"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("32a9869f-89b7-4e97-af98-856f2fb23db0"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("0b9e5b52-d391-4116-9c29-bb8b09136c16"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9a8fe7d0-8a46-4900-bc82-00b14cf14295"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("c257ecf4-cab9-4703-a089-e4c0a0222667"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("36d4015a-6c8c-4631-ae2f-714fbbf137c3"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("0a29615e-1263-4cbf-a24c-b2de6b5392a6"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6a60022f-32d6-4eab-b4f8-e08ae816061d"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("bfdc9671-47e5-49af-bff0-03cde4585cfc"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("26016af8-7053-44e5-898f-5b3625b50a0c"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("9645f8ef-1ce9-413f-9d3a-646c93d02248"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3268ddc0-8e8f-4c5d-b178-175d719a212a"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("6e18a0c7-1c97-42b3-acc3-663eb65db6d2"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3cec7f55-600b-4267-a1c6-c5943e5314af"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("c35b0d00-1030-4c62-a2b9-a23aa6bd0ec8"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3440546e-60d4-4016-af54-eda42211b60f"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("64527706-0c18-4466-ba71-ec491be4ec62"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a63a649f-63c9-4623-bea2-5b976f9dd607"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("8fc344c8-f7ea-4ad4-98cc-0ac1ff6418a1"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("23e6d794-d350-4a65-a0a6-c1afcab7a1ab"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("9ffe764a-097b-44e8-8e15-939bc253de7f"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f30adc3f-ffad-4470-9fef-c43f14e78abe"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("05ff85bc-5be7-4f95-8355-4f805d5a7d91"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("07d457cd-e36b-4539-8a6f-9fb779a50111"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("3d2928f0-b008-4776-adb5-40245a0bd93e"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("08aa724f-d3de-4888-994b-4f8dec99bd12"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("b41598f8-0238-4df1-9717-f7b1eda69b19"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("60c12ec0-3e9e-45c1-a558-2cf3d46e770e"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("f5d0c2f4-8b8f-43dc-b79b-8a47987878ed"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("437ee8b1-f70e-4a92-9794-8a39331f861c"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("d2910f46-57cb-4f0a-a363-5fe2d3005807"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7f17e391-42ec-4039-a864-5944f93e22d7"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("71ab9419-ff32-46bf-b36d-c68a1fa9ea88"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("13707666-5df1-462b-b074-0236bde81324"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("15ce3b82-1363-43e0-a039-f7a1bb0507cb"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("87e9d194-48ee-4b64-bf8f-c7baeb088729"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("7a402da0-fd0c-4108-a102-69e1395559d3"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3804f634-22a7-471d-9bc8-babcee1410e1"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("a2da708d-47df-40a9-875c-94fa056b23f4"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("69848974-9e86-4a63-a452-460f062a0faa"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("38f0de74-f258-476c-8cc9-0a8317a879b7"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7bad07c3-6b81-4546-b63d-db12f1baac25"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("f22677f4-1ee5-4f74-a389-4e4ccf986a50"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ad629fbc-5742-42e4-957a-b4a51a1844c4"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("b164b1c1-15ca-4af3-9373-6317108e8cf8"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("03ee9aaf-47e2-4b41-ae8c-57f140f064eb"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("cee4fce8-6b7a-4e95-8604-1675685e24d2"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b35fbd4d-4c34-4b6a-bd00-5aa6ce6af035"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("73244842-2c58-426c-9faa-fddfd9adf44c"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("452bd7bc-86e9-4ea4-978d-9d5e6103b458"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("c9fb924f-7e7f-4b0c-a5a2-fb6087be0618"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2eafd3dc-c928-49e8-8a3d-0c2335750e63"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("a76dece7-a7cd-4194-9d72-3ebbf8c6a718"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("13d43177-4533-491e-8e0b-4ae3263de319"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("a6da99df-f10d-4bf7-9fce-20cd9480a91c"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("827bfcd5-5905-4648-9a2d-7fdf3474034f"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("c4b196b9-35d7-456f-9136-dd009e624c70"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("938d23bb-2fdf-40b9-8b0a-e6fb5064e480"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("2c9105fe-85db-44df-b54c-fd6e2ab484c3"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c29e8e3d-0c15-4996-80aa-43144396741e"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("79075254-051a-4e4e-84c9-a6164a23b4a8"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e3fe12c3-dcf7-4fb4-80ed-fd77707e3ab6"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("97b90ca5-0235-4b3c-8ed3-d90fad0d9451"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d1047708-3f09-4143-9f3b-ae232cb3c2c6"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("5727eb5c-1e15-4100-8433-12c1165595b3"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e59ec8ea-1ee7-4e51-95c2-8eb02d1bf2dd"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("83bef74a-a2fd-49cf-aae7-e6388eb33b0b"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("75a387f1-81d7-4b87-966f-74d221b5019d"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("a696e786-0f94-4f80-a7be-4ca0328fbc51"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0bd2a5ac-6c99-47e2-a789-4de4016956f1"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("108963e2-2063-490a-a152-e7c275db4dbd"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0aced2e2-17fe-4758-bbb6-fd562b506f37"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("5d04d8ca-2cd1-4c1c-bca8-5ca2ebde8ab5"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("42956081-45ff-4ead-b13f-71201daebd2d"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("1580a312-5c62-47f4-ab77-617d6c2f2494"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("533f51d5-eb23-463b-ae4b-51b8064e7c51"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("e2117527-837a-42cf-9f13-6fcf424f68c0"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("88542528-a19e-4de9-bdbc-215d34d12bab"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("3f95c785-b0a6-45c6-a821-16b89decf46c"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("be69f42c-901e-4712-acad-d6b4539be5df"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("1eb9e494-830f-4863-82e5-8333d812ac4b"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f68aefe1-13ad-4fed-87a1-3328e9cda6bc"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("1c44c8bf-fc06-4d24-8b12-fa67fa0aec01"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("25de7c3e-ab19-428a-90d8-70af29f78071"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("194343b6-639c-4415-ae1e-6bdad298f9c2"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2a79cd33-145e-4a1c-9249-a3732a366fc3"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("4d7b5941-0e04-4a93-9e72-5febf1d2d94d"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ea46e200-db64-4941-8c5c-bb46fa7903c6"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("4b92ef39-d94f-4eff-b8a8-d4e24e1f1f84"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7e719246-018b-4855-820c-b09360edd06b"),
-                            AircraftId = new Guid("97046ae8-a72a-49c3-887c-8fc9a04b660c"),
+                            AircraftSeatId = new Guid("327aaa74-86a5-415b-afba-b8a57ed377f6"),
+                            AircraftId = new Guid("ad4b212a-8ff6-4642-8737-d5113e8ba797"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2dc1147e-5118-4b0a-826a-cfd84462f294"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("2da12f06-6960-408d-8262-38985bbc8cdb"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("44370ce0-d780-4f90-97f5-2c14d62ba084"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("4c2b6170-5dc4-4caa-9eb0-2fc8fe2fe336"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8e716b7b-487a-421c-b369-855537025b66"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("25653819-9aab-4cbf-aac8-36e62ae05b80"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("45890609-85bf-44b2-b9c8-8616f3fd7861"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("e0f663b0-fbf4-4166-ac2e-78e12a5e2029"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8bfb33cf-66f7-4519-a103-3864d3a96cdb"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("a78c0064-dfed-4cc9-9d82-a8281a55f7fb"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3719c814-09c6-4021-8680-40594d1346c5"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("08ada30a-4e87-4262-8923-27c43eb33f78"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("03d63ad5-d30c-4001-84fd-1bc890230f1e"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("c71743cc-a906-4ff8-abdf-c2f9cb3fc3a5"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2c5c0dcf-7f32-426b-a4a1-5bfa297907e9"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("70fc5645-3368-415e-b271-48e123de34e1"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("fd7ad289-92b2-4c01-9899-93cc8ee19bca"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("b9082c69-5837-443c-8ca5-1b078dbc428c"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("168e00c0-03a7-4ebd-84de-962b771ae262"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("01e4510f-4bea-4169-bbdb-521432363396"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9e449572-b729-465e-a1e3-2193699dcae0"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("9db2fcf4-598f-4031-8ba5-246c062ef21c"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0d52718b-b151-489d-8e48-71cd09ba6fc6"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("89a495b9-9bb2-4e2d-aba9-b8b760f59982"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("69d33982-1321-4222-8326-a202f787a2d8"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("00a4128c-73d5-44e5-86a9-233844a0da57"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b983844e-8e83-401d-bed3-00121b03c09b"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("a6f3b6fb-b839-4eef-9782-79d5afccdb60"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0cae2962-c4af-46b7-b438-749276960752"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("f2c16ea9-034a-48e8-a590-e1da6a9904d5"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7597bcf5-56ec-467c-8357-7c92a6678955"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("54d77156-2db5-4edb-8231-6eeedf4729c1"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("cd941dee-34b7-482e-bb3e-249e4b90624d"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("60812cd7-7a6e-4906-9f21-5b6e7ec11e93"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("99b85607-7da8-4e6f-9d6b-70d5e4a3d621"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("a6afb58b-a8fe-45e7-a9b0-9391e59933bb"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("13fb527a-04e1-4a04-ac5e-8ef684d1aec0"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("3c1d2cee-f1a2-4665-a514-b88e2c68ef9c"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("17d8e1da-3fb6-48c5-8a39-b4e1172e8f52"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("c786f022-0e3c-45c3-a76e-4ff921e2fe25"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a86adf5d-583c-46d1-b72c-df5dc8d87fbd"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("5870cb17-d9ab-41f7-91f8-695696cd3671"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e6ff1d4c-a6d9-4aed-96a3-66fd17229d36"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("ae2ce045-9b68-43c4-9ddc-5ab837590f92"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9e178b39-7f57-4ddc-ae33-a096203a37cd"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("bf3c633a-85dc-41cf-8703-c0a3b463d88a"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9c29330b-78c8-4cad-bbcf-4acee91a090d"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("142f4693-c837-4f86-a757-400a01792321"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("faf763af-a09c-4869-a876-aa57cdffaeb0"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("fd12ee1b-6de5-422a-a12f-4491f2aed939"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0092a8c1-cf4e-4c34-aa61-6cdeb3a28f99"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("262ee40c-1ba8-4d49-83cc-3da1cb2716ec"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e8d1aa83-cede-43a2-b44a-9eb398f60e3a"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("ef94bf32-899b-4495-8016-1391584ff68f"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("992aa843-b875-4497-acb0-53a8dddc13bc"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("29228638-673a-41d4-be79-8a0e9feeaf01"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("5a632226-7e60-4233-83c1-a976dbbf89c5"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("71309373-05f4-4f8b-a75c-6c0b4d29d9e1"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7b28b792-5ee5-415a-bfa9-464ff027fbd7"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("f4e27a83-2126-4a57-a27b-5aadb1674f23"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3348049d-bad7-4957-9f6b-2c1cbdd20bb5"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("eacd43e5-ed0f-443b-bc6a-01c593190ded"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0881abcb-ce4f-49be-abdf-666b1a4bf035"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("d94764e6-2c3c-4640-a8d4-fa9507b66555"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7c865e13-c7bb-4c5a-a3e1-38fa318793e2"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("b5b07a85-ab96-4699-aa66-d052286df218"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("915b6c57-7e23-4761-809c-18ae2461049c"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("ffe1b1a1-211d-41be-970f-6edd60883f71"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a2d42cb3-1467-402a-8c90-3da3b2581e12"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("6758a686-247a-479a-a964-45581dde56f5"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("cb41d864-a817-4017-8ac1-fbf41c0c0539"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("5d12f393-502d-4462-9a3f-539a0458545b"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b894d371-82c4-45b3-ac8a-6d5cf25a2ecd"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("97c13de9-f901-4076-8905-104416ea8313"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3f168c1a-dc47-48fb-b349-15db2af5822b"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("0097d626-65fc-4766-91f0-3fd82d473145"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8c7aae8b-9f6e-4075-9c81-f372b6e798fd"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("81bfce31-f8a6-4c5f-90ef-89aceead3424"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8f2c7acb-9ed6-4359-af1b-dcdcff0f0bc9"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("01a1cc1d-089d-4c6f-8fcd-f48bb7132969"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("40cc8f4b-ec7e-4e36-a6cc-5179d1fe77a8"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("3aa70290-b31a-4925-9c53-4d144ac8f742"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8f0ca92e-c163-4281-8084-b035272b199a"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("3d679a51-52b0-4862-8a40-80f923300699"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e506bdc6-8c50-4f4f-b45c-1f682e683e17"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("e0068906-62ca-4a5a-854b-3c72a513b56a"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c82c02fa-e2b1-4bf8-aa74-494c21becdb2"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("4a4f6c5f-66c0-41a2-b954-e50f8d3a02a7"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("72087925-0b75-4232-bf46-08f30c4403bc"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("283bc6b7-cf77-44e9-bb87-d55a17350cce"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("fa967238-4212-4f82-9d75-6c2da321ec36"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("aa1e7ec4-5656-4e09-9a4a-2cf6bad093fd"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("db6d88e9-3c4a-4b55-a43f-fd34cd393128"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("983451cf-eb46-41b9-9233-58aaf818e087"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("51c845f1-7911-47d0-aa08-edbd8867e97a"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("6f04c359-4911-446a-823a-db92cfd4bb6c"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4b88f6ae-06d4-486d-9a3b-957281784843"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("d2bcf3e8-3c3f-4092-b4e6-808f7df34178"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e5b59ce1-7342-47a0-a76c-928e08e04de7"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("40976613-c6ec-405a-8eb8-07c28d8d4f34"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("73119ebd-c382-4f72-953b-340dd3ad0176"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("31ce96bc-3b04-4c42-b17a-5f28d97dcf4a"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("866b2b1e-ca9f-4b9a-b11b-4cc224fbd5ab"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("36687f3f-7943-476d-a690-70336c914d60"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("918adef1-0a6a-48c4-94aa-dfa3bb01fe79"),
-                            AircraftId = new Guid("e6458593-a017-4684-8a9f-c6b5bb95dc3e"),
+                            AircraftSeatId = new Guid("45618bb7-082d-475c-bb3b-c9e6f387e243"),
+                            AircraftId = new Guid("7c94ebe7-4c57-4873-a107-75468fcb056b"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9558a492-4342-4148-9c0a-78290d340b43"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("9f716a04-219a-456a-b016-25cd52ceb479"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c79bd12a-1d56-476d-bbc6-e3dcd86b7e49"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("6fe03f90-c334-41d9-a62f-b6308631bf51"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("006f49b3-f895-4eae-af0d-778600b115c8"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("b99e5299-7fc1-4de8-a476-81f56a6eca6a"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d0c7af9c-62ac-4bd9-b7f4-bfc0543b4230"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("702626cb-7850-4ac0-aa6e-fb7ddcd4778b"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1b5da293-ab4e-47cf-842f-a2342d3c9852"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("6df1696a-e772-4f81-851e-fbb807e7c369"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a123c6d8-024f-4a91-9932-da6557fa6e87"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("aecb9c96-f076-4891-a99f-7ffad733a071"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3de11219-dc6e-4df8-b9a8-3eedd909fc4c"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("a6477904-176a-4386-a617-96c5d5a18ad9"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c0eb838d-ad76-4583-9196-f6a2675b2ab2"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("03dab844-2610-4cc4-a9ca-6555f5fdabf1"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("943b132e-b34b-459a-acf0-7e79d2aa45cb"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("a143fd25-f774-456d-a707-54b1e95f99fc"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("12c4deb6-1a3f-4bb9-a862-b13cf5d94e91"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("f994093c-c1a8-4736-b6a6-8a1089385c13"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f65777c2-9966-4e26-86bc-fa2a6a3adf5f"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("340de62b-4784-4ea3-9451-fceb08b31854"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("07a5fba4-28e9-496d-ad45-ec3f61adb5f9"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("e5d7247e-100e-4c5c-b224-d841ecd280b0"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("394663e2-50f3-473d-9f9c-be137d91ebf4"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("1727f7fc-729e-4ca6-b43b-f00c6044c4c0"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("43c5cf9e-8849-4f62-8a5a-496641f958a2"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("2dc1a8ea-3b05-4866-b7ec-ec726111c97c"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3d416699-d0e0-435a-969f-6cebadcf2ed5"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("d3cbe764-510d-45f2-8fda-7d144c7d4842"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0eb82100-6550-40de-8e78-e70c903ea96b"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("7f4c9b4a-d63d-40fa-92d9-d50ff43ec6dc"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("57cc79a0-6702-446e-bbb7-811e7ff56dcc"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("5aef093b-e80f-45a5-a17e-3de8c81d8e79"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7c18dc09-656f-4e5b-a100-fc258e496f02"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("6f2d3fd3-72b5-4c5d-9d48-132474368f3a"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3a820f8d-5b01-4698-896a-2e93bec2e9c8"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("77ee457f-b562-45bd-9e3d-20aff48b9956"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("903cf31c-334f-4b17-bc26-f58093538a67"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("5e608f83-6cbb-4055-83fe-0fe71b89d2ca"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c524d7f6-5dfa-4274-8fe0-0123e6a85777"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("c7bafaac-ea71-4e20-8d46-3d20992b2d76"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("45f969b0-6dbe-4b32-83ed-b69e00bddd94"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("55b4daf8-8b75-4874-a07d-3dd1a5360700"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("fdd60d94-9914-4a1e-82d8-148ba371f928"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("3bd48f44-7ffd-49a4-9898-18def489e072"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0d07db3c-26d5-4ee1-912b-6d23f085d9b4"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("06ec219e-9ad4-494d-a5c1-0c9ed1eca70b"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("302e171b-aeff-4f8c-aad4-2402c32ecd90"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("8d7f4359-9c77-48f7-93b7-35dae103bc08"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("36e981e9-4945-4773-8d73-4aa20a611f79"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("98e70c0a-596b-42dc-a845-9d0d289bfc47"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("896e6b8e-fc68-4df0-bee0-d2e21518ce77"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("fc37c1cd-bb91-452c-ba15-c6fde67addc4"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f9eb6662-50f8-444c-ba2f-27c9df668732"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("f8cb81e8-28fd-401c-806c-cb35f7273497"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("731f977d-0093-4277-8bb8-d39632d0f0ee"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("79ef50e4-508a-40e2-b0a4-63ac430c8a9d"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("88303771-1a0b-488a-a1dc-aab7f3b4507b"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("5e33d5f7-1461-4f99-a78f-ca19286b96c2"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ac45d958-7b1e-4b0c-88fe-edd9eecdecb6"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("ca53d8b0-54b0-43f1-9843-109e15c184ae"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("650f57bd-0d65-4fd9-95ad-c85f39ea659d"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("04f4acf9-fc29-4cff-b294-6c8dee3d7501"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e787a2f8-1c8a-4666-8e2e-d59000632d79"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("9d78f99b-9c58-4db9-bce4-f3fa63b94af0"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("5b7ebcf3-c00b-404d-8056-5c58a374f29e"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("fb8cf3fd-2a48-40ca-bb1d-e0b8c83e51fe"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ab22957b-a8c4-4dde-97e5-90833e164162"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("947708c2-c0af-4ada-b6dc-6ab0c1477ba2"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b6e20a5e-d103-4db2-9a42-5dd8d55bb058"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("262b1e8a-b0a9-4c5d-82f3-a516363f6596"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("93ed2213-0a1f-43f6-b5b9-bc7565752909"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("a4729e74-89e5-47ed-a48e-1ba6284b9439"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b55f95b9-f6b6-4cd3-9272-fffdf695819c"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("a9b5cf82-c2b2-4339-9ffb-4ba4722a21cb"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("49acac61-7da7-407f-8b1a-f44f17c90e17"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("e038ad7c-0d42-4d4d-bead-f7bae5e6d53f"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("50f4d264-8618-47c8-90db-fa2976e76909"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("e1fd97b5-387f-4d9f-98ba-006069e29f94"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1d0c89e7-6606-4d2d-b013-9670727f7195"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("d5cb18e4-a5a4-4017-9695-79777b5526c8"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8686dfba-0649-463d-95a6-b5479ea1ea24"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("b8dffb11-365b-4ba7-b2b0-7a033b6d04ec"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b6bea0be-8c2b-40ef-8247-61339b801389"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("37414c25-5550-401b-806c-8f791eb8fd36"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2643a3bd-a50d-4f41-8ef8-a55d135f3736"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("d7e40a58-5bf3-4858-ac55-68afbd730d13"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("075424aa-f390-4a81-b644-02e82802de0a"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("a413d430-7f41-4e76-92b0-9b7f2b142b41"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e1a2c849-53df-4695-8080-ced764ae36ff"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("372be52b-c664-4158-803c-7662d4263bec"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("fed8cf2c-74d5-4f31-9398-f1dc1fb2a4cd"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("1ae06b01-40da-4d5d-a569-42335e80b33d"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("807c3283-b50e-4840-ae59-1a54a91c6664"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("83bea520-1afa-4d80-a5d9-3a00c02b4c40"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c296c08b-ec1a-4a7d-85fd-e5464db4af58"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("688db705-8d37-4b61-94b6-2382f584482b"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6daa30aa-3258-469d-8b0b-c477ab1a07e9"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("926a3525-1d3d-454c-939a-b400a9940c9b"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("481301d2-b537-42b1-9b7f-d04a9e487d10"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("8e5e2211-19f1-4991-baad-3b467c969c2b"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7cc42464-e813-4853-a3fa-c80e504c7c1b"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("429770ec-47d7-42c0-9663-6aba083d8d62"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4445849d-46b4-4844-a963-b4ef2b231354"),
-                            AircraftId = new Guid("f06e709a-645f-4500-81af-674ecf0dd6f1"),
+                            AircraftSeatId = new Guid("b201455c-aece-401e-bcce-925393141ded"),
+                            AircraftId = new Guid("af3a15f1-24bc-4b0e-8878-cf5ff936fe44"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("5bfae002-192d-4b39-b6fe-d4037a624e0a"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("e00bfadb-e0b2-4580-8048-a43bda44bb7d"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7206c309-2bf7-4ae3-9fb0-20b7801efe3b"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("182bab67-a75c-4b79-967a-83955ac9935b"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c5a23702-ead2-44ef-9e37-9664baa9a668"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("1bc8b138-0574-40df-a5f1-f3a9897e359e"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a88c7644-f6c2-4f25-ba9c-9adc90d0ba38"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("11bb1ddf-b4d1-432e-a806-2d602e4e6ff4"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4cc5aff9-0d30-4a96-90c1-75df032c2121"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("989d7d62-d255-42bb-b151-b6584a247ac8"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("89ab684e-8bf6-492f-bc52-a4693b6d3260"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("5ea3cd78-2373-4d54-96fc-51bf42f8101a"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("04ca6b0f-70a0-4947-bcdc-5707783ef9f6"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("bfc09d4f-5f1f-4e71-9598-f519acdea8eb"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("66506aca-32eb-4baa-adf1-884f75465635"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("ce9d1e53-ce80-42da-bfbd-5fd324adf61f"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d2027bce-e329-4565-9fe4-341b579ba707"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("2b7d778e-7e6b-4443-8546-a9778525e78d"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1dd845dc-9dba-4054-bf91-b4a0d84fcfd5"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("840ffc0f-6c0f-4f40-9c8e-6b7df0559185"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c5ee21c1-1918-43a1-b37e-5962919e0135"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("7aed707c-afa8-40d4-82d3-ffb043125dd6"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("7dbc5e71-a532-43b5-af2d-9f03ddf598b2"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("43675d1d-d4ca-4394-a782-ec33dcf1a6c8"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6cbf324d-0eb6-46ea-8e04-3d2ff7ec4a31"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("5b45babe-b09d-49fc-9cb4-bea56e98b05e"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2fee1583-0215-4d92-a02f-0b484b903f22"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("e4146ca2-2b88-48d3-85ee-ce235aee180b"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4dea068c-785f-4efe-b596-d7484cd51f35"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("638abd34-1e34-4ca8-a25c-08499abb16c4"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e30e19d8-37d9-430c-bcc0-7bc32e8ee8e6"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("17de3526-8e84-4ea6-8b2f-0b97200e7e53"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("45850d8c-4b2b-4ee4-8c1d-762530f6a9aa"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("99f3a481-3bf2-4702-8690-f75c92b33f70"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a343ee3f-9def-489e-b0e2-4d8f5698d6af"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("45f3446a-de4c-4b1a-83e9-00099ce5bfc3"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f651d730-224f-4307-a61f-26813fed0b00"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("6882024a-dc5b-42c2-ac18-5a99116b3cb0"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("767dd607-8582-4606-80d9-de79d704cba3"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("99335557-13e2-4d71-9d8c-46bb3a9bf66a"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9bad5540-655d-4802-a816-f45a44f9682b"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("8887ece8-6028-46f9-859c-efb1340578f9"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("bc2051a1-65b3-4bb7-add2-a5c0f2e44519"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("67e9678f-2c50-4b06-8054-50513ab0db76"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0645c5ca-15be-4be9-8cea-166070744681"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("56a7028a-9c9a-4f07-8897-03bdcdf0c644"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8107a480-d492-4941-aec1-8042c04367a0"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("d9efa1c5-5d6f-40f4-997a-930295514120"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("c3302e95-f104-44bf-a906-21dc65720c84"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("8b05a294-edfd-453e-ae50-f3657f32c287"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("66421c5a-0e34-4d3d-8e25-24d37f4639c0"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("ba16ea17-34f7-41da-8571-80b6c1cbc68a"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("dd0785cc-aa2a-4f69-94a4-56250a2387eb"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("5135d5ef-fd98-4335-8c00-bb9b89a84edd"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("cc0f442b-8142-4dda-a270-482d84ef24c5"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("1fe84045-f82c-4495-9589-d21cbb834d2d"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ce91791e-bbd5-4980-867e-e16b95da4afa"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("78cc34fe-1b0d-4c30-872d-238bede21abe"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("86e80fb3-c8fc-4acd-a72a-30d5993dacab"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("b67858d3-02ed-49a3-9c09-f5b1aeac14ae"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("34e7288e-4338-4a86-be57-8b2b8186e7cc"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("262fd280-f162-4aff-85d7-c76c7e1deefe"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("1550f94d-ce45-403c-b6c9-a56321a5b33e"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("21dc1d6b-4133-486d-9232-72e141293eae"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("456bfeaa-df2a-45ce-9173-b47a6d554349"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("9c51aa21-715d-41cc-a5f0-db5881d7bfa6"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0e489460-8755-49a9-a33b-8f84bc5d571e"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("af15c241-ceb2-4ee0-96cb-c2f2dc98ae71"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("5f934684-be58-424d-a695-0ba1a9a0431b"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("eff82e02-7a06-47dc-8716-955c56565560"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8b16fc09-1d98-47fa-a6b0-18073f83b653"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("644f9077-c15e-487e-bb0f-4edeb89074ca"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ed3bc1d0-e977-48fa-b40b-52d770090e2b"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("526e2ab7-2690-4e6d-9a41-51c909e5cdcd"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("a1bd2c1d-8d0d-47ec-b9c5-e16a6c711857"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("0c8269bb-7cec-4989-8526-cb14f7575f5e"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8298aee4-ed74-4bcd-8ee4-ae68087f03ca"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("c28b5f30-c277-44f1-9bcf-d5b954ba0e2e"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("00541896-b902-4c91-a071-d095e411ac0e"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("60ab84c4-6382-45e5-877b-bb2aa4322c5d"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("09776f1e-ad02-476a-ad9b-6cde039ff10f"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("0c431f3f-5095-4f13-8291-f53366bae7aa"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("9f28363b-d73d-4889-adb5-edf315f14951"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("0eb8ed99-beac-40ff-bad6-e0639794b5e9"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("cac2393c-a093-416c-b016-b70e1c19b32c"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("1b0bbd0f-53e9-4284-9085-3c0e8a58d44b"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("eccc04ad-49be-4ea6-bce8-41077bdad212"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("031f99de-7092-4aa5-a587-2036bcbc93ac"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e75eabec-e1e3-411d-a3a6-6c77b1cf7a40"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("e1db8768-17eb-4e4d-8c88-7a9a7ff8a350"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("14ac3a3b-1624-4857-9c70-f47a1f223e82"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("79558a99-db3d-47aa-adb4-72e1c6964d82"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("483aa2df-903c-42c3-ae8d-51a287c761d2"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("9f2192b9-b432-4c81-966c-985a7eedb413"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("25d2809e-d7f0-4dbf-afd3-a3cd303c80e7"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("94437de3-71d1-48e4-b6b2-4b126f52e1d4"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ef4bd5f5-6a23-4732-bf7e-202ea8158883"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("ce7df43f-c040-4827-91d6-b1f5cc5213ab"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("935da26f-4808-4907-9f06-f9c19311b916"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("3a1f74e9-400e-4756-b968-257af2fafa93"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("71b11db0-8f8d-43fa-a595-a3d063e2f3ca"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("702097d4-808c-4a3c-81bd-c16402b1bdac"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2da20c17-1e5d-4a26-9f56-9f6b3523a931"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("87e264d8-c1ae-45d7-9aa1-b9b275307a20"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3588ab9d-95f4-4509-ab6e-f212d6ddc809"),
-                            AircraftId = new Guid("11aa3ade-d8e5-494a-a0aa-0fbf253df21f"),
+                            AircraftSeatId = new Guid("13906ef9-41a0-4137-8aaa-a5d27bfa472b"),
+                            AircraftId = new Guid("6bb651ee-3ead-4499-9b0d-fec4202c8b39"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f8d43f2e-f546-42af-9845-af70acfc37f4"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("d9e5dbfa-e35f-4645-974a-2b804add150f"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("8a116556-8748-4a93-b1c1-7ba344c240e9"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("36889bbc-ead0-40f5-bfa4-1390e93ef392"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 3,
                             OutOfService = false,
                             SeatNumber = "1B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("924d4c8d-5167-4ae6-8c8d-e37d4bf960ad"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("80772b24-f875-4b38-a87f-957926d34e51"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 2,
                             OutOfService = false,
                             SeatNumber = "2A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e23c0737-ff65-4b45-b336-f805b6bbc663"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("344f0d82-45e6-43cb-8823-a3e1dc6f82fb"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("09fc1caa-5135-439d-9ac3-ea694e8b204d"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("b2be269e-80c2-439d-93d1-a550798ff0b2"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "3B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f319d03d-74fa-4811-8cc4-c7c9fddbe23c"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("3438f231-5e3f-4cdf-887b-6f661bc9cad5"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4bfe92db-8812-4d89-aaff-4f12978b79b6"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("31975a36-79a0-4768-960b-5d3c0e5c2e9b"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b611964a-e82f-4b4f-93b5-9f1d9f4bee08"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("6cee862d-f9f4-4c0c-b8c5-e406761df5db"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b59f863f-e12e-41a3-a321-b0d6781c20e3"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("6c3873b4-dc6b-4d6d-94a1-553adec3836c"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d83c17f0-3cbe-4f6d-a487-af5108df6ebd"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("22bf27a3-47b3-44e1-abd5-99af9e088efe"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("60b330a2-5240-4902-9a02-fbd62dfba1cd"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("aa404f33-b885-4edf-b121-c28adaac0794"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "4F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("397c43d2-50ed-4adb-b3d0-8304b83c862a"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("847ebcad-a89f-44e6-bfb7-770d9a7de7db"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("af92a23f-3391-4f02-bade-d00138bb0796"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("4c9bb1b9-1665-4f2a-8a97-4d19264e200b"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("52bc206f-5ae1-4411-8704-1c29b87085a6"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("65407ebc-06e0-4904-87d2-cf665cfb3c4a"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b66dbf91-0508-4ea5-bc40-4bac318cdc25"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("3363cd4d-395c-425a-979e-391976de9701"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("f4de7706-268a-488e-8e34-0e98cc24750f"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("ce800348-470b-4135-bad3-091223b0f5a2"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("846cf520-b10e-4564-8d71-7f924a20f2bf"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("d55f82c9-2ac6-40b1-b941-56b510323f80"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "5F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("fa1ba0cb-19a0-40d8-9740-22c113315f6b"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("7f6c88eb-d482-4922-8fa7-eb12a2fe01d4"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("43ffa62c-68e5-4d74-bdb4-ab4ece5773dc"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("07d0ff08-bb6c-4f43-ad4b-4a477938b4bc"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e443c300-8f5c-4af9-ad36-b89fba8bfabf"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("64be7052-1532-4cb3-87ee-1222ca61ea9e"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ca69564b-624d-4c73-b08f-84851db2daba"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("b8a4620a-6687-4cce-b202-73c19fcb80c1"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("54271284-6bc7-4914-8ce7-c0a45c3dac19"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("a85445dd-70c4-435f-8141-ad641f82a68c"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("d7f271d4-612c-4a3c-a23d-ddd8f97b16dc"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("86dfdd13-e7d2-4449-aa41-1c1ccac59225"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "6F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3c923a22-a257-484f-8f9a-9f44adc65367"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("1fea79f8-de84-40ad-82ed-12941580e345"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("e856b72d-d715-49ce-b1ba-68d4de2414b2"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("ab37ec93-fcee-4254-9720-3e2467a63d06"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("ae733a96-98af-44f5-99ee-ffae60fdded7"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("0f3f2782-1e97-45df-b581-f8fb30a7da4c"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("efb08107-e132-4aba-9d69-280df460caf3"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("b52edb73-de7a-421f-bfd6-0c7c424d765a"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("876455aa-a551-4f2e-8e69-8c005876ba1d"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("2c642e0e-564a-4bde-89c7-5d4971e8970a"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("cff50a43-b04d-4d9d-bd0a-ea2dd2cff798"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("59e14c65-cd38-4aeb-b0b4-4f9c0036480e"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "7F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("5af93747-fa85-4a4c-bf93-205f1cd5fd9e"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("75273b7d-2d74-45d9-9bb1-da4f80454745"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4181395a-e0fd-4ef5-8958-cc0907dcbfc9"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("dbc76e3e-c8be-4947-a556-d20f15cfb7f5"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4e437492-fa96-4974-945e-12b2b13a796a"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("ea726ba8-5955-448f-9c5e-17516a834259"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("5a1fd5e0-1fb1-49c3-9d39-c4fa97074ef2"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("48114cd6-8045-4240-ba6f-bdd1ea1a7cfc"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("963560a1-70f8-4501-8b50-273f9dfe9130"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("4f677f35-f23f-45ad-9eda-90cb765db116"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("516c9e94-55d8-4234-8f76-a52d26c53292"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("f75abe59-2af2-44c0-a02b-cc9b7e8e6d59"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "8F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6acd5a8a-5774-4734-a889-e33326d997f6"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("1f00ee8e-41a0-43d0-8ba4-29e099fa4bfc"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("4851ec39-ecf7-410f-8372-b2dd7e3d78ee"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("2a58e41d-3ec3-4ea3-bbf6-bad30cc49336"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("16064c4e-b9a2-4a81-af02-e137a9d6aeca"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("8b4a16d7-a739-4c95-ae1e-4c361f13d7cf"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("b62b3a9d-045a-4c4f-a99b-65f97c9e3428"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("6e9182fb-4e00-4cdc-a9d4-ef52e976c4e1"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("156161b0-5eb1-484a-8ed7-4659b78eecc0"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("6491a78b-9656-4663-9c4b-bfd959e742c2"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("2a783b2e-1dc0-49bc-a860-fb3a79f17b54"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("56af8f17-6c07-46f0-8ba5-d92edd6186a0"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "9F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("04cf10bc-893f-4a13-bf47-854c663a8441"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("30d33e03-4faa-4afc-9c25-3e88fe0ed89a"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0a1daf06-a896-43ed-9fc4-950f7a967d92"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("9d36efee-7263-448a-8c73-06a06c0e4b2c"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("6d8601c8-3d27-485d-8d71-fbb64e369744"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("d0aed409-5859-4340-8bf9-a24b6c433ce5"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("07e79d94-db77-4c54-ab61-4992b6dd2a99"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("f9136be6-faee-4420-8671-21c927948f59"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("3e7afbcd-5ca9-48c2-ae07-3c27d0a16a1b"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("7554a6a2-9d14-41e7-8625-675e54f762e3"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("faf4cb56-7177-49da-8853-3332c8096e50"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("9824aad9-343e-4fc0-b15f-7d5fa54e0247"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "10F"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("70f8082e-3833-495b-9880-1b85d943a615"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("2c010a3b-fb47-4e87-8abb-63c6e8ed6969"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11A"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("799dc1c2-7448-435f-bc85-162d34b2b227"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("cf444045-b4cf-4aea-b35a-5a07d7d7f072"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11B"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("46e70a14-b296-4e88-b580-8d937bb1e0bd"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("e94ea843-2265-41ac-a646-4b67123f1ba5"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11C"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("11f16dd9-66ee-4c51-bafc-7d0ed4fc8516"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("1135ce2e-cf33-42de-b353-22ec4d560b62"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11D"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("850bdc4f-77cb-4c00-a3a7-1244fc4e9687"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("d541758d-9a3a-4176-a791-4c35513554a7"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11E"
                         },
                         new
                         {
-                            AircraftSeatId = new Guid("0065a9a0-333f-4d6d-b113-1a984d2f05fd"),
-                            AircraftId = new Guid("d0476af9-1672-49f6-8fdf-d74732ae86a8"),
+                            AircraftSeatId = new Guid("7748c49a-8272-4624-b349-0143841299ba"),
+                            AircraftId = new Guid("80a1a761-091a-4811-a3ba-89d2da3960a4"),
                             Class = 0,
                             OutOfService = false,
                             SeatNumber = "11F"
@@ -4921,70 +4921,70 @@ namespace FLyTicketService.Migrations
                     b.HasData(
                         new
                         {
-                            AirlineId = new Guid("b24c296f-11eb-4962-9a17-15f4c7877007"),
+                            AirlineId = new Guid("a98373c9-19bd-496e-be9f-48d8264def35"),
                             AirlineName = "Air India",
                             Country = "India",
                             IATA = "AI"
                         },
                         new
                         {
-                            AirlineId = new Guid("1debf6bf-7ffe-4940-9f9f-1453723c8be0"),
+                            AirlineId = new Guid("140e9f43-6b0e-4223-9f2f-a607068250c0"),
                             AirlineName = "Delta Airlines",
                             Country = "USA",
                             IATA = "DL"
                         },
                         new
                         {
-                            AirlineId = new Guid("2a9f9251-4b04-4b4b-8cea-ddef0b7c4a3d"),
+                            AirlineId = new Guid("3b5630f9-f5bb-439d-ad98-bfd2756accd2"),
                             AirlineName = "American Airlines",
                             Country = "USA",
                             IATA = "AA"
                         },
                         new
                         {
-                            AirlineId = new Guid("4b75bb34-292c-483c-ac54-ecff52e2e8c7"),
+                            AirlineId = new Guid("32d7cf76-c843-49d9-94a6-f37806716f96"),
                             AirlineName = "Emirates",
                             Country = "UAE",
                             IATA = "EK"
                         },
                         new
                         {
-                            AirlineId = new Guid("c808fb02-9a6c-4b9e-a7e5-ea375417990c"),
+                            AirlineId = new Guid("7f8beaf9-dd3f-4f40-b7be-532d119e040d"),
                             AirlineName = "Qatar Airways",
                             Country = "Qatar",
                             IATA = "QR"
                         },
                         new
                         {
-                            AirlineId = new Guid("e0008ad3-7e18-46ea-9366-ab65f5532517"),
+                            AirlineId = new Guid("bfa8bb8c-9b1a-4234-bc6e-3e2640942715"),
                             AirlineName = "LOT",
                             Country = "Poland",
                             IATA = "LO"
                         },
                         new
                         {
-                            AirlineId = new Guid("abf220db-9971-4c89-bebe-67464b33d677"),
+                            AirlineId = new Guid("cf695482-48bc-4d8c-aaad-8d60f1eac323"),
                             AirlineName = "Qantas",
                             Country = "Australia",
                             IATA = "QF"
                         },
                         new
                         {
-                            AirlineId = new Guid("79daabab-2cd1-4eaa-be7e-c5440701bec0"),
+                            AirlineId = new Guid("9694c0b0-2d6f-4b56-8a4f-620bdf738bea"),
                             AirlineName = "Cathay Pacific",
                             Country = "Hong Kong",
                             IATA = "CX"
                         },
                         new
                         {
-                            AirlineId = new Guid("6ab28b27-803f-42d4-b888-c69f5aae6b26"),
+                            AirlineId = new Guid("50cdc4ba-8e6f-4a7f-8790-1a88ceee9612"),
                             AirlineName = "Singapore Airlines",
                             Country = "Singapore",
                             IATA = "SQ"
                         },
                         new
                         {
-                            AirlineId = new Guid("170cabf2-3f5c-405c-8cb1-404221a89ce5"),
+                            AirlineId = new Guid("fd877c95-e15b-40cc-ad9f-5497e3902d9b"),
                             AirlineName = "Virgin Australia",
                             Country = "Australia",
                             IATA = "VA"
@@ -5057,7 +5057,7 @@ namespace FLyTicketService.Migrations
                     b.HasData(
                         new
                         {
-                            AirportId = new Guid("0d8080f8-eb5e-4693-a23c-f365f86c93c9"),
+                            AirportId = new Guid("55ad9f76-10f3-42aa-b0de-d15d2482d07c"),
                             AirportName = "Hartsfield-Jackson Atlanta International Airport",
                             Altitude = 1026.0,
                             City = "Atlanta",
@@ -5072,7 +5072,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("7bcf290a-3207-414d-94b1-d2cf9924bd50"),
+                            AirportId = new Guid("d28c803e-32a6-4e65-854a-0f49c002267f"),
                             AirportName = "Beijing Capital International Airport",
                             Altitude = 116.0,
                             City = "Beijing",
@@ -5087,7 +5087,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("6ff33a43-120d-4b64-972c-f022adecc684"),
+                            AirportId = new Guid("48fe72b8-6456-4ba0-8401-2d27ade771c6"),
                             AirportName = "Los Angeles International Airport",
                             Altitude = 125.0,
                             City = "Los Angeles",
@@ -5102,7 +5102,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("7599b5af-afe1-4039-a24f-5495b8f2b5a4"),
+                            AirportId = new Guid("fcc9975b-b0aa-4d6b-8e6b-6d2efb19e3ec"),
                             AirportName = "O'Hare International Airport",
                             Altitude = 672.0,
                             City = "Chicago",
@@ -5117,7 +5117,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("55fc4114-5f92-498b-940b-71c8e867c0b4"),
+                            AirportId = new Guid("4fbe2f3b-dd3f-4cad-abe7-f0b6d0e1a67c"),
                             AirportName = "Dallas/Fort Worth International Airport",
                             Altitude = 607.0,
                             City = "Dallas-Fort Worth",
@@ -5132,7 +5132,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("4fdda5be-0c8d-4d8e-bbfd-830826728e5e"),
+                            AirportId = new Guid("b810abb5-e418-4212-bf47-9a5723b4f2af"),
                             AirportName = "Denver International Airport",
                             Altitude = 5431.0,
                             City = "Denver",
@@ -5147,7 +5147,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("f9453ea3-c4c3-412e-b7c2-4360905105c5"),
+                            AirportId = new Guid("3333727f-79c9-4861-8b91-f6439370fb67"),
                             AirportName = "John F. Kennedy International Airport",
                             Altitude = 13.0,
                             City = "New York",
@@ -5162,7 +5162,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("2b6d45e2-6327-4471-8b85-8802108b4f4f"),
+                            AirportId = new Guid("5d977dbd-c2bd-4406-9e79-b82de54bbf10"),
                             AirportName = "San Francisco International Airport",
                             Altitude = 13.0,
                             City = "San Francisco",
@@ -5177,7 +5177,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("547cb4f5-b7ee-4fe1-9136-591e01419a3a"),
+                            AirportId = new Guid("29c89269-725b-40a2-93f5-0b98212d519a"),
                             AirportName = "Seattle-Tacoma International Airport",
                             Altitude = 433.0,
                             City = "Seattle",
@@ -5192,7 +5192,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("441e7474-38b7-47e9-bbd5-d73fcba80072"),
+                            AirportId = new Guid("e89b549c-ef7c-4a06-a1e2-328b121b23c5"),
                             AirportName = "Miami International Airport",
                             Altitude = 8.0,
                             City = "Miami",
@@ -5207,7 +5207,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("e927ec8f-78b0-40cd-8954-26ccd5a23a79"),
+                            AirportId = new Guid("7b6b77ff-e0e8-48b2-974b-52da37b76c15"),
                             AirportName = "Heathrow Airport",
                             Altitude = 83.0,
                             City = "London",
@@ -5222,7 +5222,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("25058de8-3cdc-47bf-a810-73da1e3da28b"),
+                            AirportId = new Guid("8dc70ab9-0130-4572-a168-f6df06171b80"),
                             AirportName = "Charles de Gaulle Airport",
                             Altitude = 392.0,
                             City = "Paris",
@@ -5237,7 +5237,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("69be65ff-ad04-46f6-8a12-3831e972df92"),
+                            AirportId = new Guid("052066c9-ebea-45e7-973f-049395765cc6"),
                             AirportName = "Frankfurt Airport",
                             Altitude = 364.0,
                             City = "Frankfurt",
@@ -5252,7 +5252,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("3f34fb41-0a96-46bc-9a8e-2ecf188b7525"),
+                            AirportId = new Guid("3f5b683e-794c-4465-9d8e-3072b582ebe2"),
                             AirportName = "Amsterdam Airport Schiphol",
                             Altitude = -11.0,
                             City = "Amsterdam",
@@ -5267,7 +5267,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("5269bf59-8137-4d8e-a920-ef677fa4665f"),
+                            AirportId = new Guid("4dcdb1ae-0f8f-4e4a-99b2-c270b785d7b2"),
                             AirportName = "Adolfo Suárez Madrid–Barajas Airport",
                             Altitude = 1998.0,
                             City = "Madrid",
@@ -5282,7 +5282,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("19ade48f-9b18-4025-af9a-1e8cb1ebcdf0"),
+                            AirportId = new Guid("5ccdc3aa-427e-4ecf-b001-2a0cc55fa2bf"),
                             AirportName = "Leonardo da Vinci–Fiumicino Airport",
                             Altitude = 13.0,
                             City = "Rome",
@@ -5297,7 +5297,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("34ae11d9-6da2-47ec-8ef5-975943bd3885"),
+                            AirportId = new Guid("d65a6595-d262-422c-900f-f46c80825e7b"),
                             AirportName = "Munich Airport",
                             Altitude = 1487.0,
                             City = "Munich",
@@ -5312,7 +5312,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("52f3823e-7f55-4570-9775-33494fb75999"),
+                            AirportId = new Guid("f15b8ef1-2b32-4c7c-be0e-93a8d497002d"),
                             AirportName = "Barcelona–El Prat Airport",
                             Altitude = 12.0,
                             City = "Barcelona",
@@ -5327,7 +5327,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("b00918c2-1896-4d9f-b5d8-71d61fb62b97"),
+                            AirportId = new Guid("0e80e0cb-e9cc-4fcd-8dfc-26c3c00665c7"),
                             AirportName = "Istanbul Airport",
                             Altitude = 325.0,
                             City = "Istanbul",
@@ -5342,7 +5342,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("dc182e37-d43d-4bbc-8f98-a1a31561719f"),
+                            AirportId = new Guid("a91b108f-323c-4fd0-866e-9a8d16beed1e"),
                             AirportName = "Zurich Airport",
                             Altitude = 1416.0,
                             City = "Zurich",
@@ -5357,7 +5357,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("3950e8fd-f921-4583-8633-1260c8903823"),
+                            AirportId = new Guid("03a0ac6d-b6f4-44c5-a717-4a02b55bf27e"),
                             AirportName = "Warsaw Chopin Airport",
                             Altitude = 362.0,
                             City = "Warsaw",
@@ -5372,7 +5372,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("8def7ee1-d119-4853-b75f-246886f6e1b7"),
+                            AirportId = new Guid("dd8c0dd0-81f8-4cb4-894f-a0a606527d70"),
                             AirportName = "John Paul II International Airport Kraków–Balice",
                             Altitude = 791.0,
                             City = "Kraków",
@@ -5387,7 +5387,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("b7ad2fb8-4f9a-400f-aa18-13c2ad766b4b"),
+                            AirportId = new Guid("2a21ad4d-293d-4660-bb2a-9a0492d2aee7"),
                             AirportName = "O. R. Tambo International Airport",
                             Altitude = 5558.0,
                             City = "Johannesburg",
@@ -5402,7 +5402,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("f94ac45b-dfaa-45dc-a743-1894ba5a1924"),
+                            AirportId = new Guid("b4a44c92-d4dd-4a91-85d6-74a55ed07cb4"),
                             AirportName = "Cairo International Airport",
                             Altitude = 382.0,
                             City = "Cairo",
@@ -5417,7 +5417,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("876862ea-cda9-4cca-80a1-f606ea923ca4"),
+                            AirportId = new Guid("e54282b0-62cb-4ef8-ac20-e8ac539f075e"),
                             AirportName = "Cape Town International Airport",
                             Altitude = 151.0,
                             City = "Cape Town",
@@ -5432,7 +5432,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("ee0df3c8-706c-4093-9536-8da5ca6e9016"),
+                            AirportId = new Guid("17840e0f-ff79-429f-b54b-f129db542522"),
                             AirportName = "Sydney Kingsford Smith Airport",
                             Altitude = 6.0,
                             City = "Sydney",
@@ -5447,7 +5447,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("7fedf0f9-0911-406c-bc91-11e26e683048"),
+                            AirportId = new Guid("63da3d3c-2dda-4bde-a8ad-f8ddfe1f591a"),
                             AirportName = "Melbourne Airport",
                             Altitude = 132.0,
                             City = "Melbourne",
@@ -5462,7 +5462,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("972e65fc-12b5-4bcb-b44d-070eb0591fe5"),
+                            AirportId = new Guid("ff78e335-1dcf-43b5-b440-b983ae811c8e"),
                             AirportName = "Tokyo Narita International Airport",
                             Altitude = 41.0,
                             City = "Tokyo",
@@ -5477,7 +5477,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("f94903fc-7e8b-48a9-b46b-0bb6ccb28624"),
+                            AirportId = new Guid("e217df27-96d6-430e-8219-fe0f667ddae8"),
                             AirportName = "Addis Ababa Bole International Airport",
                             Altitude = 7630.0,
                             City = "Addis Ababa",
@@ -5492,7 +5492,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("825ef8d0-1a5a-4301-9425-af33f43b0583"),
+                            AirportId = new Guid("8626eeb3-4ee2-4674-8709-e221c28ad347"),
                             AirportName = "Brisbane Airport",
                             Altitude = 13.0,
                             City = "Brisbane",
@@ -5507,7 +5507,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("d6d0d8e5-69c1-4cea-8b46-59b029bbc91e"),
+                            AirportId = new Guid("e76f3f9a-0269-436e-a395-e24ef2b595aa"),
                             AirportName = "Hong Kong International Airport",
                             Altitude = 28.0,
                             City = "Hong Kong",
@@ -5522,7 +5522,7 @@ namespace FLyTicketService.Migrations
                         },
                         new
                         {
-                            AirportId = new Guid("67305102-2acb-47a0-ad5c-503e04108beb"),
+                            AirportId = new Guid("8d36c64b-f118-414a-9908-a54fd39676db"),
                             AirportName = "Hamad International Airport",
                             Altitude = 13.0,
                             City = "Doha",
@@ -5570,28 +5570,28 @@ namespace FLyTicketService.Migrations
                     b.HasData(
                         new
                         {
-                            ConditionId = new Guid("b0280dd4-a7d0-4253-9afc-fc4b4b3ed60d"),
+                            ConditionId = new Guid("3b43a81c-0be0-4e06-8632-75a194ed9ddd"),
                             Category = 0,
                             ConditionType = 0,
-                            DiscountId = new Guid("f33611eb-613b-466f-8be5-82b0e8866f28"),
+                            DiscountId = new Guid("72fd9fbf-ee02-4016-93da-a9ea628c1f42"),
                             Property = "Birthday"
                         },
                         new
                         {
-                            ConditionId = new Guid("33a3dc6c-18db-455f-a444-37081860229a"),
+                            ConditionId = new Guid("f22570c8-d172-450e-8c37-815c5510824d"),
                             Category = 1,
                             ConditionType = 0,
                             ConditionValue = "Africa",
-                            DiscountId = new Guid("c4b192a2-41dc-4f3f-b484-fb8647692db9"),
+                            DiscountId = new Guid("d9d0bf82-fa9f-4b73-8ab9-c7077d951df2"),
                             Property = "Continent"
                         },
                         new
                         {
-                            ConditionId = new Guid("132307ff-e1c1-4409-96dc-0817c2ab0e5a"),
+                            ConditionId = new Guid("6d9125a6-b9d6-499b-961b-7b0f87d7d65d"),
                             Category = 5,
                             ConditionType = 0,
                             ConditionValue = "Thursday",
-                            DiscountId = new Guid("c4b192a2-41dc-4f3f-b484-fb8647692db9"),
+                            DiscountId = new Guid("d9d0bf82-fa9f-4b73-8ab9-c7077d951df2"),
                             Property = "self"
                         });
                 });
@@ -5626,14 +5626,14 @@ namespace FLyTicketService.Migrations
                     b.HasData(
                         new
                         {
-                            DiscountId = new Guid("f33611eb-613b-466f-8be5-82b0e8866f28"),
+                            DiscountId = new Guid("72fd9fbf-ee02-4016-93da-a9ea628c1f42"),
                             Description = "Discount applied if the purchase date matches the tenant's birthday.",
                             Name = "Birthday Discount",
                             Value = 0m
                         },
                         new
                         {
-                            DiscountId = new Guid("c4b192a2-41dc-4f3f-b484-fb8647692db9"),
+                            DiscountId = new Guid("d9d0bf82-fa9f-4b73-8ab9-c7077d951df2"),
                             Description = "Discount applied if the flight destination is in Africa on Thursday.",
                             Name = "Thursday Africa Discount",
                             Value = 0m
@@ -5733,7 +5733,7 @@ namespace FLyTicketService.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
-                    b.Property<DateTime>("BirthDate")
+                    b.Property<DateTime>("Birthday")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")

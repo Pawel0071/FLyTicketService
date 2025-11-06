@@ -58,7 +58,7 @@ builder.Services.AddScoped<IFlightScheduleService, FlightScheduleService>();
 builder.Services.AddScoped<IDiscountService, DiscountService>();
 builder.Services.AddScoped<IFlightPriceService, FlightPriceService>();
 builder.Services.AddScoped<GroupAStrategy>();
-builder.Services.AddScoped<GroupBStrategy>();
+builder.Services.AddScoped<IGroupStrategy, GroupBStrategy>();
 builder.Services.AddScoped<IGroupStrategyFactory, GroupStrategyFactory>();
 
 WebApplication app = builder.Build();

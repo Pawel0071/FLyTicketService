@@ -33,12 +33,12 @@ add_tenant() {
     
     json_data=$(cat <<EOF
 {
-  "name": "$name",
-  "address": "$address",
-  "group": "$group",
-  "birthday": "$birthday",
-  "phone": "$phone",
-  "email": "$email"
+  "Name": "$name",
+  "Address": "$address",
+  "Group": "$group",
+  "Birthday": "$birthday",
+  "Phone": "$phone",
+  "Email": "$email"
 }
 EOF
 )

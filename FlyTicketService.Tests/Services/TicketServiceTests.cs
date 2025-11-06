@@ -49,7 +49,6 @@ namespace FlyTicketService.Tests.Services
             _sut = new TicketService(
                 _ticketRepositoryMock.Object,
                 _loggerMock.Object,
-                _groupStrategyMock.Object,
                 _flightSeatRepositoryMock.Object,
                 _tenantRepositoryMock.Object,
                 _flightPriceServiceMock.Object,

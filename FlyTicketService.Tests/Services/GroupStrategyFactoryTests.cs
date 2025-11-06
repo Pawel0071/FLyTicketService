@@ -14,8 +14,10 @@ namespace FlyTicketService.Tests.Services
         public void GetStrategy_ForGroupA_ReturnsGroupAStrategy()
         {
             // Arrange
-            var serviceProvider = CreateServiceProvider();
-            var factory = new GroupStrategyFactory(serviceProvider);
+            var flightPriceServiceMock = new Mock<IFlightPriceService>();
+            var groupAStrategy = new GroupAStrategy(flightPriceServiceMock.Object);
+            var groupBStrategy = new GroupBStrategy(flightPriceServiceMock.Object);
+            var factory = new GroupStrategyFactory(groupAStrategy, groupBStrategy);
 
             // Act
             var strategy = factory.GetStrategy(TenantGroup.GroupA);
@@ -23,14 +25,17 @@ namespace FlyTicketService.Tests.Services
             // Assert
             strategy.Should().NotBeNull();
             strategy.Should().BeAssignableTo<IGroupStrategy>();
+            strategy.Should().BeOfType<GroupAStrategy>();
         }
 
         [Fact]
         public void GetStrategy_ForGroupB_ReturnsGroupBStrategy()
         {
             // Arrange
-            var serviceProvider = CreateServiceProvider();
-            var factory = new GroupStrategyFactory(serviceProvider);
+            var flightPriceServiceMock = new Mock<IFlightPriceService>();
+            var groupAStrategy = new GroupAStrategy(flightPriceServiceMock.Object);
+            var groupBStrategy = new GroupBStrategy(flightPriceServiceMock.Object);
+            var factory = new GroupStrategyFactory(groupAStrategy, groupBStrategy);
 
             // Act
             var strategy = factory.GetStrategy(TenantGroup.GroupB);
@@ -38,23 +43,7 @@ namespace FlyTicketService.Tests.Services
             // Assert
             strategy.Should().NotBeNull();
             strategy.Should().BeAssignableTo<IGroupStrategy>();
-        }
-
-        private IServiceProvider CreateServiceProvider()
-        {
-            var services = new ServiceCollection();
-            
-            var flightPriceServiceMock = new Mock<IFlightPriceService>();
-            services.AddSingleton(flightPriceServiceMock.Object);
-            
-            services.AddTransient<GroupAStrategy>();
-            services.AddTransient<GroupBStrategy>();
-            
-            // Register keyed services
-            services.AddKeyedTransient<IGroupStrategy, GroupAStrategy>(TenantGroup.GroupA);
-            services.AddKeyedTransient<IGroupStrategy, GroupBStrategy>(TenantGroup.GroupB);
-
-            return services.BuildServiceProvider();
+            strategy.Should().BeOfType<GroupBStrategy>();
         }
     }
 }

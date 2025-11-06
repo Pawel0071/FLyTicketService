@@ -14,7 +14,7 @@ namespace FLyTicketService.Service
         #region Fields
 
         private readonly int _maxReservationIDays = 30;
-        private OperationResult<TicketDTO> _operationResult;
+        private OperationResult<TicketDTO>? _operationResult;
 
         private readonly IGenericRepository<Ticket> _ticketRepository;
         private readonly IGenericRepository<Tenant> _tenantRepository;
@@ -82,7 +82,7 @@ namespace FLyTicketService.Service
 
             bool result = await _ticketRepository.UpdateAsync(ticket);
 
-            return new OperationResult<TicketDTO>(
+            return new OperationResult<TicketDTO?>(
                 result
                     ? OperationStatus.Ok
                     : OperationStatus.InternalServerError,
@@ -98,7 +98,7 @@ namespace FLyTicketService.Service
             if (ticket == null)
             {
                 _logger.LogWarning("Ticket not found");
-                return new OperationResult<TicketDTO>(OperationStatus.NotFound, "Ticket not found", null);
+                return new OperationResult<TicketDTO?>(OperationStatus.NotFound, "Ticket not found", null);
             }
 
             // Get the seat lock to prevent concurrent modifications
@@ -112,20 +112,20 @@ namespace FLyTicketService.Service
                 if (ticket == null)
                 {
                     _logger.LogWarning("Ticket not found after acquiring lock");
-                    return new OperationResult<TicketDTO>(OperationStatus.NotFound, "Ticket not found", null);
+                    return new OperationResult<TicketDTO?>(OperationStatus.NotFound, "Ticket not found", null);
                 }
 
                 if (ticket.Status == TicketStatus.Sold)
                 {
                     _logger.LogWarning($"Ticket {ticketNumber} already sold");
-                    return new OperationResult<TicketDTO>(OperationStatus.Conflict, "Ticket already sold", null);
+                    return new OperationResult<TicketDTO?>(OperationStatus.Conflict, "Ticket already sold", null);
                 }
 
                 ticket.Status = TicketStatus.Sold;
 
                 bool result = await _ticketRepository.UpdateAsync(ticket);
 
-                return new OperationResult<TicketDTO>(
+                return new OperationResult<TicketDTO?>(
                     result
                         ? OperationStatus.Ok
                         : OperationStatus.InternalServerError,
@@ -358,7 +358,7 @@ namespace FLyTicketService.Service
             {
                 // Double-check if this seat is already reserved/sold (after acquiring lock)
                 FlightSeat? existingSeat = await _flightSeatRepository.GetByAsync(x => x.FlightSeatId == seat.FlightSeatId && x.TicketId != null);
-                if (existingSeat != null)
+                if (existingSeat != null && existingSeat.TicketId.HasValue)
                 {
                     // Try to get the ticket to check its status
                     Ticket? existingTicket = await _ticketRepository.GetByIdAsync(existingSeat.TicketId.Value);
