@@ -255,11 +255,18 @@ FlyTicketService/
 │   └── FLyTicketDbContextModelSnapshot.cs
 │
 ├── 📂 Scripts/                        # Skrypty testowe API
-│   ├── test-api.sh                   # Bash script (Linux/macOS)
-│   ├── GetData.ps1                   # PowerShell - pobieranie danych
-│   ├── tenant.ps1                    # PowerShell - dodawanie tenantów
-│   ├── Flight.ps1                    # PowerShell - dodawanie lotów
-│   └── Tickets.ps1                   # PowerShell - operacje na biletach
+│   ├── 🐧 Bash scripts (Linux/macOS):
+│   │   ├── test-api.sh               # Test głównych endpointów
+│   │   ├── GetData.sh                # Pobieranie danych z API
+│   │   ├── tenant.sh                 # Dodawanie tenantów
+│   │   ├── Flight.sh                 # Dodawanie lotów
+│   │   ├── Tickets.sh                # Operacje na biletach
+│   │   └── test_concurrent_reservations.sh # Test race conditions
+│   └── 🪟 PowerShell scripts (Windows):
+│       ├── GetData.ps1               # Pobieranie danych
+│       ├── tenant.ps1                # Dodawanie tenantów (30 sztuk)
+│       ├── Flight.ps1                # Dodawanie lotów
+│       └── Tickets.ps1               # Operacje na biletach
 │
 ├── 📂 FlyTicketService.Tests/         # 🧪 Projekt testowy (181 testów)
 │   │
@@ -432,41 +439,72 @@ dotnet test --verbosity detailed
 
 ### 🔧 Skrypty testowe API
 
-Projekt zawiera skrypty do testowania działającego API w folderze `Scripts/`:
+Projekt zawiera skrypty do testowania działającego API w folderze `Scripts/` - dostępne w dwóch wersjach:
 
-#### Linux/macOS (bash)
+#### 🐧 Linux/macOS (Bash scripts - .sh)
 
 ```bash
 # 1. Uruchom serwis w jednym terminalu
 cd /Volumes/Data/Repositories/FlyTicketService
 dotnet run
 
-# 2. W osobnym terminalu - uruchom testy API
+# 2. W osobnym terminalu - uruchom testy
 cd Scripts
-./test-api.sh localhost 5000
+
+# Test głównych endpointów API
+./test-api.sh localhost 5042
+
+# Pobierz dane z API
+./GetData.sh localhost 5042
+
+# Dodaj przykładowych tenantów
+./tenant.sh localhost 5042
+
+# Dodaj przykładowe loty
+./Flight.sh localhost 5042
+
+# Testuj operacje na biletach
+./Tickets.sh localhost 5042
+
+# Test równoczesnych rezerwacji (race conditions)
+./test_concurrent_reservations.sh
 ```
 
-**Skrypt test-api.sh testuje:**
-- ✅ GET /api/Tenant - pobieranie listy tenantów
-- ✅ GET /api/FlightSchedule - pobieranie harmonogramu lotów
-- ✅ GET /api/DiscountType/all-discounts - pobieranie listy rabatów
-- ✅ POST /api/Tenant - dodawanie nowego tenanta
-- ✅ POST /api/DiscountType - dodawanie nowego rabatu
+**Dostępne skrypty Bash:**
+- **test-api.sh** - test głównych endpointów:
+  - ✅ GET /api/Tenant - lista tenantów
+  - ✅ GET /api/FlightSchedule - harmonogramy lotów
+  - ✅ GET /api/DiscountType/conditions - warunki rabatowe
+  - ✅ POST /api/Tenant - dodawanie tenanta
+  - ✅ POST /api/DiscountType - dodawanie rabatu
+  
+- **GetData.sh** - pobiera wszystkie dane z API (tenants, flights, discounts)
 
-#### Windows (PowerShell)
+- **tenant.sh** - dodaje przykładowych tenantów (różne grupy A/B)
+
+- **Flight.sh** - dodaje przykładowe harmonogramy lotów dla różnych kierunków
+
+- **Tickets.sh** - testuje pełny cykl życia biletu:
+  - Rezerwacja miejsca
+  - Sprzedaż biletu z rabatem
+  - Anulowanie biletu
+
+- **test_concurrent_reservations.sh** - test równoczesnych rezerwacji tego samego miejsca (symulacja race condition)
+
+#### 🪟 Windows (PowerShell scripts - .ps1)
 
 ```powershell
 # Pobierz wszystkie dane
-.\Scripts\GetData.ps1 -Server localhost -Port 5000
+.\Scripts\GetData.ps1 -Server localhost -Port 5042
 
 # Dodaj przykładowych tenantów (30 sztuk)
-.\Scripts\tenant.ps1 -Server localhost -Port 5000
+.\Scripts\tenant.ps1 -Server localhost -Port 5042
 
 # Dodaj przykładowe loty
-.\Scripts\Flight.ps1 -ServerHost localhost -Port 5000
+.\Scripts\Flight.ps1 -ServerHost localhost -Port 5042
 
 # Testuj operacje na biletach
-.\Scripts\Tickets.ps1 -Server localhost -Port 5000
+.\Scripts\Tickets.ps1 -Server localhost -Port 5042
 ```
 
 **Dostępne skrypty PowerShell:**
@@ -474,6 +512,8 @@ cd Scripts
 - **tenant.ps1** - dodaje 30 przykładowych tenantów (różne grupy)
 - **Flight.ps1** - dodaje przykładowe harmonogramy lotów (Europa, Ameryka, Azja, Afryka)
 - **Tickets.ps1** - testuje rezerwację, sprzedaż i anulowanie biletów
+
+> **Uwaga**: Domyślny port aplikacji to `5042`. Dostosuj parametry `--Server` i `--Port` jeśli używasz innej konfiguracji.
 
 ### Struktura testów
 
