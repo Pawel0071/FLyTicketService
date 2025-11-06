@@ -507,11 +507,15 @@ cd Scripts
 .\Scripts\Tickets.ps1 -Server localhost -Port 5042
 ```
 
-**Dostępne skrypty PowerShell:**
-- **GetData.ps1** - pobiera dane o tenantach, lotach i rabatach
-- **tenant.ps1** - dodaje 30 przykładowych tenantów (różne grupy)
-- **Flight.ps1** - dodaje przykładowe harmonogramy lotów (Europa, Ameryka, Azja, Afryka)
-- **Tickets.ps1** - testuje rezerwację, sprzedaż i anulowanie biletów
+**Dostępne skrypty PowerShell (.ps1) i Bash (.sh):**
+- **GetData.ps1 / GetData.sh** - pobiera dane o tenantach, lotach i rabatach
+- **tenant.ps1 / tenant.sh** - dodaje 30 przykładowych tenantów (różne grupy)
+- **Flight.ps1 / Flight.sh** - dodaje przykładowe harmonogramy lotów (Europa, Ameryka, Azja, Afryka)
+- **Tickets.ps1 / Tickets.sh** - testuje rezerwację, sprzedaż i anulowanie biletów
+
+**Dodatkowe skrypty (tylko Bash):**
+- **test-api.sh** - podstawowy test głównych endpointów API
+- **test_concurrent_reservations.sh** - test równoczesnych rezerwacji (race conditions)
 
 > **Uwaga**: Domyślny port aplikacji to `5042`. Dostosuj parametry `--Server` i `--Port` jeśli używasz innej konfiguracji.
 
