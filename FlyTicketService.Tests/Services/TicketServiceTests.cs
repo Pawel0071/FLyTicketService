@@ -118,6 +118,299 @@ namespace FlyTicketService.Tests.Services
             result.Status.Should().BeOneOf(OperationStatus.Ok, OperationStatus.Created);
         }
 
+        [Fact]
+        public async Task GetTicketAsync_WithValidTicketNumber_ReturnsTicket()
+        {
+            // Arrange
+            var ticketNumber = "TKT123456";
+            var tenant = new Tenant
+            {
+                TenantId = Guid.NewGuid(),
+                Name = "Test User",
+                Address = "Test Address",
+                Group = TenantGroup.GroupA,
+                Birthday = DateTime.Now.AddYears(-30)
+            };
+
+            var flightSeat = new FlightSeat
+            {
+                FlightSeatId = Guid.NewGuid(),
+                SeatNumber = "1A",
+                IsAvailable = false,
+                FlightSchedule = CreateTestFlightSchedule()
+            };
+
+            var ticket = new Ticket
+            {
+                TicketId = Guid.NewGuid(),
+                TicketNumber = ticketNumber,
+                Status = TicketStatus.Reserved,
+                Price = 100m,
+                FlightSeat = flightSeat,
+                Tenant = tenant
+            };
+
+            _ticketRepositoryMock
+                .Setup(x => x.GetByAsync(It.IsAny<Func<Ticket, bool>>()))
+                .ReturnsAsync(ticket);
+
+            // Act
+            var result = await _sut.GetTicketAsync(ticketNumber);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.Ok);
+            result.Result.Should().NotBeNull();
+        }
+
+        [Fact]
+        public async Task GetTicketAsync_WhenTicketNotFound_ReturnsNotFound()
+        {
+            // Arrange
+            var ticketNumber = "INVALID";
+
+            _ticketRepositoryMock
+                .Setup(x => x.GetByAsync(It.IsAny<Func<Ticket, bool>>()))
+                .ReturnsAsync((Ticket?)null);
+
+            // Act
+            var result = await _sut.GetTicketAsync(ticketNumber);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.NotFound);
+        }
+
+        [Fact]
+        public async Task CancelTicketAsync_WithValidTicketNumber_ReturnsSuccess()
+        {
+            // Arrange
+            var ticketNumber = "TKT123456";
+            var tenant = new Tenant
+            {
+                TenantId = Guid.NewGuid(),
+                Name = "Test User",
+                Address = "Test Address",
+                Group = TenantGroup.GroupA,
+                Birthday = DateTime.Now.AddYears(-30)
+            };
+
+            var flightSeat = new FlightSeat
+            {
+                FlightSeatId = Guid.NewGuid(),
+                SeatNumber = "1A",
+                IsAvailable = false,
+                FlightSchedule = CreateTestFlightSchedule()
+            };
+
+            var ticket = new Ticket
+            {
+                TicketId = Guid.NewGuid(),
+                TicketNumber = ticketNumber,
+                Status = TicketStatus.Reserved,
+                Price = 100m,
+                FlightSeat = flightSeat,
+                Tenant = tenant
+            };
+
+            _ticketRepositoryMock
+                .Setup(x => x.GetByAsync(It.IsAny<Func<Ticket, bool>>()))
+                .ReturnsAsync(ticket);
+
+            _ticketRepositoryMock
+                .Setup(x => x.RemoveAsync(It.IsAny<Guid>()))
+                .ReturnsAsync(true);
+
+            // Act
+            var result = await _sut.CancelTicketAsync(ticketNumber);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.Ok);
+            result.Result.Should().BeTrue();
+        }
+
+        [Fact]
+        public async Task CancelTicketAsync_WhenTicketNotFound_ReturnsNotFound()
+        {
+            // Arrange
+            var ticketNumber = "INVALID";
+
+            _ticketRepositoryMock
+                .Setup(x => x.GetByAsync(It.IsAny<Func<Ticket, bool>>()))
+                .ReturnsAsync((Ticket?)null);
+
+            // Act
+            var result = await _sut.CancelTicketAsync(ticketNumber);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.NotFound);
+        }
+
+        [Fact]
+        public async Task SaleReservedTicketAsync_WithValidTicketNumber_ReturnsTicket()
+        {
+            // Arrange
+            var ticketNumber = "TKT123456";
+            var discounts = new List<Discount>();
+            var tenant = new Tenant
+            {
+                TenantId = Guid.NewGuid(),
+                Name = "Test User",
+                Address = "Test Address",
+                Group = TenantGroup.GroupA,
+                Birthday = DateTime.Now.AddYears(-30)
+            };
+
+            var ticket = new Ticket
+            {
+                TicketId = Guid.NewGuid(),
+                TicketNumber = ticketNumber,
+                Status = TicketStatus.Reserved,
+                Price = 100m,
+                Tenant = tenant,
+                FlightSeat = new FlightSeat
+                {
+                    FlightSeatId = Guid.NewGuid(),
+                    SeatNumber = "1A",
+                    IsAvailable = false,
+                    FlightSchedule = CreateTestFlightSchedule()
+                }
+            };
+
+            _ticketRepositoryMock
+                .Setup(x => x.GetByAsync(It.IsAny<Func<Ticket, bool>>()))
+                .ReturnsAsync(ticket);
+
+            _flightPriceServiceMock
+                .Setup(x => x.GetAllApplicableDiscountsAsync(It.IsAny<Ticket>()))
+                .ReturnsAsync(discounts);
+
+            _ticketRepositoryMock
+                .Setup(x => x.UpdateAsync(It.IsAny<Ticket>()))
+                .ReturnsAsync(true);
+
+            // Act
+            var result = await _sut.SaleReservedTicketAsync(ticketNumber);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.Ok);
+            result.Result.Should().NotBeNull();
+        }
+
+        [Fact]
+        public async Task SaleReservedTicketAsync_WhenTicketNotFound_ReturnsNotFound()
+        {
+            // Arrange
+            var ticketNumber = "INVALID";
+
+            _ticketRepositoryMock
+                .Setup(x => x.GetByAsync(It.IsAny<Func<Ticket, bool>>()))
+                .ReturnsAsync((Ticket?)null);
+
+            // Act
+            var result = await _sut.SaleReservedTicketAsync(ticketNumber);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.NotFound);
+        }
+
+        [Fact]
+        public async Task GetAllApplicableDiscountsAsync_WithValidTicketNumber_ReturnsDiscounts()
+        {
+            // Arrange
+            var ticketNumber = "TKT123456";
+            var discounts = new List<Discount>
+            {
+                new Discount
+                {
+                    DiscountId = Guid.NewGuid(),
+                    Name = "Early Bird",
+                    Value = 10,
+                    Conditions = new List<Condition>()
+                }
+            };
+
+            var tenant = new Tenant
+            {
+                TenantId = Guid.NewGuid(),
+                Name = "Test User",
+                Address = "Test Address",
+                Group = TenantGroup.GroupA,
+                Birthday = DateTime.Now.AddYears(-30)
+            };
+
+            var ticket = new Ticket
+            {
+                TicketId = Guid.NewGuid(),
+                TicketNumber = ticketNumber,
+                Status = TicketStatus.Reserved,
+                Price = 100m,
+                Tenant = tenant,
+                FlightSeat = new FlightSeat
+                {
+                    FlightSeatId = Guid.NewGuid(),
+                    SeatNumber = "1A",
+                    IsAvailable = false,
+                    FlightSchedule = CreateTestFlightSchedule()
+                }
+            };
+
+            _ticketRepositoryMock
+                .Setup(x => x.GetByAsync(It.IsAny<Func<Ticket, bool>>()))
+                .ReturnsAsync(ticket);
+
+            _flightPriceServiceMock
+                .Setup(x => x.GetAllApplicableDiscountsAsync(It.IsAny<Ticket>()))
+                .ReturnsAsync(discounts);
+
+            // Act
+            var result = await _sut.GetAllApplicableDiscountsAsync(ticketNumber);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.Ok);
+            result.Result.Should().NotBeNull();
+        }
+
+        [Fact]
+        public async Task GetAllDiscountsAsync_ReturnsAllDiscounts()
+        {
+            // Arrange
+            var discounts = new List<Discount>
+            {
+                new Discount
+                {
+                    DiscountId = Guid.NewGuid(),
+                    Name = "Discount1",
+                    Value = 10,
+                    Conditions = new List<Condition>()
+                },
+                new Discount
+                {
+                    DiscountId = Guid.NewGuid(),
+                    Name = "Discount2",
+                    Value = 20,
+                    Conditions = new List<Condition>()
+                }
+            };
+
+            _flightPriceServiceMock
+                .Setup(x => x.GetAllDiscountsAsync())
+                .ReturnsAsync(discounts);
+
+            // Act
+            var result = await _sut.GetAllDiscountsAsync();
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.Ok);
+            result.Result.Should().HaveCount(2);
+        }
+
         private FlightSchedule CreateTestFlightSchedule()
         {
             return new FlightSchedule
