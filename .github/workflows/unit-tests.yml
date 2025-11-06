@@ -18,11 +18,11 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore
-        run: dotnet restore DevHobby.sln
+        run: dotnet restore FLyTicketService.sln
 
       - name: Build
-        run: dotnet build DevHobby.sln --no-restore --configuration Release
+        run: dotnet build FLyTicketService.sln --no-restore --configuration Release
 
       - name: Run tests
         # ensure test runner uses the same configuration/output as the build step
-        run: dotnet test DevHobby.sln --no-build --configuration Release --no-restore --verbosity normal
+        run: dotnet test FLyTicketService.sln --no-build --configuration Release --no-restore --verbosity normal
