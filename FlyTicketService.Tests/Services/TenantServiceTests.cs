@@ -83,6 +83,154 @@ namespace FlyTicketService.Tests.Services
             result.Result.Should().BeTrue();
         }
 
+        [Fact]
+        public async Task GetTenantsAsync_ReturnsAllTenants()
+        {
+            // Arrange
+            var tenants = new List<Tenant>
+            {
+                CreateTestTenant(),
+                CreateTestTenant(),
+                CreateTestTenant()
+            };
+
+            _tenantRepositoryMock
+                .Setup(x => x.GetAllAsync())
+                .ReturnsAsync(tenants);
+
+            // Act
+            var result = await _sut.GetTenantsAsync();
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.Ok);
+            result.Result.Should().HaveCount(3);
+        }
+
+        [Fact]
+        public async Task UpdateTenantAsync_WithValidData_ReturnsSuccess()
+        {
+            // Arrange
+            var tenantId = Guid.NewGuid();
+            var existingTenant = CreateTestTenant(tenantId);
+            var updateDto = new TenantDTO
+            {
+                TenantId = tenantId,
+                Name = "Jane Doe",
+                Address = "456 Oak St",
+                Group = TenantGroup.GroupB,
+                Birthday = DateTime.Now.AddYears(-25),
+                Phone = "987-654-3210",
+                Email = "jane@example.com"
+            };
+
+            _tenantRepositoryMock
+                .Setup(x => x.GetByIdAsync(tenantId))
+                .ReturnsAsync(existingTenant);
+
+            _tenantRepositoryMock
+                .Setup(x => x.UpdateAsync(It.IsAny<Tenant>()))
+                .ReturnsAsync(true);
+
+            // Act
+            var result = await _sut.UpdateTenantAsync(tenantId, updateDto);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.Ok);
+            result.Result.Should().BeTrue();
+        }
+
+        [Fact]
+        public async Task UpdateTenantAsync_WhenTenantDoesNotExist_ReturnsNotFound()
+        {
+            // Arrange
+            var tenantId = Guid.NewGuid();
+            var updateDto = CreateTestTenantDto();
+
+            _tenantRepositoryMock
+                .Setup(x => x.GetByIdAsync(tenantId))
+                .ReturnsAsync((Tenant?)null);
+
+            // Act
+            var result = await _sut.UpdateTenantAsync(tenantId, updateDto);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.NotFound);
+            result.Result.Should().BeFalse();
+        }
+
+        [Fact]
+        public async Task UpdateTenantAsync_WithNullTenant_ReturnsBadRequest()
+        {
+            // Arrange
+            var tenantId = Guid.NewGuid();
+
+            // Act
+            var result = await _sut.UpdateTenantAsync(tenantId, null);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.BadRequest);
+            result.Result.Should().BeFalse();
+        }
+
+        [Fact]
+        public async Task DeleteTenantAsync_WithValidId_ReturnsSuccess()
+        {
+            // Arrange
+            var tenantId = Guid.NewGuid();
+            var existingTenant = CreateTestTenant(tenantId);
+
+            _tenantRepositoryMock
+                .Setup(x => x.GetByIdAsync(tenantId))
+                .ReturnsAsync(existingTenant);
+
+            _tenantRepositoryMock
+                .Setup(x => x.RemoveAsync(tenantId))
+                .ReturnsAsync(true);
+
+            // Act
+            var result = await _sut.DeleteTenantAsync(tenantId);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.Created);
+            result.Result.Should().BeTrue();
+        }
+
+        [Fact]
+        public async Task DeleteTenantAsync_WhenTenantDoesNotExist_ReturnsNotFound()
+        {
+            // Arrange
+            var tenantId = Guid.NewGuid();
+
+            _tenantRepositoryMock
+                .Setup(x => x.GetByIdAsync(tenantId))
+                .ReturnsAsync((Tenant?)null);
+
+            // Act
+            var result = await _sut.DeleteTenantAsync(tenantId);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.NotFound);
+            result.Result.Should().BeFalse();
+        }
+
+        [Fact]
+        public async Task AddTenantAsync_WithNullTenant_ReturnsBadRequest()
+        {
+            // Act
+            var result = await _sut.AddTenantAsync(null);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.BadRequest);
+            result.Result.Should().BeFalse();
+        }
+
         private Tenant CreateTestTenant(Guid? tenantId = null)
         {
             return new Tenant

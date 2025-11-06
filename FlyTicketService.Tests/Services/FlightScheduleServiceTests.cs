@@ -81,6 +81,86 @@ namespace FlyTicketService.Tests.Services
             result.Result.Should().HaveCount(2);
         }
 
+        [Fact]
+        public async Task GetFlightAsync_WhenFlightDoesNotExist_ReturnsNotFound()
+        {
+            // Arrange
+            var flightId = "NONEXISTENT";
+
+            _flightScheduleRepositoryMock
+                .Setup(x => x.GetByAsync(It.IsAny<Func<FlightSchedule, bool>>()))
+                .ReturnsAsync((FlightSchedule?)null);
+
+            // Act
+            var result = await _sut.GetFlightAsync(flightId);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.NotFound);
+            result.Result.Should().BeNull();
+        }
+
+        [Fact]
+        public async Task GetAllFlightsAsync_WhenNoFlights_ReturnsNotFound()
+        {
+            // Arrange
+            _flightScheduleRepositoryMock
+                .Setup(x => x.GetAllAsync())
+                .ReturnsAsync(new List<FlightSchedule>());
+
+            // Act
+            var result = await _sut.GetAllFlightsAsync();
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.NotFound);
+            result.Result.Should().BeEmpty();
+        }
+
+        [Fact]
+        public async Task DeleteFlightAsync_WithValidId_ReturnsSuccess()
+        {
+            // Arrange
+            var flightScheduleId = Guid.NewGuid();
+            var flight = CreateTestFlightSchedule();
+            flight.FlightScheduleId = flightScheduleId;
+
+            _flightScheduleRepositoryMock
+                .Setup(x => x.GetByIdAsync(flightScheduleId))
+                .ReturnsAsync(flight);
+
+            _flightScheduleRepositoryMock
+                .Setup(x => x.RemoveAsync(flightScheduleId))
+                .ReturnsAsync(true);
+
+            // Act
+            var result = await _sut.DeleteFlightAsync(flightScheduleId, It.IsAny<FlightScheduleDTO>(), false);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.Ok);
+            result.Result.Should().BeTrue();
+        }
+
+        [Fact]
+        public async Task DeleteFlightAsync_WhenFlightDoesNotExist_ReturnsNotFound()
+        {
+            // Arrange
+            var flightScheduleId = Guid.NewGuid();
+
+            _flightScheduleRepositoryMock
+                .Setup(x => x.GetByIdAsync(flightScheduleId))
+                .ReturnsAsync((FlightSchedule?)null);
+
+            // Act
+            var result = await _sut.DeleteFlightAsync(flightScheduleId, It.IsAny<FlightScheduleDTO>(), false);
+
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(OperationStatus.NotFound);
+            result.Result.Should().BeFalse();
+        }
+
         private FlightSchedule CreateTestFlightSchedule()
         {
             return new FlightSchedule

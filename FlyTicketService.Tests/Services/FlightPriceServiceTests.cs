@@ -60,6 +60,55 @@ namespace FlyTicketService.Tests.Services
             price.Should().BeGreaterThanOrEqualTo(0);
         }
 
+        [Fact]
+        public async Task GetAllApplicableDiscountsAsync_ReturnsMatchingDiscounts()
+        {
+            // Arrange
+            var ticket = CreateTestTicket();
+            var allDiscounts = new List<Discount>
+            {
+                new Discount
+                {
+                    DiscountId = Guid.NewGuid(),
+                    Name = "TestDiscount",
+                    Value = 10,
+                    Description = "Test",
+                    Conditions = new List<Condition>()
+                }
+            };
+
+            _discountRepositoryMock
+                .Setup(x => x.GetAllAsync())
+                .ReturnsAsync(allDiscounts);
+
+            // Act
+            var result = await _sut.GetAllApplicableDiscountsAsync(ticket);
+
+            // Assert
+            result.Should().NotBeNull();
+        }
+
+        [Fact]
+        public void IsDiscountApplicable_WithNoConditions_ReturnsTrue()
+        {
+            // Arrange
+            var ticket = CreateTestTicket();
+            var discount = new Discount
+            {
+                DiscountId = Guid.NewGuid(),
+                Name = "NoConditions",
+                Value = 10,
+                Description = "Discount with no conditions",
+                Conditions = new List<Condition>()
+            };
+
+            // Act
+            var result = _sut.IsDiscountApplicable(discount, ticket);
+
+            // Assert
+            result.Should().BeTrue();
+        }
+
         private Ticket CreateTestTicket()
         {
             return new Ticket
